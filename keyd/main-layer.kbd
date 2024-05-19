@@ -1,4 +1,4 @@
-# This example demonstrates how to implement one of the variants of home row modifers.
+# The main layer on its own implements one of the variants of home row modifers pattern.
 # Notice we use the one-shot-shift pattern. This is important to prevent shifting errors
 # caused by the necessary delay with which characters are emitted under overloadt (on
 # release, instead of on press). It is not recommended to use home-row shift for typing
