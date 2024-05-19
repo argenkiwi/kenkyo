@@ -1,0 +1,99 @@
+# TL;DR;
+# Hold caps-lock for the extend layer, hold the spacebar and release caps-lock to anchor it.
+# Hold a, s, d, f for control, shift, meta and alt respectively, mirrored by j, k, l, semicolon.
+# Hold shift, then hold the spacebar and release shift to anchor it (pinky-free shift).
+# Hold the spacebar for the function + numbers + symbols layer. Tap right shift to switch to and from macros layer.
+
+(defsrc
+)
+
+(defvirtualkeys
+  clear (layer-switch main)
+)
+
+(deflayermap (main)
+  caps (tap-hold-press 200 200 caps (layer-toggle extend))
+  a (tap-hold-release 200 200 a lctl)
+  s (tap-hold-release 200 200 s lsft)
+  d (tap-hold-release 200 200 d lmet)
+  f (tap-hold-release 200 200 f lalt)
+  j (tap-hold-release 200 200 j lalt)
+  k (tap-hold-release 200 200 k rmet)
+  l (tap-hold-release 200 200 l rsft)
+  ; (tap-hold-release 200 200 ; rctl)
+  lsft (multi lsft (layer-toggle space))
+  v (tap-hold-release 200 200 v ralt)
+  m (tap-hold-release 200 200 m ralt)
+  rsft (multi lsft (layer-toggle space))
+  spc (tap-hold-release 200 200 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)))
+)
+
+(deflayermap (space)
+  spc (multi lsft (layer-toggle space))
+)
+
+(deflayermap (fumbol)
+  q f1
+  w f2
+  e f3
+  r f4
+  t f5
+  y f6
+  u f7
+  i f8
+  o f9
+  [ f11
+  ] f12
+  a (tap-hold-release 200 200 1 lctl)
+  s (tap-hold-release 200 200 2 lsft)
+  d (tap-hold-release 200 200 3 lmet)
+  f (tap-hold-release 200 200 4 lalt)
+  g 5
+  h 6
+  j (tap-hold-release 200 200 7 lalt)
+  k (tap-hold-release 200 200 8 lmet)
+  l (tap-hold-release 200 200 9 lsft)
+  ; (tap-hold-release 200 200 0 lctl)
+  ' \
+  z mute
+  x vold
+  c volu
+  v pp
+  b zzz
+  n '
+  m -
+  , =
+  . [
+  / ]
+  rsft (tap-hold 200 200 (layer-switch macros) lsft) 
+)
+
+(deflayermap (macros)
+  rsft (tap-hold 200 200 (layer-switch fumbol) lsft)
+  m (macro lmet 200 m ; j n 200 ret)
+)
+
+(deflayermap (extend)
+  q esc
+  w lmet
+  a lctl
+  s lsft
+  d lmet
+  f lalt
+  j left
+  k down
+  l rght
+  i up
+  u home
+  o end
+  y pgup
+  h pgdn
+  p ins
+  n comp
+  m bspc
+  ; del
+  ' esc
+  , spc
+  / ret
+  spc (tap-hold-release 200 200 spc (layer-toggle extend))
+)
