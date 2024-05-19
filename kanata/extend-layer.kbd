@@ -1,0 +1,36 @@
+# This example demonstrates how to implement a variant of the Extend layer. Notice how
+# you can pin the layer down with the space bar if you need to  do complex operations
+# using the fingers of both hands. Vim users might  prefer to bind left, down up and right
+# to h, j, k and l respectively as well as binding caps-lock to escape.
+
+(defsrc
+)
+
+(deflayermap (main)
+  caps (tap-hold-press 200 200 caps (layer-toggle extend))
+)
+
+(deflayermap (extend)
+  q esc
+  w lmet
+  a lctl
+  s lsft
+  d lmet
+  f lalt
+  j left
+  k down
+  l rght
+  i up
+  u home
+  o end
+  y pgup
+  h pgdn
+  p ins
+  n comp
+  m bspc
+  ; del
+  ' esc
+  , spc
+  / ret
+  spc (tap-hold-release 200 200 spc (layer-toggle extend))
+)
