@@ -1,0 +1,19 @@
+# This example demonstrates how to implement one of the variants of home row modifers.
+# It is not recommended to use home-row shift for typing for that reason. Home row
+# modifiers are best suited for combinations (i.e., shortcuts).
+
+(defsrc
+)
+
+(deflayermap (main)
+  a (tap-hold-release 200 200 a lctl)
+  s (tap-hold-release 200 200 s lsft)
+  d (tap-hold-release 200 200 d lmet)
+  f (tap-hold-release 200 200 f lalt)
+  j (tap-hold-release 200 200 j lalt)
+  k (tap-hold-release 200 200 k rmet)
+  l (tap-hold-release 200 200 l rsft)
+  ; (tap-hold-release 200 200 ; rctl)
+  v (tap-hold-release 200 200 v ralt)
+  m (tap-hold-release 200 200 m ralt)
+)
