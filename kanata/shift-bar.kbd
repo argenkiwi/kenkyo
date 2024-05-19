@@ -6,10 +6,13 @@
 # that you can type using the fingers of both hands freely. Consider it as an alternative
 # to caps-word mode.
 
-[ids]
+(defsrc
+)
 
-*
+(deflayermap (main)
+  lsft (multi lsft (layer-while-held space))
+)
 
-[shift]
-
-space = overloadt(shift, space, 200)
+(deflayermap (space)
+  spc (multi lsft (layer-while-held space))
+)
