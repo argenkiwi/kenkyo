@@ -1,7 +1,10 @@
 # Kenkyo
-###### A layered keyboard layout for standard ANSI keyboards.
 
-In this repository I intend to share configuration files for a range of keyboard customisation software which reprents a keyboard layout I developed under a series of principles.
+A layered keyboard layout for standard ANSI keyboards
+
+## Goal
+
+In this repository I intend to share configuration files, for a range of free and open-source keyboard customisation software, which reprent a keyboard layout I developed, following a series of principles, with the objective of providing a template for those seeking to increase their productivity and/or improve the ergonomy of their workflows without having to spend too much money on expensive hardware or too much time doing research in order to experience the benefits of keyboard customisation.
 
 > Kenkyo (謙虚) is the Japanese term for humility or modesty.
 
@@ -12,19 +15,18 @@ In this repository I intend to share configuration files for a range of keyboard
 - Efficiency: The layout should endeavour to strike a balance between the effort required for its use (i.e. hand motion) and that required to learn it (i.e., complexity).
 
 ## Patterns
-- Navigation layer
-- Functions, numbers and symbols layer
-- Home row modifiers
-- Layer pinning
-- Layer swapping
+
+- [Home row modifiers](https://precondition.github.io/home-row-mods)
+- [Impermanent (momentary) layers](https://jonny-wamsley.gitbook.io/the-ultimate-guide-to-keyboard-layers/ch-3-layer-activators/3.3-shift-layers)
+- [Layer pinning](https://argenkiwi.medium.com/keyboard-layer-pinning-20aafede96e5)
 
 ## Components:
-- Extend layer
-- Fumbol layer
-- Shift-bar
+
+- Main layer 
+- [Extend layer](https://colemakmods.github.io/ergonomic-mods/extend.html)
+- Shift layer (shift-bar)
 - Layer carousel
-- Simlayer
 
 ## Keyboard customisation software
-- Kanata
-- Keyd
+- [Kanata](https://github.com/jtroo/kanata)
+- [Keyd](https://github.com/rvaiya/keyd)
