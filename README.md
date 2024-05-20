@@ -28,5 +28,5 @@ In this repository I intend to share configuration files, for a range of free an
 - Layer carousel
 
 ## Keyboard customisation software
-- [Kanata](https://colemakmods.github.io/ergonomic-mods/extend.html)
+- [Kanata](https://github.com/jtroo/kanata)
 - [Keyd](https://github.com/rvaiya/keyd)
