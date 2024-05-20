@@ -1,5 +1,5 @@
-;; The proposed main layer implements one of the variants of home row modifers.  Home row modifiers are best
-;; suited for combinations (i.e., shortcuts) but may increase error rates if used when fast-typing.
+;; The proposed main layer implements one of the variants of home row modifers.  Home row modifiers are
+;; best suited for combinations (i.e., shortcuts) but may increase error rates if used when fast-typing.
 
 (defsrc
 )
