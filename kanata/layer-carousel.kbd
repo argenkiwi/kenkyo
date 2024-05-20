@@ -14,7 +14,7 @@
 )
 
 (deflayermap (fumbol)
-  caps (tap-hold-press 200 200 caps (layer-toggle extend))
+  caps (tap-hold-press 200 200 caps (layer-while-held extend))
   q f1
   w f2
   e f3

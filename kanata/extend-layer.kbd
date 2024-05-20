@@ -7,7 +7,7 @@
 )
 
 (deflayermap (main)
-  caps (tap-hold-press 200 200 caps (layer-toggle extend))
+  caps (tap-hold-press 200 200 caps (layer-while-held extend))
 )
 
 (deflayermap (extend)
@@ -31,6 +31,7 @@
   ; del
   ' esc
   , spc
+  . tab
   / ret
-  spc (tap-hold-release 200 200 spc (layer-toggle extend))
+  spc (layer-while-held extend)
 )
