@@ -1,6 +1,5 @@
-;; This example demonstrates how to implement one of the variants of home row modifers.
-;; It is not recommended to use home-row shift for typing for that reason. Home row
-;; modifiers are best suited for combinations (i.e., shortcuts).
+;; The proposed main layer implements one of the variants of home row modifers.  Home row modifiers are best
+;; suited for combinations (i.e., shortcuts) but may increase error rates if used when fast-typing.
 
 (defsrc
 )
