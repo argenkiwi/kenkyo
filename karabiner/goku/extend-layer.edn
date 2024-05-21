@@ -1,0 +1,35 @@
+{
+  :layers {
+    :extend-mode {
+      :key :caps_lock
+    }
+  }
+  
+  :main [
+    {
+      :des "extend-mode"
+      :rules [
+        :extend-mode
+        [:##a :left_control]
+        [:##s :left_shift]
+        [:##d :left_command]
+        [:##f :left_option]
+        [:##j :left_arrow]
+        [:##k :down_arrow]
+        [:##l :right_arrow]
+        [:##i :up_arrow]
+        [:##u :home]
+        [:##o :end]
+        [:p :insert]
+        [:##y :page_up]
+        [:##h :page_down]
+        [:##m :delete_or_backspace]
+        [:##comma :spacebar]
+        [:##period :tab]
+        [:##slash :return_or_enter]
+        [:##semicolon :delete_forward]
+        [:quote :escape]
+      ]
+    }
+  ]
+}

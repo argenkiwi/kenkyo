@@ -1,0 +1,48 @@
+{
+  :layers {
+    :fumbol-mode {
+      :key :spacebar
+    }
+  }
+  
+  :main [
+    {
+      :des "fumbol-mode"
+      :rules [
+        :fumbol-mode
+        [:##q :f1]
+        [:##w :f2]
+        [:##e :f3]
+        [:##r :f4]
+        [:##t :f5]
+        [:##y :f6]
+        [:##u :f7]
+        [:##i :f8]
+        [:##o :f9]
+        [:##p :f10]
+        [:##open_bracket :f11]
+        [:##close_bracket :f12]
+        [:##a :1]
+        [:##s :2]
+        [:##d :3]
+        [:##f :4]
+        [:##g :5]
+        [:##h :6]
+        [:##j :7]
+        [:##k :8]
+        [:##l :9]
+        [:##semicolon :0]
+        [:##quote :backslash]
+        [:##z :mute]
+        [:##x :volume_decrement]
+        [:##c :volume_increment]
+        [:##v :play_or_pause]
+        [:##n :grave_accent_and_tilde]
+        [:##m :hyphen]
+        [:##comma :equal_sign]
+        [:##period :open_bracket]
+        [:##slash :close_bracket]
+      ]
+    }
+  ]
+}

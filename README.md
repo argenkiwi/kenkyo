@@ -30,3 +30,4 @@ In this repository I intend to share configuration files, for a range of free an
 ## Keyboard customisation software
 - [Kanata](https://github.com/jtroo/kanata)
 - [Keyd](https://github.com/rvaiya/keyd)
+- [Karabiner](https://github.com/pqrs-org/Karabiner-Elements) + [Goku](https://github.com/yqrashawn/GokuRakuJoudo) (partial implementation)
