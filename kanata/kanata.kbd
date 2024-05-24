@@ -12,28 +12,43 @@
 )
 
 (deflayermap (main)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
   a (tap-hold-release 200 200 a lctl)
   s (tap-hold-release 200 200 s lsft)
   d (tap-hold-release 200 200 d lmet)
   f (tap-hold-release 200 200 f lalt)
-  j (tap-hold-release 200 200 j lalt)
+  j (tap-hold-release 200 200 j ralt)
   k (tap-hold-release 200 200 k rmet)
   l (tap-hold-release 200 200 l rsft)
   ; (tap-hold-release 200 200 ; rctl)
-  lsft (multi lsft (layer-while-held space))
-  v (tap-hold-release 200 200 v ralt)
-  m (tap-hold-release 200 200 m ralt)
-  rsft (multi rsft (layer-while-held space))
+  caps (tap-hold-press 200 200 caps (layer-while-held extend))
   spc (tap-hold-release 200 200 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)))
 )
 
-(deflayermap (space)
-  spc (multi lsft (layer-while-held space))
+(deflayermap (extend)
+  q (tap-hold 200 200 esc lalt)
+  w lmet
+  a lctl
+  s lsft
+  d lmet
+  f lalt
+  j left
+  k down
+  l rght
+  i up
+  u home
+  o end
+  y pgup
+  h pgdn
+  p ins
+  m bspc
+  ; del
+  ' esc
+  , spc
+  . tab
+  / ret
 )
 
 (deflayermap (fumbol)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
   q f1
   w f2
   e f3
@@ -61,40 +76,14 @@
   c volu
   v pp
   b (layer-switch personal)
-  n '
+  n `
   m -
   , =
   . [
   / ]
+  caps (tap-hold-press 200 200 caps (layer-while-held extend))
 )
 
 (deflayermap (personal)
-  b (layer-switch fumbol)
   m M-pgup
-)
-
-(deflayermap (extend)
-  q (tap-hold 200 200 esc lalt)
-  w lmet
-  a lctl
-  s lsft
-  d lmet
-  f lalt
-  j left
-  k down
-  l rght
-  i up
-  u home
-  o end
-  y pgup
-  h pgdn
-  p ins
-  n comp
-  m bspc
-  ; del
-  ' esc
-  , spc
-  . tab
-  / ret
-  spc (layer-while-held extend)
 )
