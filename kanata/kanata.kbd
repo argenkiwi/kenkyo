@@ -8,7 +8,8 @@
 )
 
 (defvirtualkeys
-  clear (layer-switch main)
+  shift (multi (layer-switch main) lsft)
+  clear (multi (layer-switch main) (on-press release-virtualkey shift))
 )
 
 (deflayermap (main)
@@ -82,6 +83,7 @@
   . [
   / ]
   caps (tap-hold-press 200 200 (layer-switch extend) (layer-while-held extend))
+  lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
 )
 
 (deflayermap (personal)
