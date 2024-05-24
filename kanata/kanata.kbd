@@ -81,7 +81,7 @@
   , =
   . [
   / ]
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
+  caps (tap-hold-press 200 200 (layer-switch extend) (layer-while-held extend))
 )
 
 (deflayermap (personal)
