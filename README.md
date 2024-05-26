@@ -19,11 +19,11 @@ configuration file we provide in the recommended location and use as follows:
 ## Goal
 
 In this repository I intend to share configuration files, for a range of free and
-open-source keyboard customisation applications, which reprent a keyboard layout I
-developed, following a series of principles, with the objective of providing a template
+open-source keyboard customisation applications, which implement a keyboard layout I
+developed, following a series of principles, aiming at providing a starting point
 for those seeking to increase their productivity and/or improve the ergonomy of their
-workflows without having to spend too much money on expensive hardware or too much time
-doing research in order to experience the benefits of keyboard customisation.
+workflows without having to spend too much money on expensive hardware, or too much time
+doing research, in order to experience the benefits of keyboard customisation.
 
 ## Principles
 
