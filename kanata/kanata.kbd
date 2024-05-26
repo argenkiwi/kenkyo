@@ -26,7 +26,7 @@
   l (tap-hold-release 200 200 l rsft)
   ; (tap-hold-release 200 200 ; rctl)
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
-  spc (tap-hold-release-timeout 200 200 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
+  spc (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
 )
 
 (deflayermap (extend)
@@ -92,6 +92,6 @@
 
 (deflayermap (custom)
   a M-pgup
-  a M-pgdn
+  s M-pgdn
 ;;Your macros, shortcuts and special keys here.
 )
