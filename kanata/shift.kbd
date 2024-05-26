@@ -1,0 +1,18 @@
+;; You can anchor the shift layer by holding space and immediately tapping the left shift
+;; key. Shift will remain active until the space-bar is released.
+
+(defsrc
+)
+
+(defvirtualkeys
+  shift (multi (layer-switch main) lsft)
+  clear (multi (layer-switch main) (on-press release-virtualkey shift))
+)
+
+(deflayermap (main)
+  spc (tap-hold-release-timeout 200 200 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
+)
+
+(deflayermap (fumbol)
+  lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
+)

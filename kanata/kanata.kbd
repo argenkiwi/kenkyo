@@ -1,8 +1,12 @@
 ;; TL;DR;
-;; Hold caps-lock for the extend layer, hold the spacebar and release caps-lock to anchor it.
-;; Hold a, s, d, f for control, shift, meta and alt respectively, mirrored by j, k, l, semicolon.
-;; Hold shift, then hold the spacebar and release shift to anchor it (pinky-free shift).
-;; Hold the spacebar for the function + numbers + symbols layer. Tap 'b' to switch to and from the personal layer.
+;; Hold a, s, d, f and v for control, shift, meta, alt and altgr respectively.
+;; Hold m, j, k, l and semicolon for altgr, alt, meta, shift and control respectively.
+;; Hold caps-lock to activate the extend (navigation/editing) layer.
+;; Hold space-bar (anchor key) and immediately tap:
+;; - caps-lock to anchor the extend layer
+;; - left-shift to anchor the shift layer
+;; - 'b' to anchor your custom (macros, shortcuts, etc.) layer
+;; - any other key to anchor the fumbol (function/number/symbol) layer
 
 (defsrc
 )
@@ -22,28 +26,27 @@
   l (tap-hold-release 200 200 l rsft)
   ; (tap-hold-release 200 200 ; rctl)
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
-  spc (tap-hold-release 200 200 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)))
+  spc (tap-hold-release-timeout 200 200 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
 )
 
 (deflayermap (extend)
   q (tap-hold 200 200 esc lalt)
-  w lmet
+  y pgup
+  u home
+  i up
+  o end
+  p ins
   a lctl
   s lsft
   d lmet
   f lalt
+  h pgdn
   j left
   k down
   l rght
-  i up
-  u home
-  o end
-  y pgup
-  h pgdn
-  p ins
-  m bspc
   ; del
   ' esc
+  m bspc
   , spc
   . tab
   / ret
@@ -59,6 +62,7 @@
   u f7
   i f8
   o f9
+  p f10
   [ f11
   ] f12
   a (tap-hold-release 200 200 1 lctl)
@@ -76,7 +80,7 @@
   x vold
   c volu
   v pp
-  b (layer-switch personal)
+  b (layer-switch custom)
   n `
   m -
   , =
@@ -86,6 +90,8 @@
   lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
 )
 
-(deflayermap (personal)
-  m M-pgup
+(deflayermap (custom)
+  a M-pgup
+  a M-pgdn
+;;Your macros, shortcuts and special keys here.
 )

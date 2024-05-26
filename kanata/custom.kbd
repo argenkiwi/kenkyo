@@ -1,0 +1,25 @@
+;; The custom layer is meant to provide a place where you can add macros, shortcuts and
+;; special keys that might be relevant to your workflow. You can access it by holding the
+;; space-bar and immediately tapping `b`. The layer will remain active until the space-bar
+;; is released.
+
+(defsrc
+)
+
+(defvirtualkeys
+  clear (layer-switch main)
+)
+
+(deflayermap (main)
+  spc (tap-hold-release-timeout 200 200 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
+)
+
+(deflayermap (fumbol)
+  b (layer-switch custom)
+)
+
+(deflayermap (custom)
+  a M-pgup
+  a M-pgdn
+;;Your macros, shortcuts and special keys here.
+)
