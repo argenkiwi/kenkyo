@@ -1,0 +1,49 @@
+;; The extend layer, or at least the variant proposed  here, is meant to be used for
+;; navigation and editing.
+;;
+;; You can activate it by holding caps-lock while typing for quick corrections, like
+;; deleting a character or word, repositioning the cursor, etc. For more complex tasks you
+;; can anchor the layer by holding space-bar and immediately tapping caps-lock. The layer
+;; will remain active until the space-bar is released.
+;;
+;; Vim users might prefer to bind left, down up and right to h, j, k and l respectively as
+;; well as binding caps-lock to escape.
+
+(defsrc
+)
+
+(defvirtualkeys
+  clear (layer-switch main)
+)
+
+(deflayermap (main)
+  caps (tap-hold-press 200 200 caps (layer-while-held extend))
+  spc (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
+)
+
+(deflayermap (fumbol)
+  caps (tap-hold-press 200 200 (layer-switch extend) (layer-while-held extend))
+)
+
+(deflayermap (extend)
+  q (tap-hold 200 200 esc lalt)
+  y pgup
+  u home
+  i up
+  o end
+  p ins
+  a lctl
+  s lsft
+  d lmet
+  f lalt
+  h pgdn
+  j left
+  k down
+  l rght
+  ; del
+  ' esc
+  m bspc
+  , spc
+  . tab
+  / ret
+)

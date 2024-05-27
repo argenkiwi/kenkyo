@@ -1,6 +1,8 @@
-;; The fumbol layer contains function, number and symbol keys as well as optional media keys.
-;; The personal layer should contain personalized macros and/or shortcuts relevant to the user.
-;; Hold the space-bar to activate the layer-carousel (defaults to fumbol).  Press 'b' to swap layers.
+;; The fumbol layer contains the function, number and symbol keys that are outside the
+;; central area of the keyboard. Its purpose is to avoid having to move your hand away by 
+;; instead bringing those keys under your fingertips when needed. The top row (q to |) 
+;; consists of the 12 function keys. The middle (home) row consists of numbers and the 
+;; pipe (|) symbol. The bottom row consists of the media keys and the remaining symbols.
 
 (defsrc
 )
@@ -10,7 +12,7 @@
 )
 
 (deflayermap (fumbol)
-  spc (tap-hold-release 200 200 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)))
+  spc (tap-hold-release 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)))
 )
 
 (deflayermap (fumbol)
@@ -24,6 +26,7 @@
   u f7
   i f8
   o f9
+  p f10
   [ f11
   ] f12
   a (tap-hold-release 200 200 1 lctl)
@@ -41,15 +44,9 @@
   x vold
   c volu
   v pp
-  b (layer-switch personal)
   n '
   m -
   , =
   . [
   / ]
-)
-
-(deflayermap (personal)
-  b (layer-switch fumbol)
-  m M-pgup
 )
