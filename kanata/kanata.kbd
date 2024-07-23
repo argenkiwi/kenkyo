@@ -17,14 +17,14 @@
 )
 
 (deflayermap (main)
-  a (tap-hold-release 200 200 a lctl)
+  a (tap-hold-release 200 200 a lmet)
   s (tap-hold-release 200 200 s lsft)
-  d (tap-hold-release 200 200 d lmet)
+  d (tap-hold-release 200 200 d lctl)
   f (tap-hold-release 200 200 f lalt)
   j (tap-hold-release 200 200 j lalt)
-  k (tap-hold-release 200 200 k rmet)
+  k (tap-hold-release 200 200 k rctl)
   l (tap-hold-release 200 200 l rsft)
-  ; (tap-hold-release 200 200 ; rctl)
+  ; (tap-hold-release 200 200 ; rmet)
   v (tap-hold-release 200 200 v ralt)
   m (tap-hold-release 200 200 m ralt)
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
@@ -32,16 +32,16 @@
 )
 
 (deflayermap (extend)
-  q (tap-hold 200 200 esc lalt)
+  q esc
+  w lmet
   y pgup
   u home
   i up
   o end
   p ins
-  a lctl
-  s lsft
-  d lmet
-  f lalt
+  a lsft
+  s lctl
+  d lalt
   h pgdn
   j left
   k down
@@ -68,16 +68,16 @@
   p f10
   [ f11
   ] f12
-  a (tap-hold-release 200 200 1 lctl)
+  a (tap-hold-release 200 200 1 lmet)
   s (tap-hold-release 200 200 2 lsft)
-  d (tap-hold-release 200 200 3 lmet)
+  d (tap-hold-release 200 200 3 lctl)
   f (tap-hold-release 200 200 4 lalt)
   g 5
   h 6
   j (tap-hold-release 200 200 7 ralt)
-  k (tap-hold-release 200 200 8 rmet)
+  k (tap-hold-release 200 200 8 rctl)
   l (tap-hold-release 200 200 9 rsft)
-  ; (tap-hold-release 200 200 0 rctl)
+  ; (tap-hold-release 200 200 0 rmet)
   ' \
   z mute
   x vold
