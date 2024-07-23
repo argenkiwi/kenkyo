@@ -7,8 +7,8 @@ A layered keyboard layout for standard ANSI keyboards
 **TL;DR;** Install one of the supported keyboard customisation applications, place the
 configuration file we provide in the recommended location and use as follows:
 
-- Hold a, s, d, f and v for control, shift, meta, alt and altgr respectively.
-- Hold m, j, k, l and semicolon for altgr, alt, meta, shift and control respectively.
+- Hold a, s, d, f and v for meta, shift, control, alt and altgr respectively.
+- Hold m, j, k, l and semicolon for altgr, alt, control, shift and meta respectively.
 - Hold caps-lock to activate the extend (navigation/editing) layer.
 - Hold space-bar (anchor key) and immediately tap:
   - caps-lock to anchor the extend layer
