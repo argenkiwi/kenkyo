@@ -2,21 +2,12 @@
 ;; Hold a, s, d, f and v for control, shift, meta, alt and altgr respectively.
 ;; Hold m, j, k, l and semicolon for altgr, alt, meta, shift and control respectively.
 ;; Hold caps-lock to activate the extend (navigation/editing) layer.
-;; Hold space-bar (anchor key) and immediately tap:
-;; - caps-lock to anchor the extend layer
-;; - left-shift to anchor the shift layer
-;; - 'b' to anchor your custom (macros, shortcuts, etc.) layer
-;; - any other key to anchor the fumbol (function/number/symbol) layer
+;; Hold space-bar and immediately tap any other key to activate the fumbol (function/number/symbol) layer
 (defcfg
   process-unmapped-keys false
 )
 
 (defsrc
-)
-
-(defvirtualkeys
-  shift (multi (layer-switch main) lsft)
-  clear (multi (layer-switch main) (on-press release-virtualkey shift))
 )
 
 (deflayermap (main)
@@ -31,7 +22,7 @@
   v (tap-hold-release 200 200 v ralt)
   m (tap-hold-release 200 200 m ralt)
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
-  spc (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
+  spc (tap-hold-release-timeout 200 500 spc (layer-while-held fumbol) spc)
 )
 
 (deflayermap (extend)
@@ -92,8 +83,6 @@
   , =
   . [
   / ]
-  caps (tap-hold-press 200 200 (layer-switch extend) (layer-while-held extend))
-  lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
 )
 
 (deflayermap (custom)
