@@ -7,6 +7,9 @@
 ;; - left-shift to anchor the shift layer
 ;; - 'b' to anchor your custom (macros, shortcuts, etc.) layer
 ;; - any other key to anchor the fumbol (function/number/symbol) layer
+(defcfg
+  process-unmapped-keys false
+)
 
 (defsrc
 )
@@ -48,7 +51,7 @@
   l rght
   ; del
   ' esc
-  n comp ;; Disable on MacOS.
+;;n comp ;; Enable if not MacOS.
   m bspc
   , spc
   . tab
