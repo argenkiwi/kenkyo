@@ -10,6 +10,11 @@
 (defsrc
 )
 
+(defvirtualkeys
+  shift (multi (layer-switch main) lsft)
+  clear (multi (layer-switch main) (on-press release-virtualkey shift))
+)
+
 (deflayermap (main)
   a (tap-hold-release 200 200 a lmet)
   s (tap-hold-release 200 200 s lsft)
@@ -22,7 +27,7 @@
   v (tap-hold-release 200 200 v ralt)
   m (tap-hold-release 200 200 m ralt)
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
-  spc (tap-hold-release-timeout 200 500 spc (layer-while-held fumbol) spc)
+  spc (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
 )
 
 (deflayermap (extend)
@@ -83,6 +88,8 @@
   , =
   . [
   / ]
+  caps (tap-hold-press 200 200 (layer-switch extend) (layer-while-held extend))
+  lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
 )
 
 (deflayermap (custom)
