@@ -49,7 +49,6 @@
   k down
   l rght
   ; del
-  ' esc
 ;;n comp ;; Enable if not MacOS.
   m bspc
   , spc
