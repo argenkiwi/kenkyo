@@ -10,7 +10,6 @@ A layered layout designed to augment your ANSI keyboard's capabilities without m
 - Hold `M`, `J`, `K`, `L` and `;` for `AltGr`, `Alt`, `Control`, `Shift` and `Meta` respectively.
 - Hold `Caps-lock` to activate the extend (navigation/editing) layer.
 - Hold the spacebar (anchor key) and immediately tap:
-  - `Caps-lock` to anchor the extend layer
   - `Shift` to anchor the shift layer
   - `B` to anchor your custom (macros, shortcuts, etc.) layer
   - any other key to anchor the fumbol (function/number/symbol) layer
