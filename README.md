@@ -49,4 +49,3 @@ workflows without having to spend too much money on expensive hardware, or too m
 
 - [Kanata](https://github.com/jtroo/kanata)
 - [Keyd](https://github.com/rvaiya/keyd)
-- [Karabiner](https://github.com/pqrs-org/Karabiner-Elements) + [Goku](https://github.com/yqrashawn/GokuRakuJoudo) (partial implementation)
