@@ -29,7 +29,7 @@
   ; (tap-hold-release-timeout 200 500 ; rmet ;)
   v (tap-hold-release-timeout 200 500 v ralt v)
   m (tap-hold-release-timeout 200 500 m ralt m)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
+  caps (tap-hold-press-timeout 200 500 caps (layer-while-held extend) caps)
   spc (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
 )
 
