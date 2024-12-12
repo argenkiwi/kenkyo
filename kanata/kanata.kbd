@@ -19,6 +19,7 @@
 )
 
 (deflayermap (main)
+  caps (tap-hold-press-timeout 200 500 caps (layer-while-held extend) caps)
   a (tap-hold-release-timeout 200 500 a lmet a)
   s (tap-hold-release-timeout 200 500 s lsft s)
   d (tap-hold-release-timeout 200 500 d lctl d)
@@ -29,7 +30,6 @@
   ; (tap-hold-release-timeout 200 500 ; rmet ;)
   v (tap-hold-release-timeout 200 500 v ralt v)
   m (tap-hold-release-timeout 200 500 m ralt m)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
   spc (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
 )
 
@@ -69,6 +69,8 @@
   p f10
   [ f11
   ] f12
+  \ f13
+  caps (tap-hold-press 200 200 caps (layer-while-held extend))
   a (tap-hold-release-timeout 200 500 1 lmet 1)
   s (tap-hold-release-timeout 200 500 2 lsft 2)
   d (tap-hold-release-timeout 200 500 3 lctl 3)
@@ -80,6 +82,7 @@
   l (tap-hold-release-timeout 200 500 9 rsft 9)
   ; (tap-hold-release-timeout 200 500 0 rmet 0)
   ' \
+  lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
   z mute
   x vold
   c volu
@@ -90,12 +93,20 @@
   , =
   . [
   / ]
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
-  lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
 )
 
 (deflayermap (custom)
-  a M-pgup
-  s M-pgdn
+  caps (tap-hold-press 200 200 caps (layer-while-held extend))
+  a (tap-hold-release-timeout 200 500 f14 lmet f14)
+  s (tap-hold-release-timeout 200 500 f15 lsft f15)
+  d (tap-hold-release-timeout 200 500 f16 lctl f16)
+  f (tap-hold-release-timeout 200 500 f17 lalt f17)
+  g f18
+  h f19
+  j (tap-hold-release-timeout 200 500 f20 lalt f20)
+  k (tap-hold-release-timeout 200 500 f21 lctl f21)
+  l (tap-hold-release-timeout 200 500 f22 lsft f21)
+  ; (tap-hold-release-timeout 200 500 f23 lmet f23)
+  ' f24
 ;;Your macros, shortcuts and special keys here.
 )
