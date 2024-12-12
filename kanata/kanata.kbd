@@ -69,6 +69,7 @@
   p f10
   [ f11
   ] f12
+  \ f13
   a (tap-hold-release-timeout 200 500 1 lmet 1)
   s (tap-hold-release-timeout 200 500 2 lsft 2)
   d (tap-hold-release-timeout 200 500 3 lctl 3)
@@ -95,7 +96,16 @@
 )
 
 (deflayermap (custom)
-  a M-pgup
-  s M-pgdn
+  a f14
+  s f15
+  d f16
+  f f17
+  g f18
+  h f19
+  j f20
+  k f21
+  l f22
+  ; f23
+  ' f24
 ;;Your macros, shortcuts and special keys here.
 )
