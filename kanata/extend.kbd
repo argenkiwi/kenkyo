@@ -47,3 +47,7 @@
 (deflayermap (fumbol)
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
 )
+
+(deflayermap (custom)
+  caps (tap-hold-press 200 200 caps (layer-while-held extend))
+)
