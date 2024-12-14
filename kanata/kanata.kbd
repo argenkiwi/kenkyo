@@ -81,18 +81,18 @@
   k (tap-hold-release-timeout 200 500 8 rctl 8)
   l (tap-hold-release-timeout 200 500 9 rsft 9)
   ; (tap-hold-release-timeout 200 500 0 rmet 0)
-  ' \
+  ' (layer-switch custom)
   lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
-  z mute
-  x vold
-  c volu
+  z `
+  x -
+  c =
   v pp
-  b (layer-switch custom)
-  n `
-  m -
-  , =
-  . [
-  / ]
+  b mute
+  n vold
+  m volu
+  , [
+  . ]
+  / \
 )
 
 (deflayermap (custom)
