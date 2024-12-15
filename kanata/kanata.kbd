@@ -93,6 +93,7 @@
   , [
   . ]
   / \
+  rsft (tap-hold 200 200 (on-press press-virtualkey shift) rsft)
 )
 
 (deflayermap (custom)
