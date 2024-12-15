@@ -96,7 +96,19 @@
 )
 
 (deflayermap (custom)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
+  q f1
+  w f2
+  e f3
+  r f4
+  t f5
+  y f6
+  u f7
+  i f8
+  o f9
+  p f10
+  [ f11
+  ] f12
+  \ f13
   a (tap-hold-release-timeout 200 500 f14 lmet f14)
   s (tap-hold-release-timeout 200 500 f15 lsft f15)
   d (tap-hold-release-timeout 200 500 f16 lctl f16)
