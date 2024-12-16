@@ -81,22 +81,35 @@
   k (tap-hold-release-timeout 200 500 8 rctl 8)
   l (tap-hold-release-timeout 200 500 9 rsft 9)
   ; (tap-hold-release-timeout 200 500 0 rmet 0)
-  ' \
+  ' (layer-switch custom)
   lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
-  z mute
-  x vold
-  c volu
+  z `
+  x -
+  c =
   v pp
-  b (layer-switch custom)
-  n `
-  m -
-  , =
-  . [
-  / ]
+  b mute
+  n vold
+  m volu
+  , [
+  . ]
+  / \
+  rsft (tap-hold 200 200 (on-press press-virtualkey shift) rsft)
 )
 
 (deflayermap (custom)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
+  q f1
+  w f2
+  e f3
+  r f4
+  t f5
+  y f6
+  u f7
+  i f8
+  o f9
+  p f10
+  [ f11
+  ] f12
+  \ f13
   a (tap-hold-release-timeout 200 500 f14 lmet f14)
   s (tap-hold-release-timeout 200 500 f15 lsft f15)
   d (tap-hold-release-timeout 200 500 f16 lctl f16)
