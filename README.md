@@ -37,7 +37,7 @@ While on the _fumbol_ layer you can tap one of the `shift` keys to anchor the _s
   
 [Custom (or personal) layer](https://www.keyboard-layout-editor.com/##@_name=Custom;&@_w:1.5;&=Tab&=Q&=W&=E&=R&=T&=Y&=U&=I&=O&=P&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_c=#90D5FF&w:1.75;&=Caps%20Lock%0A%0A%0A%0A%0A%0A%0A%0A%0AExtend&=F14%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=F15%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=F16%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=F17%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=F18&=F19&=F20%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=F21%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=F22%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=F23%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=F24&_c=#cccccc&w:2.25;&=Enter;&@_w:2.25;&=Shift&=Z&=X&=C&=V&=B&=N&=M&=%3C%0A,&=%3E%0A.&=?%0A//&_w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
   
-![Custom layer image](images/custom.png)
+### ![Custom layer image](images/custom.png)
 
 Finally, this layer is intended to provide a place for shortcuts, macros, etc., that you may find useful in your own workflow.
 
