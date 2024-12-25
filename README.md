@@ -11,7 +11,7 @@ A layered keyboard layout designed to augment your keyboard's capabilities witho
 ![Main layer image](images/main.png)
 
 The default layer of this layout makes use of _Home Row Modifiers_ (see [patterns](#patterns)):
-- Hold `A`, `B`, `D`, `F` and `V` for `Meta` (Win/Command), `Shift`, `Control`, `Alt` and `AltGr` respectively.
+- Hold `A`, `S`, `D`, `F` and `V` for `Meta` (Win/Command), `Shift`, `Control`, `Alt` and `AltGr` respectively.
 - Hold `M`, `J`, `K`, `L` and `;` for `AltGr`, `Alt`, `Control`, `Shift` and `Meta` respectively.
 
 It is also an entry point to the following layers.
