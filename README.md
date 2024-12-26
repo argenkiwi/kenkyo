@@ -1,6 +1,6 @@
 # Kenkyo
 
-A layered keyboard layout designed to augment your keyboard's capabilities without changing its expected behaviour, so you can remain productive as you learn to use it.
+A layered keyboard layout designed to augment your keyboard's capabilities without changing its default behaviour, so you can remain productive as you learn to use it.
 
 > Kenkyo (謙虚) is the Japanese term for humility or modesty.
 
@@ -41,7 +41,7 @@ While on the _fumbol_ layer you can tap one of the `shift` keys to anchor the _s
 
 Finally, this layer is intended to provide a place for shortcuts, macros, etc., that you may find useful in your own workflow.
 
-As an example, function keys that are rarely physically present on a keyboard but generally recognized by most operating systems where distributed along the home row. Many applications will allow you to assign particular behaviours to them which can open up opportunities to simplify and speed up repetitive or frequent tasks.
+As an example, function keys that are rarely physically present on a keyboard but generally recognized by most operating systems were distributed along the home row. Many applications will allow you to assign particular behaviours to them which can open up opportunities to simplify and speed up repetitive or frequent tasks.
 
 ## Instructions
 
@@ -53,8 +53,8 @@ To provide a starting point for the keyboard customization journey of those who 
 
 ## Principles
 
-- Seamlessness: A user that is unaware or the presence of this layout should not be able to tell it is there. 
-- Progressiveness: A new user of the layout should be able to adopt the layout gradually and always have the option to fall-back to pre-existing habits if necessary.
+- Seamlessness: A user that is unaware of the presence of this layout should not be able to tell it is there. 
+- Progressiveness: A new user of the layout should be able to adopt the layout gradually and always have the option to fall back to pre-existing habits if necessary.
 - Composability: The layout should be built on well known patterns that can be applied together or individually.
 - Efficiency: The layout should endeavour to strike a balance between the effort required for its use (i.e. hand motion) and that required to learn it (i.e., complexity).
   
