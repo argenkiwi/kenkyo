@@ -10,7 +10,10 @@
 )
 
 (deflayermap (main)
-  spc (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
+  spc (switch
+    ((key-timing 1 less-than 200)) _ break 
+    () (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc) break
+  )
 )
 
 (deflayermap (fumbol)
