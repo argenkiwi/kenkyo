@@ -13,9 +13,11 @@
 (defsrc
 )
 
-(defvar
-  key-recency 3
-  key-time 300
+(deftemplate charmod (char mod)
+  (switch 
+    ((key-timing 3 less-than 450)) $char break
+    () (tap-hold-release-timeout 200 500 $char $mod $char) break
+  )
 )
 
 (defvirtualkeys
@@ -25,16 +27,16 @@
 
 (deflayermap (main)
   caps (tap-hold-press-timeout 200 500 caps (layer-while-held extend) caps)
-  a (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 a lmet a) break)
-  s (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 s lsft s) break)
-  d (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 d lctl d) break)
-  f (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 f lalt f) break)
-  j (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 j lalt j) break)
-  k (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 k rctl k) break)
-  l (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 l rsft l) break)
-  ; (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 ; rmet ;) break)
-  v (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 v ralt v) break)
-  m (switch ((key-timing $key-recency less-than $key-time)) _ break () (tap-hold-release-timeout 200 500 m ralt m) break)
+  a (t! charmod a lmet)
+  s (t! charmod s lsft)
+  d (t! charmod d lctl)
+  f (t! charmod f lalt)
+  j (t! charmod j lalt)
+  k (t! charmod k rctl)
+  l (t! charmod l rsft)
+  ; (t! charmod ; rmet)
+  v (t! charmod v ralt)
+  m (t! charmod m ralt)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc) break
@@ -79,16 +81,16 @@
   ] f12
   \ f13
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
-  a (switch ((key-timing $key-recency less-than $key-time)) 1 break () (tap-hold-release-timeout 200 500 1 lmet 1) break)
-  s (switch ((key-timing $key-recency less-than $key-time)) 2 break () (tap-hold-release-timeout 200 500 2 lsft 2) break)
-  d (switch ((key-timing $key-recency less-than $key-time)) 3 break () (tap-hold-release-timeout 200 500 3 lctl 3) break)
-  f (switch ((key-timing $key-recency less-than $key-time)) 4 break () (tap-hold-release-timeout 200 500 4 lalt 4) break)
+  a (t! charmod 1 lmet)
+  s (t! charmod 2 lsft)
+  d (t! charmod 3 lctl)
+  f (t! charmod 4 lalt)
   g 5
   h 6
-  j (switch ((key-timing $key-recency less-than $key-time)) 7 break () (tap-hold-release-timeout 200 500 7 lalt 7) break)
-  k (switch ((key-timing $key-recency less-than $key-time)) 8 break () (tap-hold-release-timeout 200 500 8 rctl 8) break)
-  l (switch ((key-timing $key-recency less-than $key-time)) 9 break () (tap-hold-release-timeout 200 500 9 rsft 9) break)
-  ; (switch ((key-timing $key-recency less-than $key-time)) 0 break () (tap-hold-release-timeout 200 500 0 rmet 0) break)
+  j (t! charmod 7 ralt)
+  k (t! charmod 8 rctl)
+  l (t! charmod 9 rsft)
+  ; (t! charmod 0 rmet)
   ' (layer-switch custom)
   lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
   z `
