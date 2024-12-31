@@ -20,17 +20,20 @@
 
 (deflayermap (main)
   caps (tap-hold-press-timeout 200 500 caps (layer-while-held extend) caps)
-  a (tap-hold-release-timeout 200 500 a lmet a)
-  s (tap-hold-release-timeout 200 500 s lsft s)
-  d (tap-hold-release-timeout 200 500 d lctl d)
-  f (tap-hold-release-timeout 200 500 f lalt f)
-  j (tap-hold-release-timeout 200 500 j lalt j)
-  k (tap-hold-release-timeout 200 500 k rctl k)
-  l (tap-hold-release-timeout 200 500 l rsft l)
-  ; (tap-hold-release-timeout 200 500 ; rmet ;)
-  v (tap-hold-release-timeout 200 500 v ralt v)
-  m (tap-hold-release-timeout 200 500 m ralt m)
-  spc (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc)
+  a (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 a lmet a) break)
+  s (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 s lsft s) break)
+  d (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 d lctl d) break)
+  f (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 f lalt f) break)
+  j (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 j lalt j) break)
+  k (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 k rctl k) break)
+  l (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 l rsft l) break)
+  ; (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 ; rmet ;) break)
+  v (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 v ralt v) break)
+  m (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 m ralt m) break)
+  spc (switch
+    ((key-timing 1 less-than 200)) _ break 
+    () (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc) break
+  )
 )
 
 (deflayermap (extend)
@@ -71,16 +74,16 @@
   ] f12
   \ f13
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
-  a (tap-hold-release-timeout 200 500 1 lmet 1)
-  s (tap-hold-release-timeout 200 500 2 lsft 2)
-  d (tap-hold-release-timeout 200 500 3 lctl 3)
-  f (tap-hold-release-timeout 200 500 4 lalt 4)
+  a (switch ((key-timing 2 less-than 200)) 1 break () (tap-hold-release-timeout 200 500 1 lmet 1) break)
+  s (switch ((key-timing 2 less-than 200)) 2 break () (tap-hold-release-timeout 200 500 2 lsft 2) break)
+  d (switch ((key-timing 2 less-than 200)) 3 break () (tap-hold-release-timeout 200 500 3 lctl 3) break)
+  f (switch ((key-timing 2 less-than 200)) 4 break () (tap-hold-release-timeout 200 500 4 lalt 4) break)
   g 5
   h 6
-  j (tap-hold-release-timeout 200 500 7 ralt 7)
-  k (tap-hold-release-timeout 200 500 8 rctl 8)
-  l (tap-hold-release-timeout 200 500 9 rsft 9)
-  ; (tap-hold-release-timeout 200 500 0 rmet 0)
+  j (switch ((key-timing 2 less-than 200)) 7 break () (tap-hold-release-timeout 200 500 7 lalt 7) break)
+  k (switch ((key-timing 2 less-than 200)) 8 break () (tap-hold-release-timeout 200 500 8 rctl 8) break)
+  l (switch ((key-timing 2 less-than 200)) 9 break () (tap-hold-release-timeout 200 500 9 rsft 9) break)
+  ; (switch ((key-timing 2 less-than 200)) 0 break () (tap-hold-release-timeout 200 500 0 rmet 0) break)
   ' (layer-switch custom)
   lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
   z `
