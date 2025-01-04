@@ -9,7 +9,7 @@
 
 (deftemplate charmod (char mod)
   (switch 
-    ((key-timing 3 less-than 450)) $char break
+    ((key-timing 3 less-than 250)) $char break
     () (tap-hold-release-timeout 200 500 $char $mod $char) break
   )
 )
@@ -38,26 +38,27 @@
   p f10
   [ f11
   ] f12
+  \ f13
   a (t! charmod 1 lmet)
   s (t! charmod 2 lsft)
   d (t! charmod 3 lctl)
   f (t! charmod 4 lalt)
   g 5
   h 6
-  j (t! charmod 7 ralt)
+  j (t! charmod 7 lalt)
   k (t! charmod 8 rctl)
   l (t! charmod 9 rsft)
   ; (t! charmod 0 rmet)
-  ' \
-  z mute
-  x vold
-  c volu
-  v pp
-  b (layer-switch custom)
-  n `
-  m -
-  , =
-  . [
-  / ]
+  ' (layer-switch custom)
+  z `
+  x -
+  c =
+  v (t! charmod pp ralt)
+  b mute
+  n vold
+  m (t! charmod volu ralt)
+  , [
+  . ]
+  / \
   caps (tap-hold-press 200 200 caps (layer-while-held extend))
 )

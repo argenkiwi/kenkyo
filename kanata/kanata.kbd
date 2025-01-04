@@ -7,7 +7,7 @@
 ;; - 'b' to anchor your custom (macros, shortcuts, etc.) layer
 ;; - any other key to anchor the fumbol (function/number/symbol) layer
 (defcfg
-  process-unmapped-keys false
+  process-unmapped-keys no
 )
 
 (defsrc
@@ -15,7 +15,7 @@
 
 (deftemplate charmod (char mod)
   (switch 
-    ((key-timing 3 less-than 450)) $char break
+    ((key-timing 3 less-than 250)) $char break
     () (tap-hold-release-timeout 200 500 $char $mod $char) break
   )
 )
@@ -87,7 +87,7 @@
   f (t! charmod 4 lalt)
   g 5
   h 6
-  j (t! charmod 7 ralt)
+  j (t! charmod 7 lalt)
   k (t! charmod 8 rctl)
   l (t! charmod 9 rsft)
   ; (t! charmod 0 rmet)
@@ -96,10 +96,10 @@
   z `
   x -
   c =
-  v pp
+  v (t! charmod pp ralt)
   b mute
   n vold
-  m volu
+  m (t! charmod volu ralt)
   , [
   . ]
   / \
@@ -127,9 +127,9 @@
   g f18
   h f19
   j (tap-hold-release-timeout 200 500 f20 lalt f20)
-  k (tap-hold-release-timeout 200 500 f21 lctl f21)
-  l (tap-hold-release-timeout 200 500 f22 lsft f21)
-  ; (tap-hold-release-timeout 200 500 f23 lmet f23)
+  k (tap-hold-release-timeout 200 500 f21 rctl f21)
+  l (tap-hold-release-timeout 200 500 f22 rsft f21)
+  ; (tap-hold-release-timeout 200 500 f23 rmet f23)
   ' f24
 ;;Your macros, shortcuts and special keys here.
 )
