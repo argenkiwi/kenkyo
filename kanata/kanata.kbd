@@ -84,7 +84,7 @@
   [ f11
   ] f12
   \ f13
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
+  caps (tap-hold-press 200 200 (on-press press-virtualkey shift) (layer-while-held extend))
   a (t! charmod 1 lmet)
   s (t! charmod 2 lsft)
   d (t! charmod 3 lctl)
@@ -96,7 +96,6 @@
   l (t! charmod 9 rsft)
   ; (t! charmod 0 rmet)
   ' (layer-switch custom)
-  lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
   z `
   x -
   c =
@@ -107,7 +106,6 @@
   , [
   . ]
   / \
-  rsft (tap-hold 200 200 (on-press press-virtualkey shift) rsft)
 )
 
 (deflayermap (custom)
