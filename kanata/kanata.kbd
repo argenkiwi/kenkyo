@@ -11,11 +11,15 @@
 )
 
 (defsrc
+       q w e r t y u i o p
+  caps a s d f g h j k l ; '
+       z x c v b n m , . /
+               spc
 )
 
 (deftemplate charmod (char mod)
   (switch 
-    ((key-timing 3 less-than 250)) $char break
+    ((key-timing 3 less-than 375)) $char break
     () (tap-hold-release-timeout 200 500 $char $mod $char) break
   )
 )
