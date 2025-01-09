@@ -3,7 +3,7 @@
 ;; Hold m, j, k, l and semicolon for altgr, alt, meta, shift and control respectively.
 ;; Hold caps-lock to activate the extend (navigation/editing) layer.
 ;; Hold space-bar (anchor key) and immediately tap:
-;; - left-shift to anchor the shift layer
+;; - caps-lock to anchor the shift layer
 ;; - 'b' to anchor your custom (macros, shortcuts, etc.) layer
 ;; - any other key to anchor the fumbol (function/number/symbol) layer
 (defcfg
