@@ -1,6 +1,18 @@
-;; The proposed main layer implements one of the variants of home row modifers.
+;; The proposed main layer implements one of the variants of home row modifers:
+;; - We white-list the core keys of the layout to ensure they are evaluated by the `key-timing` logic.
+;; - `switch` checks if the `key-timing` of the 3rd most recent key is less than a quarter of a second and, if so, skips the modifier evaluation.
+;; - 3 represents the `key-recency` and should equal the maximum number of modifiers to be held simultaneously (accounting for chords).
+;; - 250 represents the elapsed `time` since the key specified above was pressed and it should be adjusted to your typing speed.
+;; - `tap-hold-release-timeout` triggers a modifier while held only if another key is pressed *and* released before the timeout, after which the expected repeat action for the key would trigger instead.
+(defcfg
+  process-unmapped-keys no
+)
 
 (defsrc
+       q w e r t y u i o p
+  caps a s d f g h j k l ; '
+       z x c v b n m , . /
+               spc
 )
 
 (deftemplate charmod (char mod)
