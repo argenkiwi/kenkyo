@@ -42,9 +42,9 @@
   g f18
   h f19
   j (tap-hold-release-timeout 200 500 f20 lalt f20)
-  k (tap-hold-release-timeout 200 500 f21 lctl f21)
-  l (tap-hold-release-timeout 200 500 f22 lsft f21)
-  ; (tap-hold-release-timeout 200 500 f23 lmet f23)
+  k (tap-hold-release-timeout 200 500 f21 rctl f21)
+  l (tap-hold-release-timeout 200 500 f22 rsft f21)
+  ; (tap-hold-release-timeout 200 500 f23 rmet f23)
   ' f24
 ;;Your macros, shortcuts and special keys here.
 )

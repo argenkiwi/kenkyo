@@ -3,14 +3,25 @@
 ;; Hold m, j, k, l and semicolon for altgr, alt, meta, shift and control respectively.
 ;; Hold caps-lock to activate the extend (navigation/editing) layer.
 ;; Hold space-bar (anchor key) and immediately tap:
-;; - left-shift to anchor the shift layer
-;; - 'b' to anchor your custom (macros, shortcuts, etc.) layer
+;; - caps-lock to anchor the shift layer
+;; - `'` to anchor your custom (macros, shortcuts, etc.) layer
 ;; - any other key to anchor the fumbol (function/number/symbol) layer
 (defcfg
-  process-unmapped-keys false
+  process-unmapped-keys no
 )
 
 (defsrc
+       q w e r t y u i o p
+  caps a s d f g h j k l ; '
+       z x c v b n m , . /
+               spc
+)
+
+(deftemplate charmod (char mod)
+  (switch 
+    ((key-timing 3 less-than 375)) $char break
+    () (tap-hold-release-timeout 200 500 $char $mod $char) break
+  )
 )
 
 (defvirtualkeys
@@ -20,16 +31,16 @@
 
 (deflayermap (main)
   caps (tap-hold-press-timeout 200 500 caps (layer-while-held extend) caps)
-  a (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 a lmet a) break)
-  s (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 s lsft s) break)
-  d (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 d lctl d) break)
-  f (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 f lalt f) break)
-  j (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 j lalt j) break)
-  k (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 k rctl k) break)
-  l (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 l rsft l) break)
-  ; (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 ; rmet ;) break)
-  v (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 v ralt v) break)
-  m (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 m ralt m) break)
+  a (t! charmod a lmet)
+  s (t! charmod s lsft)
+  d (t! charmod d lctl)
+  f (t! charmod f lalt)
+  j (t! charmod j lalt)
+  k (t! charmod k rctl)
+  l (t! charmod l rsft)
+  ; (t! charmod ; rmet)
+  v (t! charmod v ralt)
+  m (t! charmod m ralt)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc) break
@@ -73,30 +84,28 @@
   [ f11
   ] f12
   \ f13
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
-  a (switch ((key-timing 2 less-than 200)) 1 break () (tap-hold-release-timeout 200 500 1 lmet 1) break)
-  s (switch ((key-timing 2 less-than 200)) 2 break () (tap-hold-release-timeout 200 500 2 lsft 2) break)
-  d (switch ((key-timing 2 less-than 200)) 3 break () (tap-hold-release-timeout 200 500 3 lctl 3) break)
-  f (switch ((key-timing 2 less-than 200)) 4 break () (tap-hold-release-timeout 200 500 4 lalt 4) break)
+  caps (tap-hold-press 200 200 (on-press press-virtualkey shift) (layer-while-held extend))
+  a (t! charmod 1 lmet)
+  s (t! charmod 2 lsft)
+  d (t! charmod 3 lctl)
+  f (t! charmod 4 lalt)
   g 5
   h 6
-  j (switch ((key-timing 2 less-than 200)) 7 break () (tap-hold-release-timeout 200 500 7 lalt 7) break)
-  k (switch ((key-timing 2 less-than 200)) 8 break () (tap-hold-release-timeout 200 500 8 rctl 8) break)
-  l (switch ((key-timing 2 less-than 200)) 9 break () (tap-hold-release-timeout 200 500 9 rsft 9) break)
-  ; (switch ((key-timing 2 less-than 200)) 0 break () (tap-hold-release-timeout 200 500 0 rmet 0) break)
+  j (t! charmod 7 lalt)
+  k (t! charmod 8 rctl)
+  l (t! charmod 9 rsft)
+  ; (t! charmod 0 rmet)
   ' (layer-switch custom)
-  lsft (tap-hold 200 200 (on-press press-virtualkey shift) lsft)
   z `
   x -
   c =
-  v pp
+  v (t! charmod pp ralt)
   b mute
   n vold
-  m volu
+  m (t! charmod volu ralt)
   , [
   . ]
   / \
-  rsft (tap-hold 200 200 (on-press press-virtualkey shift) rsft)
 )
 
 (deflayermap (custom)
@@ -120,9 +129,9 @@
   g f18
   h f19
   j (tap-hold-release-timeout 200 500 f20 lalt f20)
-  k (tap-hold-release-timeout 200 500 f21 lctl f21)
-  l (tap-hold-release-timeout 200 500 f22 lsft f21)
-  ; (tap-hold-release-timeout 200 500 f23 lmet f23)
+  k (tap-hold-release-timeout 200 500 f21 rctl f21)
+  l (tap-hold-release-timeout 200 500 f22 rsft f21)
+  ; (tap-hold-release-timeout 200 500 f23 rmet f23)
   ' f24
 ;;Your macros, shortcuts and special keys here.
 )

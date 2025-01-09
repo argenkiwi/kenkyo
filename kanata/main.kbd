@@ -1,18 +1,36 @@
-;; The proposed main layer implements one of the variants of home row modifers.
+;; The proposed main layer implements one of the variants of home row modifers:
+;; - We white-list the core keys of the layout to ensure they are evaluated by the `key-timing` logic.
+;; - `switch` checks if the `key-timing` of the 3rd most recent key is less than a quarter of a second and, if so, skips the modifier evaluation.
+;; - 3 represents the `key-recency` and should equal the maximum number of modifiers to be held simultaneously (accounting for chords).
+;; - 250 represents the elapsed `time` since the key specified above was pressed and it should be adjusted to your typing speed.
+;; - `tap-hold-release-timeout` triggers a modifier while held only if another key is pressed *and* released before the timeout, after which the expected repeat action for the key would trigger instead.
+(defcfg
+  process-unmapped-keys no
+)
 
 (defsrc
+       q w e r t y u i o p
+  caps a s d f g h j k l ; '
+       z x c v b n m , . /
+               spc
+)
+
+(deftemplate charmod (char mod)
+  (switch 
+    ((key-timing 3 less-than 250)) $char break
+    () (tap-hold-release-timeout 200 500 $char $mod $char) break
+  )
 )
 
 (deflayermap (main)
-  a (tap-hold-release-timeout 200 500 a lmet a)
-  a (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 a lmet a) break)
-  s (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 s lsft s) break)
-  d (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 d lctl d) break)
-  f (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 f lalt f) break)
-  j (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 j lalt j) break)
-  k (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 k rctl k) break)
-  l (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 l rsft l) break)
-  ; (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 ; rmet ;) break)
-  v (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 v ralt v) break)
-  m (switch ((key-timing 2 less-than 200)) _ break () (tap-hold-release-timeout 200 500 m ralt m) break)
+  a (t! charmod a lmet)
+  s (t! charmod s lsft)
+  d (t! charmod d lctl)
+  f (t! charmod f lalt)
+  j (t! charmod j lalt)
+  k (t! charmod k rctl)
+  l (t! charmod l rsft)
+  ; (t! charmod ; rmet)
+  v (t! charmod v ralt)
+  m (t! charmod m ralt)
 )
