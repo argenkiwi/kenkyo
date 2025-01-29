@@ -39,13 +39,13 @@ The bottom row contains symbols that would otherwise require you to move your ha
 
 While on the _fumbol_ layer you can tap the `CapsLock` key to anchor the _shift_ layer or the apostrophe (`'`) to anchor the optional custom layer described below.
   
-### [Custom (or personal) layer](https://www.keyboard-layout-editor.com/##@_name=Custom;&@_w:1.5;&=Tab&=Q&=W&=E&=R&=T&=Y&=U&=I&=O&=P&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_c=#90D5FF&w:1.75;&=Caps%20Lock%0A%0A%0A%0A%0A%0A%0A%0A%0AExtend&=F14%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=F15%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=F16%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=F17%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=F18&=F19&=F20%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=F21%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=F22%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=F23%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=F24&_c=#cccccc&w:2.25;&=Enter;&@_w:2.25;&=Shift&=Z&=X&=C&=V&=B&=N&=M&=%3C%0A,&=%3E%0A.&=?%0A//&_w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
+### [Custom (or personal) layer](https://www.keyboard-layout-editor.com/##@_name=Custom&author=argenkiwi&notes=https/:////github.com//argenkiwi//kenkyo;&@_w:1.5;&=Tab&_c=#90D5FF;&=F11&=F12&=F13&=F14&=F15&=F16&=F17&=F18&=F19&=F20&_c=#cccccc;&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_c=#90D5FF&w:1.75;&=Caps%20Lock%0A%0A%0A%0A%0A%0A%0A%0A%0AExtend&=!%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=/@%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=#%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=$%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=%25&=%5E&=/&%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=*%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=(%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=)%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&_a:7;&=Fmbl&_c=#cccccc&a:4&w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#90D5FF;&=~&=/_&=+&=F21&=F22&=F23&=F24&=%7B&=%7D&=%7C&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
   
 ![Custom layer image](images/custom.png)
 
 Finally, this layer is intended to provide a place for shortcuts, macros, etc., that you may find useful in your own workflow.
 
-As an example, function keys that are rarely physically present on a keyboard but generally recognized by most operating systems were distributed along the home row. Many applications will allow you to assign particular behaviours to them which can open up opportunities to simplify and speed up repetitive or frequent tasks.
+As an example, function keys that are rarely physically present on a keyboard but generally recognized by most operating systems were distributed along the top and bottom rows. Many applications will allow you to assign particular behaviours to them which can open up opportunities to simplify and speed up repetitive or frequent tasks. Also, this layer contains the shifted alternative for the numbers and symbols present in the fumbol layer described above.
 
 ## Instructions
 
