@@ -1,10 +1,14 @@
 # Kenkyo
 
-A layered keyboard layout designed to augment your keyboard's capabilities without changing its expected behaviour, so you can remain productive as you learn to use it.
+A layered keyboard layout designed to augment your keyboard's capabilities without changing its default behaviour, so you can remain productive as you learn to use it.
 
 > Kenkyo (謙虚) is the Japanese term for humility or modesty.
 
 ## At a glance:
+
+Blue keys represent changes to the default layer. Orange keys represent the key being held to activate the current layer.
+
+> Bear in mind that layer and modifier keys will activate only if another key is tapped immediately after.
 
 ### [Main layer](https://www.keyboard-layout-editor.com/##@_name=Main;&@_w:1.5;&=Tab&=Q&=W&=E&=R&=T&=Y&=U&=I&=O&=P&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_c=#90D5FF&w:1.75;&=Caps%20Lock%0A%0A%0A%0A%0A%0A%0A%0A%0AExtend&=A%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=S%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=D%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=F%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&_c=#cccccc;&=G&=H&_c=#90D5FF;&=J%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=K%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=L%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=/:%0A/;%0A%0A%0A%0A%0A%0A%0A%0AAlt&_c=#cccccc;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&=Z&=X&=C&_c=#90D5FF;&=V%0A%0A%0A%0A%0A%0A%0A%0A%0AAltGr&_c=#cccccc;&=B&=N&_c=#90D5FF;&=M%0A%0A%0A%0A%0A%0A%0A%0A%0AAltGr&_c=#cccccc;&=%3C%0A,&=%3E%0A.&=?%0A//&_w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#90D5FF&a:7&w:6.25;&=Fumbol&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
   
@@ -41,7 +45,7 @@ While on the _fumbol_ layer you can tap the `CapsLock` key to anchor the _shift_
 
 Finally, this layer is intended to provide a place for shortcuts, macros, etc., that you may find useful in your own workflow.
 
-As an example, function keys that are rarely physically present on a keyboard but generally recognized by most operating systems where distributed along the home row. Many applications will allow you to assign particular behaviours to them which can open up opportunities to simplify and speed up repetitive or frequent tasks.
+As an example, function keys that are rarely physically present on a keyboard but generally recognized by most operating systems were distributed along the home row. Many applications will allow you to assign particular behaviours to them which can open up opportunities to simplify and speed up repetitive or frequent tasks.
 
 ## Instructions
 
@@ -53,8 +57,8 @@ To provide a starting point for the keyboard customization journey of those who 
 
 ## Principles
 
-- Seamlessness: A user that is unaware or the presence of this layout should not be able to tell it is there. 
-- Progressiveness: A new user of the layout should be able to adopt the layout gradually and always have the option to fall-back to pre-existing habits if necessary.
+- Seamlessness: A user that is unaware of the presence of this layout should not be able to tell it is there. 
+- Progressiveness: A new user of the layout should be able to adopt the layout gradually and always have the option to fall back to pre-existing habits if necessary.
 - Composability: The layout should be built on well known patterns that can be applied together or individually.
 - Efficiency: The layout should endeavour to strike a balance between the effort required for its use (i.e. hand motion) and that required to learn it (i.e., complexity).
   
