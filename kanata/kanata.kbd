@@ -30,7 +30,6 @@
 )
 
 (deflayermap (main)
-  caps (tap-hold-press-timeout 200 500 caps (layer-while-held extend) caps)
   a (t! charmod a lmet)
   s (t! charmod s lsft)
   d (t! charmod d lctl)
@@ -43,31 +42,38 @@
   m (t! charmod m ralt)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
-    () (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc) break
+    () (tap-hold-release-timeout 200 500 spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) spc) break
+  )
+
+  ralt (switch
+    ((key-timing 1 less-than 200)) bspc break 
+    () (tap-hold-release-timeout 200 500 bspc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) bspc) break
   )
 )
 
 (deflayermap (extend)
-  q esc
-  w lmet
   y pgup
   u home
   i up
   o end
   p ins
-  a lsft
-  s lctl
-  d lalt
+  caps (on-press press-virtualkey shift)
+  a lmet
+  s lsft
+  d lctl
+  f lalt
   h pgdn
   j left
   k down
   l rght
   ; del
+  ' esc
 ;;n comp ;; Enable if not MacOS.
   m bspc
   , spc
   . tab
   / ret
+  ralt bspc
 )
 
 (deflayermap (fumbol)
@@ -84,7 +90,6 @@
   [ f11
   ] f12
   \ f13
-  caps (tap-hold-press 200 200 (on-press press-virtualkey shift) (layer-while-held extend))
   a (t! charmod 1 lmet)
   s (t! charmod 2 lsft)
   d (t! charmod 3 lctl)
@@ -106,6 +111,10 @@
   , [
   . ]
   / \
+  spc (switch
+    ((key-timing 1 less-than 200)) _ break 
+    () (tap-hold-release-timeout 200 500 spc (layer-switch extend) spc) break
+  )
 )
 
 (deflayermap (custom)
