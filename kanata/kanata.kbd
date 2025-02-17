@@ -24,6 +24,30 @@
   )
 )
 
+(defchords mtl 500
+  (w  ) w
+  (  e) e
+  (w e) esc
+)
+
+(defchords mtr 500
+  (i  ) i
+  (  o) o
+  (i o) bspc
+)
+
+(defchords mbl 500
+  (x  ) x
+  (  c) c
+  (x c) tab
+)
+
+(defchords mbr 500
+  (,  ) ,
+  (  .) .
+  (, .) ret
+)
+
 (defvirtualkeys
   shift (multi (layer-switch main) lsft)
   clear (multi (layer-switch main) (on-press release-virtualkey shift))
@@ -31,16 +55,22 @@
 
 (deflayermap (main)
   caps (tap-hold-press-timeout 200 500 caps (layer-while-held extend) caps)
+  w (chord mtl w)
+  e (chord mtl e)
+  i (chord mtr i)
+  o (chord mtr o)
   a (t! charmod a lmet)
-  s (t! charmod s lsft)
+  s (t! charmod s lalt)
   d (t! charmod d lctl)
-  f (t! charmod f lalt)
-  j (t! charmod j lalt)
+  f (t! charmod f lsft)
+  j (t! charmod j rsft)
   k (t! charmod k rctl)
-  l (t! charmod l rsft)
+  l (t! charmod l lalt)
   ; (t! charmod ; rmet)
-  v (t! charmod v ralt)
-  m (t! charmod m ralt)
+  x (chord mbl x)
+  c (chord mbl c)
+  , (chord mbr ,)
+  . (chord mbr .)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc) break
@@ -48,21 +78,22 @@
 )
 
 (deflayermap (extend)
-  q esc
+  q (tap-hold-press 200 200 esc lctl)
   w lmet
   y pgup
   u home
   i up
   o end
   p ins
-  a lsft
+  a lalt
   s lctl
-  d lalt
+  d lsft
   h pgdn
   j left
   k down
   l rght
   ; del
+  ' esc
 ;;n comp ;; Enable if not MacOS.
   m bspc
   , spc
@@ -70,56 +101,116 @@
   / ret
 )
 
+(defchords ftl 500
+  (w  ) (t! charmod f2 ralt)
+  (  e) e
+  (w e) esc
+)
+
+(defchords ftr 500
+  (i  ) i
+  (  o) (t! charmod f9 ralt)
+  (i o) bspc
+)
+
+(defchords fbl 500
+  (x  ) -
+  (  c) =
+  (x c) tab
+)
+
+(defchords fbc 500
+  (v  ) pp
+  (  n) vold
+  (v n) spc
+)
+
+(defchords fbr 500
+  (,  ) [
+  (  .) ]
+  (, .) ret
+)
+
 (deflayermap (fumbol)
   q f1
-  w f2
-  e f3
+  w (chord ftl w)
+  e (chord ftl e)
   r f4
   t f5
   y f6
   u f7
-  i f8
-  o f9
+  i (chord ftr i)
+  o (chord ftr o)
   p f10
   [ f11
   ] f12
   \ f13
   caps (tap-hold-press 200 200 (on-press press-virtualkey shift) (layer-while-held extend))
   a (t! charmod 1 lmet)
-  s (t! charmod 2 lsft)
+  s (t! charmod 2 ralt)
   d (t! charmod 3 lctl)
-  f (t! charmod 4 lalt)
+  f (t! charmod 4 lsft)
   g 5
   h 6
-  j (t! charmod 7 lalt)
+  j (t! charmod 7 rsft)
   k (t! charmod 8 rctl)
-  l (t! charmod 9 rsft)
+  l (t! charmod 9 lalt)
   ; (t! charmod 0 rmet)
   ' (layer-switch custom)
   z `
-  x -
-  c =
-  v (t! charmod pp ralt)
+  x (chord fbl x)
+  c (chord fbl c)
+  v (chord fbc v)
   b mute
-  n vold
-  m (t! charmod volu ralt)
-  , [
-  . ]
+  n (chord fbc n)
+  m volu
+  , (chord fbr ,)
+  . (chord fbr .)
   / \
+)
+
+(defchords ctl 500
+  (w  ) (t! charmod f12 ralt)
+  (  e) f13 
+  (w e) esc
+)
+
+(defchords ctr 500
+  (i  ) f18
+  (  o) (t! charmod f19 ralt)
+  (i o) bspc
+)
+
+(defchords cbl 500
+  (x  ) S--
+  (  c) S-=
+  (x c) tab
+)
+
+(defchords cbc 500
+  (v  ) f21
+  (  n) f23
+  (v n) spc
+)
+
+(defchords cbr 500
+  (,  ) S-[
+  (  .) S-]
+  (, .) ret
 )
 
 (deflayermap (custom)
   q f11
-  w f12
-  e f13
+  w (chord ctl w)
+  e (chord ctl e)
   r f14
   t f15
   y f16 
   u f17
-  i f18
-  o f19
+  i (chord ctr i)
+  o (chord ctr o)
   p f20
-  a (t! charmod S-1 lmet)
+  a S-1
   s (t! charmod S-2 lsft)
   d (t! charmod S-3 lctl)
   f (t! charmod S-4 lalt)
@@ -128,17 +219,17 @@
   j (t! charmod S-7 lalt)
   k (t! charmod S-8 rctl)
   l (t! charmod S-9 rsft)
-  ; (t! charmod S-0 rmet)
+  ; S-0
   ' (layer-switch fumbol)
   z S-`
-  x S--
-  c S-=
-  v f21
+  x (chord cbl x)
+  c (chord cbl c)
+  v (chord cbc v)
   b f22
-  n f23
+  n (chord cbc n)
   m f24
-  , S-[
-  . S-]
+  , (chord cbr ,)
+  . (chord cbr .)
   / S-\
   ;;Your macros, shortcuts and special keys here.
 )
