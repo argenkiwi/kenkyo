@@ -21,37 +21,61 @@
   b (layer-switch custom)
 )
 
+(defchords ctl 500
+  (w  ) (t! charmod f12 ralt)
+  (  e) f13 
+  (w e) esc
+)
+
+(defchords ctr 500
+  (i  ) f18
+  (  o) (t! charmod f19 ralt)
+  (i o) bspc
+)
+
+(defchords cbl 500
+  (x  ) S--
+  (  c) S-=
+  (x c) tab
+)
+
+(defchords cbr 500
+  (,  ) S-[
+  (  .) S-]
+  (, .) ret
+)
+
 (deflayermap (custom)
   q f11
-  w f12
-  e f13
+  w (chord ctl w)
+  e (chord ctl e)
   r f14
   t f15
   y f16 
   u f17
-  i f18
-  o f19
+  i (chord ctr i)
+  o (chord ctr o)
   p f20
   a (t! charmod S-1 lmet)
-  s (t! charmod S-2 lsft)
-  d (t! charmod S-3 lctl)
-  f (t! charmod S-4 lalt)
+  s (t! charmod S-2 lalt)
+  d (t! charmod S-3 lsft)
+  f (t! charmod S-4 lctl)
   g 5
   h 6
-  j (t! charmod S-7 lalt)
-  k (t! charmod S-8 rctl)
-  l (t! charmod S-9 rsft)
+  j (t! charmod S-7 rctl)
+  k (t! charmod S-8 rsft)
+  l (t! charmod S-9 lalt)
   ; (t! charmod S-0 rmet)
   ' (layer-switch fumbol)
   z S-`
-  x S--
-  c S-=
-  v f21
+  x (chord cbl x)
+  c (chord cbl c)
+  v (t! charmod f21 ralt)
   b f22
   n f23
-  m f24
-  , S-[
-  . S-]
+  m (t! charmod f24 ralt)
+  , (chord cbr ,)
+  . (chord cbr .)
   / S-\
   ;;Your macros, shortcuts and special keys here.
 )

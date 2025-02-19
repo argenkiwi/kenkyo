@@ -61,10 +61,10 @@
   o (chord mtr o)
   a (t! charmod a lmet)
   s (t! charmod s lalt)
-  d (t! charmod d lctl)
-  f (t! charmod f lsft)
-  j (t! charmod j rsft)
-  k (t! charmod k rctl)
+  d (t! charmod d lsft)
+  f (t! charmod f lctl)
+  j (t! charmod j rctl)
+  k (t! charmod k rsft)
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
   x (chord mbl x)
@@ -80,7 +80,7 @@
 )
 
 (deflayermap (extend)
-  q (tap-hold-press 200 200 esc lctl)
+  q (tap-hold-press 200 200 esc lsft)
   w lmet
   y pgup
   u home
@@ -88,8 +88,8 @@
   o end
   p ins
   a lalt
-  s lctl
-  d lsft
+  s lsft
+  d lctl
   h pgdn
   j left
   k down
@@ -143,13 +143,13 @@
   \ f13
   caps (tap-hold-press 200 200 (on-press press-virtualkey shift) (layer-while-held extend))
   a (t! charmod 1 lmet)
-  s (t! charmod 2 ralt)
-  d (t! charmod 3 lctl)
-  f (t! charmod 4 lsft)
+  s (t! charmod 2 lalt)
+  d (t! charmod 3 lsft)
+  f (t! charmod 4 lctl)
   g 5
   h 6
-  j (t! charmod 7 rsft)
-  k (t! charmod 8 rctl)
+  j (t! charmod 7 rctl)
+  k (t! charmod 8 rsft)
   l (t! charmod 9 lalt)
   ; (t! charmod 0 rmet)
   ' (layer-switch custom)
@@ -200,16 +200,16 @@
   i (chord ctr i)
   o (chord ctr o)
   p f20
-  a S-1
-  s (t! charmod S-2 lsft)
-  d (t! charmod S-3 lctl)
-  f (t! charmod S-4 lalt)
+  a (t! charmod S-1 lmet)
+  s (t! charmod S-2 lalt)
+  d (t! charmod S-3 lsft)
+  f (t! charmod S-4 lctl)
   g 5
   h 6
-  j (t! charmod S-7 lalt)
-  k (t! charmod S-8 rctl)
-  l (t! charmod S-9 rsft)
-  ; S-0
+  j (t! charmod S-7 rctl)
+  k (t! charmod S-8 rsft)
+  l (t! charmod S-9 lalt)
+  ; (t! charmod S-0 rmet)
   ' (layer-switch fumbol)
   z S-`
   x (chord cbl x)
