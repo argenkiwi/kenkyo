@@ -166,14 +166,14 @@
 )
 
 (defchords ctl 500
-  (w  ) (t! charmod f12 ralt)
+  (w  ) f12
   (  e) f13 
   (w e) esc
 )
 
 (defchords ctr 500
   (i  ) f18
-  (  o) (t! charmod f19 ralt)
+  (  o) f19
   (i o) bspc
 )
 
