@@ -204,8 +204,8 @@
   s (t! charmod S-2 lalt)
   d (t! charmod S-3 lsft)
   f (t! charmod S-4 lctl)
-  g 5
-  h 6
+  g S-5
+  h S-6
   j (t! charmod S-7 rctl)
   k (t! charmod S-8 rsft)
   l (t! charmod S-9 lalt)
