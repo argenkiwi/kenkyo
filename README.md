@@ -8,7 +8,7 @@ A layered keyboard layout designed to augment your keyboard's capabilities witho
 
 ### Chords
 
-This layout implements a few common chords, also kown as key combinations or combos, which are available in all layers with the exception of _Extend_:
+This layout implements a few chords, also kown as combos or key combinations, which are common to all layers with the exception of _Extend_:
 
 - `W` + `E`: `Esc`
 - `I` + `O`: `BackSpace`
@@ -36,7 +36,7 @@ It is also an entry point to the following layers.
 ![Extend layer image](images/extend.png)
 
 While holding the `CapsLock` key, with you left hand's little finger, the navigation and editing keys will become accessible under the fingers of your right hand. 
-> Notice your left hand will be displaced to the left by one key. Therefore, to preserve motor memory, the modifiers will shift to the left by one key as well, except for `Meta` which is re-assigned to `W` instead.
+> Notice your left hand will be displaced to the left by one key. Therefore, to preserve motor memory, the modifiers will shift to the left by one key as well, except for `Meta` which is re-assigned to `W` instead. `Q` behaves as `Shift` while held to simplify holding `Shift` + `Meta` while on the Extend layer.
   
 #### [Fumbol](https://www.keyboard-layout-editor.com/##@_name=Fumbol;&@_w:1.5;&=Tab&_c=#90D5FF;&=F1&=F2&=F3&=F4&=F5&=F6&=F7&=F8&=F9&=F10&=F11&=F12&_w:1.5;&=F13;&@_w:1.75;&=Caps%20Lock%0A%0A%0A%0A%0A%0A%0A%0A%0AExtend&=!%0A1%0A%0A%0A%0A%0A%0A%0A%0AMeta&=/@%0A2%0A%0A%0A%0A%0A%0A%0A%0AAlt&=#%0A3%0A%0A%0A%0A%0A%0A%0A%0AShift&=$%0A4%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=%25%0A5&=%5E%0A6&=/&%0A7%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=*%0A8%0A%0A%0A%0A%0A%0A%0A%0AShift&=(%0A9%0A%0A%0A%0A%0A%0A%0A%0AAlt&=)%0A0%0A%0A%0A%0A%0A%0A%0A%0AMeta&_a:7;&=Cstm&_c=#cccccc&a:4&w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#90D5FF;&=~%0A%60&=/_%0A-&=+%0A/=&=%3Ci%20class/='kb%20kb-Multimedia-Play-Pause'%3E%3C//i%3E&=%3Ci%20class/='kb%20kb-Multimedia-Mute-2'%3E%3C//i%3E&=%3Ci%20class/='kb%20kb-Multimedia-Volume-Down-2'%3E%3C//i%3E&=%3Ci%20class/='kb%20kb-Multimedia-Volume-Up-2'%3E%3C//i%3E&=%7B%0A%5B&=%7D%0A%5D&=%7C%0A%5C&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
   
