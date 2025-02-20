@@ -25,16 +25,16 @@
 )
 
 (deflayermap (extend)
-  q esc
+  q (tap-hold-press 200 200 esc lsft)
   w lmet
   y pgup
   u home
   i up
   o end
   p ins
-  a lsft
-  s lctl
-  d lalt
+  a lalt
+  s lsft
+  d lctl
   h pgdn
   j left
   k down
