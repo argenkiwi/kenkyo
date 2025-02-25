@@ -8,6 +8,7 @@
 ;; - any other key to anchor the fumbol (function/number/symbol) layer
 (defcfg
   process-unmapped-keys no
+  concurrent-tap-hold yes
 )
 
 (defsrc
@@ -15,6 +16,13 @@
   caps a s d f g h j k l ; '
        z x c v b n m , . /
                spc
+)
+
+(defchordsv2
+  (w e) esc 50 all-released (extend)
+  (i o) bspc 50 all-released (extend)
+  (x c) tab 50 all-released (extend)
+  (, .) ret 50 all-released (extend)
 )
 
 (deftemplate charmod (char mod)
@@ -29,36 +37,8 @@
   clear (multi (layer-switch main) (on-press release-virtualkey shift))
 )
 
-(defchords mtl 500
-  (w  ) w
-  (  e) e
-  (w e) esc
-)
-
-(defchords mtr 500
-  (i  ) i
-  (  o) o
-  (i o) bspc
-)
-
-(defchords mbl 500
-  (x  ) x
-  (  c) c
-  (x c) tab
-)
-
-(defchords mbr 500
-  (,  ) ,
-  (  .) .
-  (, .) ret
-)
-
 (deflayermap (main)
   caps (tap-hold-press-timeout 200 500 caps (layer-while-held extend) caps)
-  w (chord mtl w)
-  e (chord mtl e)
-  i (chord mtr i)
-  o (chord mtr o)
   a (t! charmod a lmet)
   s (t! charmod s lalt)
   d (t! charmod d lsft)
@@ -67,12 +47,8 @@
   k (t! charmod k rsft)
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
-  x (chord mbl x)
-  c (chord mbl c)
   v (t! charmod v ralt)
   m (t! charmod m ralt)
-  , (chord mbr ,)
-  . (chord mbr .)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc) break
@@ -80,63 +56,39 @@
 )
 
 (deflayermap (extend)
-  q (tap-hold-press 200 200 esc lsft)
+  q lsft
   w lmet
-  y pgup
   u home
   i up
   o end
-  p ins
+  p pgup
   a lalt
   s lsft
   d lctl
-  h pgdn
+  h ins
   j left
   k down
   l rght
-  ; del
+  ; pgdn
   ' esc
-;;n comp ;; Enable if not MacOS.
+;;c comp ;; Enable if not MacOS.
+  n spc
   m bspc
-  , spc
+  , del
   . tab
   / ret
 )
 
-(defchords ftl 500
-  (w  ) f2
-  (  e) f3
-  (w e) esc
-)
-
-(defchords ftr 500
-  (i  ) f8
-  (  o) f9
-  (i o) bspc
-)
-
-(defchords fbl 500
-  (x  ) -
-  (  c) =
-  (x c) tab
-)
-
-(defchords fbr 500
-  (,  ) [
-  (  .) ]
-  (, .) ret
-)
-
 (deflayermap (fumbol)
   q f1
-  w (chord ftl w)
-  e (chord ftl e)
+  w f2
+  e f3
   r f4
   t f5
   y f6
   u f7
-  i (chord ftr i)
-  o (chord ftr o)
+  i f8
+  o f9
   p f10
   [ f11
   ] f12
@@ -154,51 +106,27 @@
   ; (t! charmod 0 rmet)
   ' (layer-switch custom)
   z `
-  x (chord fbl x)
-  c (chord fbl c)
+  x -
+  c =
   v (t! charmod pp ralt)
   b mute
   n vold
   m (t! charmod volu ralt)
-  , (chord fbr ,)
-  . (chord fbr .)
+  , [
+  . ]
   / \
-)
-
-(defchords ctl 500
-  (w  ) f12
-  (  e) f13 
-  (w e) esc
-)
-
-(defchords ctr 500
-  (i  ) f18
-  (  o) f19
-  (i o) bspc
-)
-
-(defchords cbl 500
-  (x  ) S--
-  (  c) S-=
-  (x c) tab
-)
-
-(defchords cbr 500
-  (,  ) S-[
-  (  .) S-]
-  (, .) ret
 )
 
 (deflayermap (custom)
   q f11
-  w (chord ctl w)
-  e (chord ctl e)
+  w f12
+  e f13
   r f14
   t f15
   y f16 
   u f17
-  i (chord ctr i)
-  o (chord ctr o)
+  i f18
+  o f19
   p f20
   a (t! charmod S-1 lmet)
   s (t! charmod S-2 lalt)
@@ -212,14 +140,14 @@
   ; (t! charmod S-0 rmet)
   ' (layer-switch fumbol)
   z S-`
-  x (chord cbl x)
-  c (chord cbl c)
+  x S--
+  c S-=
   v (t! charmod f21 ralt)
   b f22
   n f23
   m (t! charmod f24 ralt)
-  , (chord cbr ,)
-  . (chord cbr .)
+  , S-[
+  . S-]
   / S-\
   ;;Your macros, shortcuts and special keys here.
 )

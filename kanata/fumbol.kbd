@@ -25,40 +25,16 @@
   )
 )
 
-(defchords ftl 500
-  (w  ) f2
-  (  e) f3
-  (w e) esc
-)
-
-(defchords ftr 500
-  (i  ) f8
-  (  o) f9
-  (i o) bspc
-)
-
-(defchords fbl 500
-  (x  ) -
-  (  c) =
-  (x c) tab
-)
-
-(defchords fbr 500
-  (,  ) [
-  (  .) ]
-  (, .) ret
-)
-
 (deflayermap (fumbol)
   q f1
-  w (chord ftl w)
-  e (chord ftl e)
+  w f2
+  e f3
   r f4
   t f5
   y f6
   u f7
-  i (chord ftr i)
-  o (chord ftr o)
+  i f8
+  o f9
   p f10
   [ f11
   ] f12
@@ -76,13 +52,13 @@
   ; (t! charmod 0 rmet)
   ' (layer-switch custom)
   z `
-  x (chord fbl x)
-  c (chord fbl c)
+  x -
+  c =
   v (t! charmod pp ralt)
   b mute
   n vold
   m (t! charmod volu ralt)
-  , (chord fbr ,)
-  . (chord fbr .)
+  , [
+  . ]
   / \
 )
