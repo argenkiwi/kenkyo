@@ -25,7 +25,7 @@
 )
 
 (deflayermap (extend)
-  q (tap-hold-press 200 200 esc lsft)
+  q lsft
   w lmet
   y pgup
   u home
@@ -40,6 +40,7 @@
   k down
   l rght
   ; del
+  ' esc
 ;;n comp ;; Enable if not MacOS.
   m bspc
   , spc

@@ -80,7 +80,7 @@
 )
 
 (deflayermap (extend)
-  q (tap-hold-press 200 200 esc lsft)
+  q lsft
   w lmet
   y pgup
   u home
