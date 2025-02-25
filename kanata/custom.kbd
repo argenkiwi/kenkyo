@@ -6,6 +6,13 @@
 (defsrc
 )
 
+(defchordsv2
+  (w e) esc 50 all-released ()
+  (i o) bspc 50 all-released ()
+  (x c) tab 50 all-released ()
+  (, .) ret 50 all-released ()
+)
+
 (defvirtualkeys
   clear (layer-switch main)
 )
@@ -21,40 +28,16 @@
   b (layer-switch custom)
 )
 
-(defchords ctl 500
-  (w  ) f12
-  (  e) f13 
-  (w e) esc
-)
-
-(defchords ctr 500
-  (i  ) f18
-  (  o) f19
-  (i o) bspc
-)
-
-(defchords cbl 500
-  (x  ) S--
-  (  c) S-=
-  (x c) tab
-)
-
-(defchords cbr 500
-  (,  ) S-[
-  (  .) S-]
-  (, .) ret
-)
-
 (deflayermap (custom)
   q f11
-  w (chord ctl w)
-  e (chord ctl e)
+  w f12
+  e f13
   r f14
   t f15
   y f16 
   u f17
-  i (chord ctr i)
-  o (chord ctr o)
+  i f18
+  o f19
   p f20
   a (t! charmod S-1 lmet)
   s (t! charmod S-2 lalt)
@@ -68,14 +51,14 @@
   ; (t! charmod S-0 rmet)
   ' (layer-switch fumbol)
   z S-`
-  x (chord cbl x)
-  c (chord cbl c)
+  x S--
+  c S-=
   v (t! charmod f21 ralt)
   b f22
   n f23
   m (t! charmod f24 ralt)
-  , (chord cbr ,)
-  . (chord cbr .)
+  , S-[
+  . S-]
   / S-\
   ;;Your macros, shortcuts and special keys here.
 )
