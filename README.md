@@ -8,7 +8,7 @@ A layered keyboard layout designed to augment your keyboard's capabilities witho
 
 ### Chords
 
-This layout implements a few chords, also kown as combos or key combinations, which are common to all layers with the exception of _Extend_:
+This layout implements a few chords, also known as combos or key combinations, which are common to all layers with the exception of _Extend_:
 
 - `W` + `E`: `Esc`
 - `I` + `O`: `BackSpace`
