@@ -57,23 +57,23 @@
 (deflayermap (extend)
   q lsft
   w lmet
-  y pgup
   u home
   i up
   o end
-  p ins
+  p pgup
   a lalt
   s lsft
   d lctl
-  h pgdn
+  h ins
   j left
   k down
   l rght
-  ; del
+  ; pgdn
   ' esc
-;;n comp ;; Enable if not MacOS.
+;;c comp ;; Enable if not MacOS.
+  n spc
   m bspc
-  , spc
+  , del
   . tab
   / ret
 )
