@@ -8,6 +8,7 @@
 ;; - any other key to anchor the fumbol (function/number/symbol) layer
 (defcfg
   process-unmapped-keys no
+  concurrent-tap-hold yes
 )
 
 (defsrc
