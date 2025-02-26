@@ -61,24 +61,23 @@
 )
 
 (deflayermap (extend)
-  y pgup
   u home
   i up
   o end
-  p ins
+  p pgup
   a lmet
   s lalt
   d lsft
   f lctl
-  h pgdn
+  h ins
   j left
   k down
   l rght
-  ; del
-  ' esc
-;;n comp ;; Enable if not MacOS.
+  ; pgdn
+;;v comp ;; Enable if not MacOS.
+  n spc
   m bspc
-  , spc
+  , del
   . tab
   / ret
   ralt esc
