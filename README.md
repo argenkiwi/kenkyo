@@ -31,7 +31,7 @@ The default layer of this layout makes use of _Home Row Modifiers_ (see [pattern
 
 It is also an entry point to the following layers.
   
-#### [Extend](https://www.keyboard-layout-editor.com/##@@_w:1.5;&=Tab&_c=#90D5FF;&=Shift&=Meta&_c=#cccccc;&=E&=R&=T&_c=#90D5FF;&=PgUp&=Home&=%E2%86%91&=End&=Insert&_c=#cccccc;&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_c=#FFA500&w:1.75;&=Caps%20Lock&_c=#90D5FF;&=Alt&=Shift&=Ctrl&_c=#cccccc;&=F&=G&_c=#90D5FF;&=PgDn&=%E2%86%90&=%E2%86%93&=%E2%86%92&=Delete&=Esc&_c=#cccccc;&_w:2.25;&=Enter;&@_w:2.25;&=Shift&=Z&=X&=C&=V&=B&_c=#90D5FF;&=Menu&=Bspc&=Spc&=Tab&=Enter&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_a:7&w:6.25;&=&_a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
+#### [Extend](https://www.keyboard-layout-editor.com/##@_name=extend;&@_w:1.5;&=Tab&_c=#90D5FF;&=Shift&=Meta&_c=#cccccc;&=E&=R&=T&_c=#CCCCCC;&=Y&_c=#90D5FF;&=Home&=%E2%86%91&=End&=PgUp&_c=#cccccc;&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_c=#FFA500&w:1.75;&=Caps%20Lock&_c=#90D5FF;&=Alt&=Shift&=Ctrl&_c=#cccccc;&=F&=G&_c=#90D5FF;&=Insert&=%E2%86%90&=%E2%86%93&=%E2%86%92&=PgDn&=Esc&_c=#cccccc&w:2.25;&=Enter;&@_w:2.25;&=Shift&=Z&=X&_c=#90D5FF;&=Menu&_c=#cccccc;&=V&=B&_c=#90D5FF;&=Spc&=Bspc&=Delete&=Tab&=Enter&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_a:7&w:6.25;&=&_a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
   
 ![Extend layer image](images/extend.png)
 
