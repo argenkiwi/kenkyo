@@ -15,13 +15,6 @@
                spc
 )
 
-(defchordsv2
-  (w e) esc 50 all-released ()
-  (i o) bspc 50 all-released ()
-  (x c) tab 50 all-released ()
-  (, .) ret 50 all-released ()
-)
-
 (deftemplate charmod (char mod)
   (switch 
     ((key-timing 3 less-than 250)) $char break

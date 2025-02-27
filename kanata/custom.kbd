@@ -6,13 +6,6 @@
 (defsrc
 )
 
-(defchordsv2
-  (w e) esc 50 all-released ()
-  (i o) bspc 50 all-released ()
-  (x c) tab 50 all-released ()
-  (, .) ret 50 all-released ()
-)
-
 (defvirtualkeys
   clear (layer-switch main)
 )
