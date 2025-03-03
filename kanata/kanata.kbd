@@ -46,10 +46,10 @@
   k (t! charmod k rsft)
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
-  z (t! charmod z (layer-while-held fumbol))
-  v (t! charmod v ralt)
-  m (t! charmod m ralt)
-  / (t! charmod / (layer-while-held fumbol))
+  z (t! charmod z ralt)
+  v (t! charmod v (layer-while-held fumbol))
+  m (t! charmod m (layer-while-held fumbol))
+  / (t! charmod / ralt)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) spc) break
@@ -58,8 +58,8 @@
 
 (deflayermap (extend)
   q (on-press press-virtualkey shift)
-  e (layer-switch custom)
-  r (layer-switch fumbol)
+  w (layer-switch custom)
+  e (layer-switch fumbol)
   y ins
   u home
   i up
@@ -106,16 +106,16 @@
   k (t! charmod 8 rsft)
   l (t! charmod 9 lalt)
   ; (t! charmod 0 rmet)
-  z `
+  z (t! charmod ` ralt)
   x -
   c =
-  v (t! charmod pp ralt)
+  v pp
   b mute
   n vold
-  m (t! charmod volu ralt)
+  m volu
   , [
   . ]
-  / \
+  / (t! charmod \ ralt)
 )
 
 (deflayermap (custom)
@@ -139,15 +139,15 @@
   k (t! charmod S-8 rsft)
   l (t! charmod S-9 lalt)
   ; (t! charmod S-0 rmet)
-  z S-`
+  z (t! charmod S-` ralt)
   x S--
   c S-=
-  v (t! charmod f21 ralt)
+  v f21
   b f22
   n f23
-  m (t! charmod f24 ralt)
+  m f24
   , S-[
   . S-]
-  / S-\
+  / (t! charmod S-\ ralt)
   ;;Your macros, shortcuts and special keys here.
 )
