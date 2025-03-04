@@ -47,8 +47,10 @@
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
   z (t! charmod z ralt)
+  c (t! charmod c (layer-while-held custom))
   v (t! charmod v (layer-while-held fumbol))
   m (t! charmod m (layer-while-held fumbol))
+  , (t! charmod , (layer-while-held custom))
   / (t! charmod / ralt)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
@@ -57,11 +59,11 @@
 )
 
 (deflayermap (extend)
-  q esc
+;;q comp ;; Enable if not MacOS.
   w (on-press press-virtualkey shift)
   e (layer-switch custom)
   r (layer-switch fumbol)
-;;y comp ;; Enable if not MacOS.
+  y ins
   u home
   i up
   o end
@@ -70,7 +72,7 @@
   s lalt
   d lsft
   f lctl
-  h ins
+  h esc
   j left
   k down
   l rght
