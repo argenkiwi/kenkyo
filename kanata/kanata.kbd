@@ -57,10 +57,11 @@
 )
 
 (deflayermap (extend)
-  q (on-press press-virtualkey shift)
-  w (layer-switch custom)
-  e (layer-switch fumbol)
-  y ins
+  q esc
+  w (on-press press-virtualkey shift)
+  e (layer-switch custom)
+  r (layer-switch fumbol)
+;;y comp ;; Enable if not MacOS.
   u home
   i up
   o end
@@ -69,12 +70,11 @@
   s lalt
   d lsft
   f lctl
-  h esc
+  h ins
   j left
   k down
   l rght
   ; pgdn
-;;v comp ;; Enable if not MacOS.
   n spc
   m bspc
   , del
