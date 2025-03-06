@@ -1,10 +1,7 @@
 ;; TL;DR;
 ;; Hold a, s, d, f and v for control, shift, meta, alt and altgr respectively.
 ;; Hold m, j, k, l and semicolon for altgr, alt, meta, shift and control respectively.
-;; Hold caps-lock to activate the extend (navigation/editing) layer.
 ;; Hold space-bar (anchor key) and immediately tap:
-;; - caps-lock to anchor the shift layer
-;; - `'` to anchor your custom (macros, shortcuts, etc.) layer
 ;; - any other key to anchor the fumbol (function/number/symbol) layer
 (defcfg
   process-unmapped-keys no
@@ -46,12 +43,8 @@
   k (t! charmod k rsft)
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
-  z (t! charmod z ralt)
-  c (t! charmod c (layer-while-held custom))
-  v (t! charmod v (layer-while-held fumbol))
-  m (t! charmod m (layer-while-held fumbol))
-  , (t! charmod , (layer-while-held custom))
-  / (t! charmod / ralt)
+  v (t! charmod v ralt)
+  m (t! charmod m ralt)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) spc) break
@@ -59,9 +52,7 @@
 )
 
 (deflayermap (extend)
-;;q comp ;; Enable if not MacOS.
-  w (on-press press-virtualkey shift)
-  e (layer-switch custom)
+  e (on-press press-virtualkey shift)
   r (layer-switch fumbol)
   y ins
   u home
@@ -72,11 +63,16 @@
   s lalt
   d lsft
   f lctl
+;;q comp ;; Enable if not MacOS.
   h esc
   j left
   k down
   l rght
   ; pgdn
+  z mute
+  x vold
+  c volu
+  v pp
   n spc
   m bspc
   , del
@@ -108,48 +104,14 @@
   k (t! charmod 8 rsft)
   l (t! charmod 9 lalt)
   ; (t! charmod 0 rmet)
-  z (t! charmod ` ralt)
+  z `
   x -
   c =
-  v pp
-  b mute
-  n vold
-  m volu
+  v (t! charmod f11 ralt)
+  b f12
+  n f13
+  m (t! charmod ' ralt)
   , [
   . ]
-  / (t! charmod \ ralt)
-)
-
-(deflayermap (custom)
-  q f11
-  w f12
-  e f13
-  r f14
-  t f15
-  y f16 
-  u f17
-  i f18
-  o f19
-  p f20
-  a (t! charmod S-1 lmet)
-  s (t! charmod S-2 lalt)
-  d (t! charmod S-3 lsft)
-  f (t! charmod S-4 lctl)
-  g S-5
-  h S-6
-  j (t! charmod S-7 rctl)
-  k (t! charmod S-8 rsft)
-  l (t! charmod S-9 lalt)
-  ; (t! charmod S-0 rmet)
-  z (t! charmod S-` ralt)
-  x S--
-  c S-=
-  v f21
-  b f22
-  n f23
-  m f24
-  , S-[
-  . S-]
-  / (t! charmod S-\ ralt)
-  ;;Your macros, shortcuts and special keys here.
+  / \
 )
