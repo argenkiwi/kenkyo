@@ -51,6 +51,8 @@ The function and number keys have been distributed along the top and home (middl
 
 The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. For completeness, F11 and F12 were also placed on the bottom row together with F13, which you choose to use for custom bindings in your favourite applications or to replace with a shortcut or macro of your preference.
 
+Finally, the home and bottom row modifiers are placed to match those of the main layer.
+
 ## Instructions
 
 Install one of the [supported keyboard customisation applications](#keyboard-customisation-software) and place the corresponding configuration file provided by this repository in the recommended location.
