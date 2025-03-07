@@ -33,7 +33,7 @@ The default layer of this layout makes use of _Home Row Modifiers_ (see [pattern
 The bottom row contains layer keys to quickly access funciton, number and symbol keys as well as the AltGr and Meta modifiers to make some key combinations more convenient:
 
 - Hold `Z`, `C` and `V` for `Fumbol`, `AltGr` and `Meta` respectively.
-- Hold `M`, `,` and `/` for `Meta`, `AltGr` and `Fumbol` respectively.
+- Hold `M`, `.` and `/` for `Meta`, `AltGr` and `Fumbol` respectively.
 
 The spacebar is also a layer key and behaves as an entry point to the following layers, defaulting to the Extend layer described below.
   
