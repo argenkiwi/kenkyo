@@ -47,7 +47,9 @@ While holding the spacebar the navigation and editing keys will become accessibl
   
 ![Fumbol layer image](images/fumbol.png)
 
-The function and number keys have been distributed along the top and home (middle) rows so they match the positioning they would have on a physical keyboard (no cheat-sheet required, just look at your keyboard).
+As explained above, this layer can be accessed by holding the layer keys from the main layer or buy holding the spacebar and tapping the Fumbol layer switch key (`R`) on the Extend layer. 
+
+On this layer the function and number keys have been distributed along the top and home (middle) rows so they match the positioning they would have on a physical keyboard (no cheat-sheet required, just look at your keyboard).
 
 The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. For completeness, F11 and F12 were also placed on the bottom row together with F13, which you choose to use for custom bindings in your favourite applications or to replace with a shortcut or macro of your preference.
 
