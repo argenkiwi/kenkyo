@@ -17,11 +17,11 @@ This layout implements a few chords, also known as combos or key combinations, w
 
 ### Layers
 
-Blue keys represent changes to the default layer. Orange indicates the key being held to activate the current layer.
+Blue keys represent changes to the default layer. Orange indicates which keys can activate the current layer while held.
 
 > Bear in mind that layer and modifier keys will activate only if another key is tapped immediately after. Otherwise, the expected repeat or long-press action will be respected (although a slight delay may be perceived).
 
-#### [Main](https://www.keyboard-layout-editor.com/##@_name=Main;&@_w:1.5;&=Tab&=Q&=W&=E&=R&=T&=Y&=U&=I&=O&=P&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_w:1.75;&=Caps%20Lock&_c=#90D5FF;&=A%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=S%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=D%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=F%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&_c=#cccccc;&=G&=H&_c=#90D5FF;&=J%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=K%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=L%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=/:%0A/;%0A%0A%0A%0A%0A%0A%0A%0AMeta&_c=#cccccc;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#90D5FF;&=Z%0A%0A%0A%0A%0A%0A%0A%0A%0AFmbl&=X%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=C%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=V%0A%0A%0A%0A%0A%0A%0A%0A%0AAltGr&_c=#cccccc;&=B&=N&_c=#90D5FF;&=M%0A%0A%0A%0A%0A%0A%0A%0A%0AAltGr&=%3C%0A,%0A%0A%0A%0A%0A%0A%0A%0AShift&=%3E%0A.%0A%0A%0A%0A%0A%0A%0A%0AAlt&=?%0A//%0A%0A%0A%0A%0A%0A%0A%0AFmbl&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#90D5FF&a:7&w:6.25;&=%3Ci%20class/='fa%20fa-thumbs-up'%3E%3C//i%3E&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
+#### [Main](https://www.keyboard-layout-editor.com/##@_name=Main;&@_w:1.5;&=Tab&=Q&=W&=E&=R&=T&=Y&=U&=I&=O&=P&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_w:1.75;&=Caps%20Lock&_c=#90D5FF;&=A%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=S%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=D%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=F%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&_c=#cccccc;&=G&=H&_c=#90D5FF;&=J%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=K%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=L%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=/:%0A/;%0A%0A%0A%0A%0A%0A%0A%0AMeta&_c=#cccccc;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#90D5FF;&=Z%0A%0A%0A%0A%0A%0A%0A%0A%0AFmbl&=X%0A%0A%0A%0A%0A%0A%0A%0A%0AAltGr&_c=#cccccc;&=C&_c=#90D5FF;&=V%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&_c=#cccccc;&=B&=N&_c=#90D5FF;&=M%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&_c=#cccccc;&=%3C%0A,&_c=#90D5FF;&=%3E%0A.%0A%0A%0A%0A%0A%0A%0A%0AAltGr&=?%0A//%0A%0A%0A%0A%0A%0A%0A%0AFmbl&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#90D5FF&a:7&w:6.25;&=%3Ci%20class/='fa%20fa-thumbs-up'%3E%3C//i%3E&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
   
 ![Main layer image](images/main.png)
 
@@ -30,10 +30,10 @@ The default layer of this layout makes use of _Home Row Modifiers_ (see [pattern
 - Hold `A`, `S`, `D` and `F` for `Meta` (Win/Command), `Alt`, `Shift` and `Control` respectively.
 - Hold `J`, `K`, `L` and `;` for `Control`, `Shift`, `Alt` and `Meta` respectively.
 
-The bottom row contains the following modifiers and layer keys:
+The bottom row contains layer keys to quickly access funciton, number and symbol keys as well as the AltGr and Meta modifiers to make some key combinations more convenient:
 
-- Hold 'Z', 'C' and `V` for `AltGr`, `Custom` and `Fumbol` respectively.
-- Hold `M`, `,` and `/` for `Fumbol`, `Custom` and `AltGr` respectively.
+- Hold `Z`, `C` and `V` for `Fumbol`, `AltGr` and `Meta` respectively.
+- Hold `M`, `,` and `/` for `Meta`, `AltGr` and `Fumbol` respectively.
 
 The spacebar is also a layer key and behaves as an entry point to the following layers, defaulting to the Extend layer described below.
   
@@ -41,23 +41,15 @@ The spacebar is also a layer key and behaves as an entry point to the following 
   
 ![Extend layer image](images/extend.png)
 
-While holding the spacebar the navigation and editing keys will become accessible under the fingers of your right hand. With your left hand you will be able to use the modifier keys as well as to switch to the Shift, Fumbol and Custom layers, which will remain active until you release the spacebar.
+While holding the spacebar the navigation and editing keys will become accessible under the fingers of your right hand. With your left hand you will be able to access the modifier and media keys. The Shift and Fumbol keys can be used to switch to the corresponding layer, which will remain active until you release the spacebar.
 
-#### [Fumbol](https://www.keyboard-layout-editor.com/##@_name=Fumbol;&@_w:1.5;&=Tab&_c=#90D5FF;&=F1&=F2&=F3&=F4&=F5&=F6&=F7&=F8&=F9&=F10&_c=#cccccc;&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_w:1.75;&=Caps%20Lock&_c=#90D5FF;&=!%0A1%0A%0A%0A%0A%0A%0A%0A%0AMeta&=/@%0A2%0A%0A%0A%0A%0A%0A%0A%0AAlt&=#%0A3%0A%0A%0A%0A%0A%0A%0A%0AShift&=$%0A4%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=%25%0A5&=%5E%0A6&=/&%0A7%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=*%0A8%0A%0A%0A%0A%0A%0A%0A%0AShift&=(%0A9%0A%0A%0A%0A%0A%0A%0A%0AAlt&=)%0A0%0A%0A%0A%0A%0A%0A%0A%0AMeta&_c=#cccccc;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#FFA500;&=~%0A%60&_c=#90D5FF;&=/_%0A-%0A%0A%0A%0A%0A%0A%0A%0AAlt&=+%0A/=%0A%0A%0A%0A%0A%0A%0A%0AShift&=F11%0A%0A%0A%0A%0A%0A%0A%0A%0AAltGr&=F12&=F13&=%22%0A'%0A%0A%0A%0A%0A%0A%0A%0AAltGr&=%7B%0A%5B%0A%0A%0A%0A%0A%0A%0A%0AShift&=%7D%0A%5D%0A%0A%0A%0A%0A%0A%0A%0AAlt&_c=#FFA500;&=%7C%0A%5C&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
+#### [Fumbol](https://www.keyboard-layout-editor.com/##@_name=Fumbol;&@_w:1.5;&=Tab&_c=#90D5FF;&=F1&=F2&=F3&=F4&=F5&=F6&=F7&=F8&=F9&=F10&_c=#cccccc;&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_w:1.75;&=Caps%20Lock&_c=#90D5FF;&=!%0A1%0A%0A%0A%0A%0A%0A%0A%0AMeta&=/@%0A2%0A%0A%0A%0A%0A%0A%0A%0AAlt&=#%0A3%0A%0A%0A%0A%0A%0A%0A%0AShift&=$%0A4%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=%25%0A5&=%5E%0A6&=/&%0A7%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=*%0A8%0A%0A%0A%0A%0A%0A%0A%0AShift&=(%0A9%0A%0A%0A%0A%0A%0A%0A%0AAlt&=)%0A0%0A%0A%0A%0A%0A%0A%0A%0AMeta&_c=#cccccc;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#FFA500;&=~%0A%60&_c=#90D5FF;&=/_%0A-%0A%0A%0A%0A%0A%0A%0A%0AAltGr&=+%0A/=&=F11%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=F12&=F13&=%22%0A'%0A%0A%0A%0A%0A%0A%0A%0AMeta&=%7B%0A%5B&=%7D%0A%5D%0A%0A%0A%0A%0A%0A%0A%0AAltGr&_c=#FFA500;&=%7C%0A%5C&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
   
 ![Fumbol layer image](images/fumbol.png)
 
 The function and number keys have been distributed along the top and home (middle) rows so they match the positioning they would have on a physical keyboard (no cheat-sheet required, just look at your keyboard).
 
-The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. The order in which they appear on your physical keyboard has been preserved. The remaining 4 keys at the center of the bottom row are used for media playback and volume control.
-
-#### [Custom (or personal)](https://www.keyboard-layout-editor.com/##@_name=Custom&author=argenkiwi&notes=https/:////github.com//argenkiwi//kenkyo;&@_w:1.5;&=Tab&_c=#90D5FF;&=F11&=F12&=F13&=F14&=F15&=F16&=F17&=F18&=F19&=F20&_c=#cccccc;&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_c=#90D5FF&w:1.75;&=Caps%20Lock%0A%0A%0A%0A%0A%0A%0A%0A%0AExtend&=!%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=/@%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=#%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=$%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=%25&=%5E&=/&%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=*%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=(%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=)%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&_a:7;&=Fmbl&_c=#cccccc&a:4&w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#90D5FF;&=~&=/_&=+&=F21&=F22&=F23&=F24&=%7B&=%7D&=%7C&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
-  
-![Custom layer image](images/custom.png)
-
-Finally, this layer is intended to provide a place for shortcuts, macros, etc., that you may find useful in your own workflow.
-
-As an example, function keys that are rarely physically present on a keyboard but generally recognized by most operating systems were distributed along the top and bottom rows. Many applications will allow you to assign particular behaviours to them which can open up opportunities to simplify and speed up repetitive or frequent tasks. Also, this layer contains the shifted alternative for the numbers and symbols present in the fumbol layer described above.
+The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. For completeness, F11 and F12 were also placed on the bottom row together with F13, which you choose to use for custom bindings in your favourite applications or to replace with a shortcut or macro of your preference.
 
 ## Instructions
 
