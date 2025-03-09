@@ -103,12 +103,12 @@
   k (t! charmod 8 rsft)
   l (t! charmod 9 lalt)
   ; (t! charmod 0 rmet)
-  z `
-  x (t! charmod - ralt)
-  c =
-  v (t! charmod f11 lmet)
-  b f12
-  n f13
+  z lsgt
+  x (t! charmod ` ralt)
+  c -
+  v (t! charmod = lmet)
+  b f11
+  n f12
   m (t! charmod ' rmet)
   , [
   . (t! charmod ] ralt)
