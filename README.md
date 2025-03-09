@@ -6,7 +6,7 @@ A layered keyboard layout designed to augment your keyboard's capabilities witho
 
 ## Components
 
-The componets described below assume a physical QWERTY keyboard. 
+The componets described below assume a physical QWERTY keyboard independently of you keyboard language and layout settings. 
 
 ### Chords
 
@@ -32,9 +32,9 @@ The default layer of this layout makes use of _Home Row Modifiers_ (see [pattern
 - Hold `A`, `S`, `D` and `F` for `Meta`, `Alt`, `Shift` and `Control` respectively.
 - Hold `J`, `K`, `L` and `;` for `Control`, `Shift`, `Alt` and `Meta` respectively.
 
-> The `Meta` key is also known as `Win`, `Command`, `Super` or `Gui`. The `Alt` key is referred to as `Option` on MacOS.. 
+> The `Meta` key is also known as `Win`, `Command`, `Super` or `Gui`. The `Alt` key is referred to as `Option` on MacOS. 
 
-The bottom row contains layer keys to quickly access funciton, number and symbol keys as well as the AltGr and Meta modifiers to make some key combinations more convenient:
+The bottom row contains layer keys to quickly access funciton, number and symbol keys as well as the `AltGr` and `Meta` modifiers to make some key combinations more convenient:
 
 - Hold `Z`, `C` and `V` for `Fumbol`, `AltGr` and `Meta` respectively.
 - Hold `M`, `.` and `/` for `Meta`, `AltGr` and `Fumbol` respectively.
@@ -53,7 +53,7 @@ While holding the spacebar the navigation and editing keys will become accessibl
 
 As explained above, this layer can be accessed by holding the layer keys from the main layer or buy holding the spacebar and tapping the Fumbol layer switch key (`R`) on the Extend layer. 
 
-On this layer the number keys have been distributed along the home (middle) row. The top row consist of function keys from 1 to 10. For completeness, F11 and F12 are located at the center of the bottom row. The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. Finally, the home and bottom row modifiers are placed to match those of the main layer.
+On this layer the number keys have been distributed along the home (middle) row. The top row consist of function keys from 1 to 10. For completeness, `F11` and `F12` are located at the center of the bottom row. The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. Finally, the home and bottom row modifiers are placed to match those of the main layer.
 
 > The first key to the left of the bottom row is bound to what is referred to as the ISO or 102nd key, which may emit different key codes depending on your keyboard language and layout.
 
