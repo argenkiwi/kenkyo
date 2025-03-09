@@ -62,7 +62,7 @@
   s lalt
   d lsft
   f lctl
-;;q comp ;; Enable if not MacOS.
+;;g comp ;; Enable if not MacOS.
   h esc
   j left
   k down

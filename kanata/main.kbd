@@ -4,15 +4,16 @@
 ;; - 3 represents the `key-recency` and should equal the maximum number of modifiers to be held simultaneously (accounting for chords).
 ;; - 250 represents the elapsed `time` since the key specified above was pressed and it should be adjusted to your typing speed.
 ;; - `tap-hold-release-timeout` triggers a modifier while held only if another key is pressed *and* released before the timeout, after which the expected repeat action for the key would trigger instead.
+
 (defcfg
   process-unmapped-keys no
 )
 
 (defsrc
-       q w e r t y u i o p
-  caps a s d f g h j k l ; '
-       z x c v b n m , . /
-               spc
+  q w e r t y u i o p
+  a s d f g h j k l ;
+  z x c v b n m , . /
+         spc
 )
 
 (deftemplate charmod (char mod)
@@ -31,6 +32,8 @@
   k (t! charmod k rsft)
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
-  v (t! charmod v ralt)
-  m (t! charmod m ralt)
+  x (t! charmod x ralt)
+  v (t! charmod v lmet)
+  m (t! charmod m rmet)
+  . (t! charmod . ralt)
 )
