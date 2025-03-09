@@ -1,8 +1,3 @@
-;; TL;DR;
-;; Hold a, s, d, f and v for control, shift, meta, alt and altgr respectively.
-;; Hold m, j, k, l and semicolon for altgr, alt, meta, shift and control respectively.
-;; Hold space-bar (anchor key) and immediately tap:
-;; - any other key to anchor the fumbol (function/number/symbol) layer
 (defcfg
   process-unmapped-keys no
   concurrent-tap-hold yes
@@ -56,8 +51,8 @@
 )
 
 (deflayermap (extend)
-  e (on-press press-virtualkey shift)
-  r (layer-switch fumbol)
+  e (layer-switch fumbol)
+  r (on-press press-virtualkey shift)
   y ins
   u home
   i up
