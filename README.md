@@ -6,7 +6,7 @@ A layered keyboard layout designed to augment your keyboard's capabilities witho
 
 ## Components
 
-The componets described below assume a physical QWERTY keyboard independently of you keyboard language and layout settings. 
+The componets described below assume a physical QWERTY keyboard independently of your keyboard language and layout settings. 
 
 ### Chords
 
@@ -55,7 +55,7 @@ As explained above, this layer can be accessed by holding the layer keys from th
 
 On this layer the number keys have been distributed along the home (middle) row. The top row consist of function keys from 1 to 10. For completeness, `F11` and `F12` are located at the center of the bottom row. The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. Finally, the home and bottom row modifiers are placed to match those of the main layer.
 
-> The first key to the left of the bottom row is bound to what is referred to as the ISO or 102nd key, which may emit different key codes depending on your keyboard language and layout.
+> The first key to the left of the bottom row is bound to what is referred to as the ISO or 102nd key, which may emit different key codes depending on your keyboard language and layout settings.
 
 ## Instructions
 
@@ -63,7 +63,7 @@ Install one of the [supported keyboard customisation applications](#keyboard-cus
 
 ## Goal
 
-To provide a starting point for the keyboard customization journey of those who seek to increase their productivity, and/or improve the ergonomy of their workflows, without having to spend too much money on expensive hardware or too much time doing research.
+To provide a starting point for the keyboard customisation journey of those who seek to increase their productivity, and/or improve the ergonomy of their workflows, without having to spend too much money on expensive hardware or too much time doing research.
 
 ## Principles
 
@@ -81,4 +81,4 @@ To provide a starting point for the keyboard customization journey of those who 
 ## Keyboard customisation software
 
 - [Kanata](https://github.com/jtroo/kanata)
-- [Keyd](https://github.com/rvaiya/keyd)
+- [Keyd](https://github.com/rvaiya/keyd) (Linux only)
