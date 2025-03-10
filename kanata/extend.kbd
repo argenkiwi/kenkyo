@@ -1,13 +1,5 @@
-;; The extend layer, or at least the variant proposed  here, is meant to be used for
-;; navigation and editing.
-;;
-;; You can activate it by holding caps-lock while typing for quick corrections, like
-;; deleting a character or word, repositioning the cursor, etc. For more complex tasks you
-;; can anchor the layer by holding space-bar and immediately tapping caps-lock. The layer
-;; will remain active until the space-bar is released.
-;;
-;; Vim users might prefer to bind left, down up and right to h, j, k and l respectively as
-;; well as binding caps-lock to escape.
+;; We make use of a vitual key to clear all layers. This will allow us to swap the extend layer for other layers while the spacebar is held,
+;; while always making sure we return to the main layer when the spacebar is released.
 
 (defsrc
 )
@@ -17,41 +9,35 @@
 )
 
 (deflayermap (main)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
-    () (tap-hold-release-timeout 200 500 spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear)) spc) break
+    () (tap-hold-release-timeout 200 500 spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) spc) break
   )
 )
 
 (deflayermap (extend)
-  q lsft
-  w lmet
+  y ins
   u home
   i up
   o end
   p pgup
-  a lalt
-  s lsft
-  d lctl
-  h ins
+  a lmet
+  s lalt
+  d lsft
+  f lctl
+;;g comp ;; Enable if not MacOS.
+  h esc
   j left
   k down
   l rght
   ; pgdn
-  ' esc
-;;c comp ;; Enable if not MacOS.
+  z mute
+  x vold
+  c volu
+  v pp
   n spc
   m bspc
   , del
   . tab
   / ret
-)
-
-(deflayermap (fumbol)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
-)
-
-(deflayermap (custom)
-  caps (tap-hold-press 200 200 caps (layer-while-held extend))
 )
