@@ -51,9 +51,9 @@ While holding the spacebar the navigation and editing keys will become accessibl
   
 ![Fumbol layer image](images/fumbol.png)
 
-As explained above, this layer can be accessed by holding the layer keys from the main layer or buy holding the spacebar and tapping the Fumbol layer switch key (`R`) on the Extend layer. 
+As explained above, this layer can be accessed either by holding the layer keys from the main layer or buy holding the spacebar and, once on the Extend layer, pressing `R`. 
 
-On this layer the number keys have been distributed along the home (middle) row. The top row consist of function keys from 1 to 10. For completeness, `F11` and `F12` are located at the center of the bottom row. The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. Finally, the home and bottom row modifiers are placed to match those of the main layer.
+On this layer the number keys have been distributed along the home (middle) row. The top row consists of function keys from 1 to 10. For completeness, `F11` and `F12` are located at the center of the bottom row. The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. Finally, the home and bottom row modifiers are placed to match those of the main layer.
 
 > The first key to the left of the bottom row is bound to what is referred to as the ISO or 102nd key, which may emit different key codes depending on your keyboard language and layout settings.
 
