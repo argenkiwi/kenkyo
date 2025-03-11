@@ -33,7 +33,5 @@
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
   x (t! charmod x ralt)
-  v (t! charmod v lmet)
-  m (t! charmod m rmet)
   . (t! charmod . ralt)
 )
