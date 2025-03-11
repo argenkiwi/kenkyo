@@ -71,11 +71,11 @@
   z mute
   x vold
   c volu
-  v pp
-  n spc
+  v (tap-hold-release 200 200 pp lmet)
+  n tab
   m bspc
-  , del
-  . tab
+  , spc
+  . del
   / ret
 )
 
