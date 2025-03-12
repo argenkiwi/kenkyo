@@ -34,7 +34,7 @@
   z mute
   x vold
   c volu
-  v (tap-hold-release 200 200 pp lmet)
+  v pp
   n tab
   m bspc
   , spc

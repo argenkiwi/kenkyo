@@ -13,8 +13,8 @@
 )
 
 (deflayermap (main)
-  z (t! charmod z (layer-while-held fumbol))
-  / (t! charmod / (layer-while-held fumbol))
+  v (t! charmod v (layer-while-held fumbol))
+  m (t! charmod m (layer-while-held fumbol))
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) spc) break
@@ -49,14 +49,14 @@
   k (t! charmod 8 rsft)
   l (t! charmod 9 lalt)
   ; (t! charmod 0 rmet)
-  z `
-  x (t! charmod - ralt)
-  c =
-  v (t! charmod f11 lmet)
-  b f12
-  n f13
-  m (t! charmod ' rmet)
+  z (t! charmod lsgt lctl)
+  x (t! charmod ` ralt)
+  c -
+  v =
+  b f11
+  n f12
+  m '
   , [
   . (t! charmod ] ralt)
-  / \
+  / (t! charmod \ lctl)
 )

@@ -38,12 +38,12 @@
   k (t! charmod k rsft)
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
-  z (t! charmod z (layer-while-held fumbol))
+  z (t! charmod z lctl) 
   x (t! charmod x ralt)
-  v (t! charmod v lmet)
-  m (t! charmod m rmet)
+  v (t! charmod v (layer-while-held fumbol))
+  m (t! charmod m (layer-while-held fumbol))
   . (t! charmod . ralt)
-  / (t! charmod / (layer-while-held fumbol))
+  / (t! charmod / rctl)
   spc (switch
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) spc) break
@@ -71,7 +71,7 @@
   z mute
   x vold
   c volu
-  v (tap-hold-release 200 200 pp lmet)
+  v pp
   n tab
   m bspc
   , spc
@@ -103,14 +103,14 @@
   k (t! charmod 8 rsft)
   l (t! charmod 9 lalt)
   ; (t! charmod 0 rmet)
-  z lsgt
+  z (t! charmod lsgt lctl)
   x (t! charmod ` ralt)
   c -
-  v (t! charmod = lmet)
+  v =
   b f11
   n f12
-  m (t! charmod ' rmet)
+  m '
   , [
   . (t! charmod ] ralt)
-  / \
+  / (t! charmod \ lctl)
 )
