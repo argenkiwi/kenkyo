@@ -4,9 +4,27 @@ A layered keyboard layout designed to augment your keyboard's capabilities witho
 
 > Kenkyo (謙虚) is the Japanese term for humility or modesty.
 
+## Benefits
+
+- Available to any keyboard, by using software rather than firmware.
+- Intuitive and easy to learn.
+- Requires only 31 keys.
+- Your hands don't need to leave the center of the keyboard.
+- Allows you to touch-type 100% of the time.
+- Makes key combinations more comfortable and ergonomic.
+- Reduces hand movement and strain.
+- Helps transitioning to smaller keyboards.
+
+## Instructions
+
+Install the keyboard customisation software of your choice from the list below and place the corresponding configuration file, provided by this repository, in the recommended location.
+
+- [Kanata](https://github.com/jtroo/kanata)
+- [Keyd](https://github.com/rvaiya/keyd) (Linux only)
+
 ## Components
 
-The componets described below assume a physical QWERTY keyboard independently of your keyboard language and layout settings. 
+The componets described below assume a physical QWERTY keyboard, independently of the keyboard language and layout settings of your system. 
 
 ### Chords
 
@@ -57,10 +75,6 @@ On this layer the number keys have been distributed along the home (middle) row.
 
 > The first key to the left of the bottom row is bound to what is referred to as the ISO or 102nd key, which may emit different key codes depending on your keyboard language and layout settings.
 
-## Instructions
-
-Install one of the [supported keyboard customisation applications](#keyboard-customisation-software) and place the corresponding configuration file provided by this repository in the recommended location.
-
 ## Goal
 
 To provide a starting point for the keyboard customisation journey of those who seek to increase their productivity, and/or improve the ergonomy of their workflows, without having to spend too much money on expensive hardware or too much time doing research.
@@ -77,8 +91,3 @@ To provide a starting point for the keyboard customisation journey of those who 
 - [Home row modifiers](https://precondition.github.io/home-row-mods)
 - [Impermanent (momentary) layers](https://jonny-wamsley.gitbook.io/the-ultimate-guide-to-keyboard-layers/ch-3-layer-activators/3.3-shift-layers)
 - [Layer anchoring](https://argenkiwi.medium.com/keyboard-layer-pinning-20aafede96e5)
- 
-## Keyboard customisation software
-
-- [Kanata](https://github.com/jtroo/kanata)
-- [Keyd](https://github.com/rvaiya/keyd) (Linux only)
