@@ -48,10 +48,6 @@
     ((key-timing 1 less-than 200)) _ break 
     () (tap-hold-release-timeout 200 500 spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) spc) break
   )
-  rsft (one-shot 500 rsft)
-  lsft (one-shot 500 lsft)
-  lalt (tap-hold 200 200 (one-shot 500 (layer-while-held fumbol)) lalt)
-  ralt (one-shot 500 ralt)
 )
 
 (deflayermap (extend)

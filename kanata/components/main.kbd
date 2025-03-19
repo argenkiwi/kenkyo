@@ -34,8 +34,4 @@
   ; (t! charmod ; rmet)
   x (t! charmod x ralt)
   . (t! charmod . ralt)
-  rsft (one-shot 500 rsft)
-  lsft (one-shot 500 lsft)
-  lalt (tap-hold 200 200 (one-shot 500 (layer-while-held fumbol)) lalt)
-  ralt (one-shot 500 ralt)
 )
