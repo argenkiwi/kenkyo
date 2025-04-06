@@ -44,10 +44,7 @@
   m (t! charmod m (layer-while-held fumbol))
   . (t! charmod . ralt)
   / (t! charmod / rctl)
-  spc (switch
-    ((key-timing 1 less-than 200)) _ break 
-    () (tap-hold-release-timeout 200 500 spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) spc) break
-  )
+  spc (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
 )
 
 (deflayermap (extend)
