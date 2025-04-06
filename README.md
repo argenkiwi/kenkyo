@@ -91,3 +91,5 @@ To provide a starting point for the keyboard customisation journey of those who 
 - [Home row modifiers](https://precondition.github.io/home-row-mods)
 - [Impermanent (momentary) layers](https://jonny-wamsley.gitbook.io/the-ultimate-guide-to-keyboard-layers/ch-3-layer-activators/3.3-shift-layers)
 - [Layer anchoring](https://argenkiwi.medium.com/keyboard-layer-pinning-20aafede96e5)
+- [SpaceFn](https://drop.com/talk/138510/what-is-space-fn-and-why-you-should-give-it-a-try)
+- [Extend Layer](https://colemakmods.github.io/ergonomic-mods/extend.html)
