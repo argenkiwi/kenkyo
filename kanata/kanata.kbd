@@ -47,13 +47,56 @@
   spc (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
 )
 
+(platform (macos)
+  (defalias
+    undo M-z
+    cut M-x
+    copy M-c
+    paste M-v
+  )
+)
+
+(platform (linux win winiov2 wintercept)
+  (defalias
+    undo C-z
+    cut C-x
+    copy C-c
+    paste C-v
+  )
+)
+
+(defchords mute 50
+  (w  ) w
+  (  e) (layer-switch fumbol)
+  (w e) mute 
+)
+
+(defchords volu 50
+  (i  ) up
+  (  o) end
+  (i o) volu
+)
+
+(defchords pp 50
+  (x  ) @cut
+  (  c) @copy
+  (x c) pp
+)
+
+(defchords vold 50
+  (,  ) spc
+  (  .) del
+  (, .) vold
+)
+
 (deflayermap (extend)
-  e (layer-switch fumbol)
+  w (chord mute w)
+  e (chord mute e)
   r (on-press press-virtualkey shift)
   y ins
   u home
-  i up
-  o end
+  i (chord volu i)
+  o (chord volu o)
   p pgup
   a lmet
   s lalt
@@ -65,14 +108,14 @@
   k down
   l rght
   ; pgdn
-  z mute
-  x vold
-  c volu
-  v pp
+  z @undo
+  x (chord pp x)
+  c (chord pp c)
+  v @paste
   n tab
   m bspc
-  , spc
-  . del
+  , (chord vold ,)
+  . (chord vold .)
   / ret
 )
 
