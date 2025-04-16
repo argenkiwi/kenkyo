@@ -23,7 +23,35 @@
   )
 )
 
+(defchords mtl 50
+  (w  ) w
+  (  e) e
+  (w e) esc
+)
+
+(defchords mtr 50
+  (i  ) i
+  (  o) o
+  (i o) bspc
+)
+
+(defchords mbl 50
+  (x  ) (t! charmod x ralt)
+  (  c) c
+  (x c) tab
+)
+
+(defchords mbr 50
+  (,  ) ,
+  (  .) (t! charmod . ralt)
+  (, .) ret
+)
+
 (deflayermap (main)
+  w (chord mtl w)
+  e (chord mtl e)
+  i (chord mtr i)
+  o (chord mtr o)
   a (t! charmod a lmet)
   s (t! charmod s lalt)
   d (t! charmod d lsft)
@@ -32,6 +60,8 @@
   k (t! charmod k rsft)
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
-  x (t! charmod x ralt)
-  . (t! charmod . ralt)
+  x (chord mbl x)
+  c (chord mbl c)
+  , (chord mbr ,)
+  . (chord mbr .)
 )

@@ -10,13 +10,6 @@
          spc
 )
 
-(defchordsv2
-  (w e) esc 50 all-released (extend)
-  (i o) bspc 50 all-released (extend)
-  (x c) tab 50 all-released (extend)
-  (, .) ret 50 all-released (extend)
-)
-
 (deftemplate charmod (char mod)
   (switch 
     ((key-timing 3 less-than 375)) $char break
@@ -29,7 +22,35 @@
   clear (multi (layer-switch main) (on-press release-virtualkey shift))
 )
 
+(defchords mtl 50
+  (w  ) w
+  (  e) e
+  (w e) esc
+)
+
+(defchords mtr 50
+  (i  ) i
+  (  o) o
+  (i o) bspc
+)
+
+(defchords mbl 50
+  (x  ) (t! charmod x ralt)
+  (  c) c
+  (x c) tab
+)
+
+(defchords mbr 50
+  (,  ) ,
+  (  .) (t! charmod . ralt)
+  (, .) ret
+)
+
 (deflayermap (main)
+  w (chord mtl w)
+  e (chord mtl e)
+  i (chord mtr i)
+  o (chord mtr o)
   a (t! charmod a lmet)
   s (t! charmod s lalt)
   d (t! charmod d lsft)
@@ -39,10 +60,12 @@
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
   z (t! charmod z lctl) 
-  x (t! charmod x ralt)
+  x (chord mbl x)
+  c (chord mbl c)
   v (t! charmod v (layer-while-held fumbol))
   m (t! charmod m (layer-while-held fumbol))
-  . (t! charmod . ralt)
+  , (chord mbr ,)
+  . (chord mbr .)
   / (t! charmod / rctl)
   spc (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
 )
@@ -76,16 +99,40 @@
   / ret
 )
 
+(defchords ftl 50
+  (w  ) f2
+  (  e) f3
+  (w e) esc
+)
+
+(defchords ftr 50
+  (i  ) f8
+  (  o) f9
+  (i o) bspc
+)
+
+(defchords fbl 50
+  (x  ) (t! charmod ` ralt)
+  (  c) -
+  (x c) tab
+)
+
+(defchords fbr 50
+  (,  ) [
+  (  .) (t! charmod ] ralt)
+  (, .) ret
+)
+
 (deflayermap (fumbol)
   q f1
-  w f2
-  e f3
+  w (chord ftl w)
+  e (chord ftl e)
   r f4
   t f5
   y f6
   u f7
-  i f8
-  o f9
+  i (chord ftr i)
+  o (chord ftr o)
   p f10
   [ f11
   ] f12
@@ -101,13 +148,13 @@
   l (t! charmod 9 lalt)
   ; (t! charmod 0 rmet)
   z (t! charmod lsgt lctl)
-  x (t! charmod ` ralt)
-  c -
+  x (chord fbl x)
+  c (chord fbl c)
   v =
   b f11
   n f12
   m '
-  , [
-  . (t! charmod ] ralt)
+  , (chord fbr ,)
+  . (chord fbr .)
   / (t! charmod \ lctl)
 )
