@@ -1,6 +1,5 @@
 (defcfg
   process-unmapped-keys no
-  concurrent-tap-hold yes
 )
 
 (defsrc
@@ -10,10 +9,18 @@
          spc
 )
 
+(defvar
+  streak-count 3
+  streak-time 325
+  tap-timeout 200
+  hold-timeout 500
+  chord-timeout 50
+)
+
 (deftemplate charmod (char mod)
   (switch 
-    ((key-timing 3 less-than 325)) $char break
-    () (tap-hold-release-timeout 200 500 $char $mod $char) break
+    ((key-timing $streak-count less-than $streak-time)) $char break
+    () (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char) break
   )
 )
 
@@ -22,25 +29,25 @@
   clear (multi (layer-switch main) (on-press release-virtualkey shift))
 )
 
-(defchords mtl 50
+(defchords mtl $chord-timeout
   (w  ) w
   (  e) e
   (w e) esc
 )
 
-(defchords mtr 50
+(defchords mtr $chord-timeout
   (i  ) i
   (  o) o
   (i o) bspc
 )
 
-(defchords mbl 50
+(defchords mbl $chord-timeout
   (x  ) (t! charmod x ralt)
   (  c) c
   (x c) tab
 )
 
-(defchords mbr 50
+(defchords mbr $chord-timeout
   (,  ) ,
   (  .) (t! charmod . ralt)
   (, .) ret
@@ -99,25 +106,25 @@
   / ret
 )
 
-(defchords ftl 50
+(defchords ftl $chord-timeout
   (w  ) f2
   (  e) f3
   (w e) esc
 )
 
-(defchords ftr 50
+(defchords ftr $chord-timeout
   (i  ) f8
   (  o) f9
   (i o) bspc
 )
 
-(defchords fbl 50
+(defchords fbl $chord-timeout
   (x  ) (t! charmod ` ralt)
   (  c) -
   (x c) tab
 )
 
-(defchords fbr 50
+(defchords fbr $chord-timeout
   (,  ) [
   (  .) (t! charmod ] ralt)
   (, .) ret
