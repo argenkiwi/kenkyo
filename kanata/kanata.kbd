@@ -1,5 +1,6 @@
 (defcfg
-  process-unmapped-keys no
+;; You can set the value below to no if you only use the keys defined in defsrc.
+  process-unmapped-keys yes
 )
 
 (defsrc
