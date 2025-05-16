@@ -142,9 +142,6 @@
   i (chord ftr i)
   o (chord ftr o)
   p f10
-  [ f11
-  ] f12
-  \ f13
   a (t! charmod 1 lmet)
   s (t! charmod 2 lalt)
   d (t! charmod 3 lsft)
