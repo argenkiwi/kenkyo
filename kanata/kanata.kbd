@@ -16,11 +16,22 @@
   tap-timeout 200
   hold-timeout 300
   chord-timeout 50
+  lkeys (
+    q w e r t
+    a s d f g
+    z x c v b
+  )
+
+  rkeys (
+    y u i o p
+    h j k l ;
+    n m , . /
+  )
 )
 
-(deftemplate charmod (char mod)
+(deftemplate charmod (char mod keys)
   (switch 
-    ((key-timing $streak-count less-than $streak-time)) $char break
+    ((key-timing $streak-count less-than $streak-time)) (tap-hold-release-keys $tap-timeout $hold-timeout $char $mod $keys) break
     () (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char reset-timeout-on-press) break
   )
 )
@@ -43,14 +54,14 @@
 )
 
 (defchords mbl $chord-timeout
-  (x  ) (t! charmod x ralt)
+  (x  ) (t! charmod x ralt $lkeys)
   (  c) c
   (x c) tab
 )
 
 (defchords mbr $chord-timeout
   (,  ) ,
-  (  .) (t! charmod . ralt)
+  (  .) (t! charmod . ralt $rkeys)
   (, .) ret
 )
 
@@ -59,23 +70,23 @@
   e (chord mtl e)
   i (chord mtr i)
   o (chord mtr o)
-  a (t! charmod a lmet)
-  s (t! charmod s lalt)
-  d (t! charmod d lsft)
-  f (t! charmod f lctl)
-  j (t! charmod j rctl)
-  k (t! charmod k rsft)
-  l (t! charmod l lalt)
-  ; (t! charmod ; rmet)
-  z (t! charmod z lctl) 
+  a (t! charmod a lmet $lkeys)
+  s (t! charmod s lalt $lkeys)
+  d (t! charmod d lsft $lkeys)
+  f (t! charmod f lctl $lkeys)
+  j (t! charmod j rctl $rkeys)
+  k (t! charmod k rsft $rkeys)
+  l (t! charmod l lalt $rkeys)
+  ; (t! charmod ; rmet $rkeys)
+  z (t! charmod z lctl $lkeys) 
   x (chord mbl x)
   c (chord mbl c)
-  v (t! charmod v (layer-while-held fumbol))
-  m (t! charmod m (layer-while-held fumbol))
+  v (t! charmod v (layer-while-held fumbol) $lkeys)
+  m (t! charmod m (layer-while-held fumbol) $rkeys)
   , (chord mbr ,)
   . (chord mbr .)
-  / (t! charmod / rctl)
-  spc (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
+  / (t! charmod / rctl $rkeys)
+  spc (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)) ())
 )
 
 (deflayermap (extend)
@@ -120,14 +131,14 @@
 )
 
 (defchords fbl $chord-timeout
-  (x  ) (t! charmod ` ralt)
+  (x  ) (t! charmod ` ralt $lkeys)
   (  c) -
   (x c) tab
 )
 
 (defchords fbr $chord-timeout
   (,  ) [
-  (  .) (t! charmod ] ralt)
+  (  .) (t! charmod ] ralt $rkeys)
   (, .) ret
 )
 
@@ -142,17 +153,17 @@
   i (chord ftr i)
   o (chord ftr o)
   p f10
-  a (t! charmod 1 lmet)
-  s (t! charmod 2 lalt)
-  d (t! charmod 3 lsft)
-  f (t! charmod 4 lctl)
+  a (t! charmod 1 lmet $lkeys)
+  s (t! charmod 2 lalt $lkeys)
+  d (t! charmod 3 lsft $lkeys)
+  f (t! charmod 4 lctl $lkeys)
   g 5
   h 6
-  j (t! charmod 7 rctl)
-  k (t! charmod 8 rsft)
-  l (t! charmod 9 lalt)
-  ; (t! charmod 0 rmet)
-  z (t! charmod lsgt lctl)
+  j (t! charmod 7 rctl $rkeys)
+  k (t! charmod 8 rsft $rkeys)
+  l (t! charmod 9 lalt $rkeys)
+  ; (t! charmod 0 rmet $rkeys)
+  z (t! charmod lsgt lctl $lkeys)
   x (chord fbl x)
   c (chord fbl c)
   v =
@@ -161,5 +172,5 @@
   m '
   , (chord fbr ,)
   . (chord fbr .)
-  / (t! charmod \ lctl)
+  / (t! charmod \ lctl $rkeys)
 )
