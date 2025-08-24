@@ -90,8 +90,8 @@
 )
 
 (deflayermap (extend)
-  e (layer-switch fumbol)
-  r (on-press press-virtualkey shift)
+  e (on-press press-virtualkey shift)
+  r (layer-switch fumbol)
   y ins
   u home
   i up
