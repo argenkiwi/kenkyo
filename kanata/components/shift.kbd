@@ -14,5 +14,5 @@
 )
 
 (deflayermap (extend)
-  r (on-press press-virtualkey shift)
+  e (on-press press-virtualkey shift)
 )

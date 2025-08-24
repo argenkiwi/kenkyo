@@ -22,7 +22,7 @@
 )
 
 (deflayermap (extend)
-  e (layer-switch fumbol)
+  r (layer-switch fumbol)
 )
 
 (defchords ftl 50
