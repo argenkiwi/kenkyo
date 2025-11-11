@@ -90,7 +90,7 @@
   s lalt
   d lsft
   f lctl
-;;g comp ;; Enable if not MacOS.
+  g comp
   h esc
   j left
   k down
