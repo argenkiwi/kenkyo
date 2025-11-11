@@ -14,14 +14,14 @@
   streak-count 3
   streak-time 325
   tap-timeout 200
-  hold-timeout 500
+  hold-timeout 300
   chord-timeout 50
 )
 
 (deftemplate charmod (char mod)
   (switch 
     ((key-timing $streak-count less-than $streak-time)) $char break
-    () (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char) break
+    () (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char reset-timeout-on-press) break
   )
 )
 
@@ -79,8 +79,8 @@
 )
 
 (deflayermap (extend)
-  e (layer-switch fumbol)
-  r (on-press press-virtualkey shift)
+  e (on-press press-virtualkey shift)
+  r (layer-switch fumbol)
   y ins
   u home
   i up
@@ -90,7 +90,7 @@
   s lalt
   d lsft
   f lctl
-;;g comp ;; Enable if not MacOS.
+  g comp
   h esc
   j left
   k down
