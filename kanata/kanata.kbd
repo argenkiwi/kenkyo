@@ -166,10 +166,10 @@
   z (t! charmod lsgt lctl $lkeys)
   x (chord fbl x)
   c (chord fbl c)
-  v =
+  v (t! charmod = (layer-while-held main) $lkeys)
   b f11
   n f12
-  m '
+  m (t! charmod ' (layer-while-held main) $rkeys)
   , (chord fbr ,)
   . (chord fbr .)
   / (t! charmod \ lctl $rkeys)
