@@ -119,6 +119,24 @@
   (i o) bspc
 )
 
+(defchords fcl $chord-timeout
+ (s    ) (t! charmod 2 lalt)
+ (  d  ) (t! charmod 3 lsft) 
+ (    f) (t! charmod 4 lctl)
+ (s d  ) kp-
+ (  d f) kp+
+ (s   f) 🔢₌
+)
+
+(defchords fcr $chord-timeout
+ (j    ) (t! charmod 7 rctl)
+ (  k  ) (t! charmod 8 rsft)
+ (    l) (t! charmod 9 lalt)
+ (j k  ) kp/
+ (  k l) kp*
+ (j   l) .
+)
+
 (defchords fbl $chord-timeout
   (x  ) (t! charmod ` ralt)
   (  c) -
@@ -143,14 +161,14 @@
   o (chord ftr o)
   p f10
   a (t! charmod 1 lmet)
-  s (t! charmod 2 lalt)
-  d (t! charmod 3 lsft)
-  f (t! charmod 4 lctl)
+  s (chord fcl s)
+  d (chord fcl d)
+  f (chord fcl f)
   g 5
   h 6
-  j (t! charmod 7 rctl)
-  k (t! charmod 8 rsft)
-  l (t! charmod 9 lalt)
+  j (chord fcr j)
+  k (chord fcr k)
+  l (chord fcr l)
   ; (t! charmod 0 rmet)
   z (t! charmod lsgt lctl)
   x (chord fbl x)
