@@ -75,6 +75,17 @@ On this layer the number keys have been distributed along the home (middle) row.
 
 > The first key to the left of the bottom row is bound to what is referred to as the ISO or 102nd key, which may emit different key codes depending on your keyboard language and layout settings.
 
+##### Chords
+
+In order to quickly access symbols commonly available to numpads, the Fumbol layer offers the following additional chords:
+
+- `S` + `D`: `-`
+- `D` + `F`: `+`
+- `S` + `F`: `=`
+- `J` + `K`: `/`
+- `K` + `L`: `*`
+- `J` + `L`: `.`
+
 ## Goal
 
 To provide a starting point for the keyboard customisation journey of those who seek to increase their productivity, and/or improve the ergonomy of their workflows, without having to spend too much money on expensive hardware or too much time doing research.
