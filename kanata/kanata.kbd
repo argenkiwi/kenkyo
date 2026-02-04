@@ -19,10 +19,17 @@
   chord-timeout 50
 )
 
-(deftemplate charmod (char mod)
+(deftemplate flowtap (flow tap)
   (switch 
-    ((key-timing $streak-count less-than $streak-time)) $char break
-    () (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char reset-timeout-on-press) break
+    ((key-timing $streak-count less-than $streak-time)) $flow break
+    () $tap break
+  )
+)
+
+(deftemplate charmod (char mod)
+  (t! flowtap
+    $char
+    (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char reset-timeout-on-press)
   )
 )
 
