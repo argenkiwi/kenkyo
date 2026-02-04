@@ -1,6 +1,7 @@
 (defcfg
 ;; You can set the value below to no if you only use the keys defined in defsrc.
   process-unmapped-keys yes
+  concurrent-tap-hold yes
 )
 
 (defsrc
@@ -30,35 +31,14 @@
   clear (multi (layer-switch main) (on-press release-virtualkey shift))
 )
 
-(defchords mtl $chord-timeout
-  (w  ) w
-  (  e) e
-  (w e) esc
-)
-
-(defchords mtr $chord-timeout
-  (i  ) i
-  (  o) o
-  (i o) bspc
-)
-
-(defchords mbl $chord-timeout
-  (x  ) (t! charmod x ralt)
-  (  c) c
-  (x c) tab
-)
-
-(defchords mbr $chord-timeout
-  (,  ) ,
-  (  .) (t! charmod . ralt)
-  (, .) ret
+(defchordsv2
+  (w e) esc $chord-timeout all-released (extend)
+  (i o) bspc $chord-timeout all-released (extend)
+  (x c) tab $chord-timeout all-released (extend)
+  (, .) ret $chord-timeout all-released (extend)
 )
 
 (deflayermap (main)
-  w (chord mtl w)
-  e (chord mtl e)
-  i (chord mtr i)
-  o (chord mtr o)
   a (t! charmod a lmet)
   s (t! charmod s lalt)
   d (t! charmod d lsft)
@@ -68,12 +48,10 @@
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
   z (t! charmod z lctl) 
-  x (chord mbl x)
-  c (chord mbl c)
+  x (t! charmod x ralt)
   v (t! charmod v (layer-while-held fumbol))
   m (t! charmod m (layer-while-held fumbol))
-  , (chord mbr ,)
-  . (chord mbr .)
+  . (t! charmod . ralt)
   / (t! charmod / rctl)
   spc (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
 )
@@ -107,18 +85,6 @@
   / ret
 )
 
-(defchords ftl $chord-timeout
-  (w  ) f2
-  (  e) f3
-  (w e) esc
-)
-
-(defchords ftr $chord-timeout
-  (i  ) f8
-  (  o) f9
-  (i o) bspc
-)
-
 (defchords fcl $chord-timeout
  (s    ) (t! charmod 2 lalt)
  (  d  ) (t! charmod 3 lsft) 
@@ -137,28 +103,16 @@
  (j   l) .
 )
 
-(defchords fbl $chord-timeout
-  (x  ) (t! charmod ` ralt)
-  (  c) -
-  (x c) tab
-)
-
-(defchords fbr $chord-timeout
-  (,  ) [
-  (  .) (t! charmod ] ralt)
-  (, .) ret
-)
-
 (deflayermap (fumbol)
   q f1
-  w (chord ftl w)
-  e (chord ftl e)
+  w f2
+  e f3
   r f4
   t f5
   y f6
   u f7
-  i (chord ftr i)
-  o (chord ftr o)
+  i f8
+  o f9
   p f10
   a (t! charmod 1 lmet)
   s (chord fcl s)
@@ -171,13 +125,13 @@
   l (chord fcr l)
   ; (t! charmod 0 rmet)
   z (t! charmod lsgt lctl)
-  x (chord fbl x)
-  c (chord fbl c)
-  v =
+  x (t! charmod ` ralt)
+  c -
+  v (t! charmod = (layer-while-held main))
   b f11
   n f12
-  m '
-  , (chord fbr ,)
-  . (chord fbr .)
+  m (t! charmod ' (layer-while-held main))
+  , [
+  . (t! charmod ] ralt)
   / (t! charmod \ lctl)
 )
