@@ -12,22 +12,55 @@
 
 (defvar
   streak-count 3
-  streak-time 325
+  streak-time 450
   tap-timeout 200
   hold-timeout 300
   chord-timeout 50
-)
+  lkeys (
+    q w e r t
+    a s d f g
+    z x c v b
+  )
 
-(deftemplate charmod (char mod)
-  (switch 
-    ((key-timing $streak-count less-than $streak-time)) $char break
-    () (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char reset-timeout-on-press) break
+  rkeys (
+    y u i o p
+    h j k l ;
+    n m , . /
   )
 )
 
 (defvirtualkeys
   shift (multi (layer-switch main) lsft)
   clear (multi (layer-switch main) (on-press release-virtualkey shift))
+)
+
+(deftemplate flowtap (flow tap)
+  (switch 
+    ((key-timing $streak-count less-than $streak-time)) $flow break
+    () $tap break
+  )
+)
+
+(deftemplate charmod (char mod)
+  (t! flowtap
+    $char
+    (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char reset-timeout-on-press)
+  )
+) 
+
+(deftemplate charmodkeys (char mod press release)
+  (t! flowtap
+    (tap-hold-release-tap-keys-release $tap-timeout $hold-timeout $char $mod $press $release)
+    (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char reset-timeout-on-press)
+  )
+)
+
+(deftemplate lcharmod (char mod)
+  (t! charmodkeys $char $mod $lkeys $rkeys)
+)
+
+(deftemplate rcharmod (char mod)
+  (t! charmodkeys $char $mod $rkeys $lkeys)
 )
 
 (defchords mtl $chord-timeout
@@ -43,14 +76,14 @@
 )
 
 (defchords mbl $chord-timeout
-  (x  ) (t! charmod x ralt)
+  (x  ) (t! lcharmod x ralt)
   (  c) c
   (x c) tab
 )
 
 (defchords mbr $chord-timeout
   (,  ) ,
-  (  .) (t! charmod . ralt)
+  (  .) (t! rcharmod . ralt)
   (, .) ret
 )
 
@@ -61,17 +94,17 @@
   o (chord mtr o)
   a (t! charmod a lmet)
   s (t! charmod s lalt)
-  d (t! charmod d lsft)
+  d (t! lcharmod d lsft)
   f (t! charmod f lctl)
   j (t! charmod j rctl)
-  k (t! charmod k rsft)
+  k (t! rcharmod k rsft)
   l (t! charmod l lalt)
   ; (t! charmod ; rmet)
   z (t! charmod z lctl) 
   x (chord mbl x)
   c (chord mbl c)
-  v (t! charmod v (layer-while-held fumbol))
-  m (t! charmod m (layer-while-held fumbol))
+  v (t! lcharmod v (layer-while-held fumbol))
+  m (t! rcharmod m (layer-while-held fumbol))
   , (chord mbr ,)
   . (chord mbr .)
   / (t! charmod / rctl)
@@ -121,7 +154,7 @@
 
 (defchords fcl $chord-timeout
  (s    ) (t! charmod 2 lalt)
- (  d  ) (t! charmod 3 lsft) 
+ (  d  ) (t! lcharmod 3 lsft) 
  (    f) (t! charmod 4 lctl)
  (s d  ) kp-
  (  d f) kp+
@@ -130,7 +163,7 @@
 
 (defchords fcr $chord-timeout
  (j    ) (t! charmod 7 rctl)
- (  k  ) (t! charmod 8 rsft)
+ (  k  ) (t! rcharmod 8 rsft)
  (    l) (t! charmod 9 lalt)
  (j k  ) kp/
  (  k l) kp*
@@ -138,14 +171,14 @@
 )
 
 (defchords fbl $chord-timeout
-  (x  ) (t! charmod ` ralt)
+  (x  ) (t! lcharmod ` ralt)
   (  c) -
   (x c) tab
 )
 
 (defchords fbr $chord-timeout
   (,  ) [
-  (  .) (t! charmod ] ralt)
+  (  .) (t! rcharmod ] ralt)
   (, .) ret
 )
 
