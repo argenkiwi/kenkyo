@@ -48,19 +48,19 @@
   )
 ) 
 
-(deftemplate charmodkeys (char mod press release)
+(deftemplate charmodkeys (char mod keys)
   (t! flowtap
-    (tap-hold-release-tap-keys-release $tap-timeout $hold-timeout $char $mod $press $release)
+    (tap-hold-release-keys $tap-timeout $hold-timeout $char $mod $keys)
     (tap-hold-release-timeout $tap-timeout $hold-timeout $char $mod $char reset-timeout-on-press)
   )
 )
 
 (deftemplate lcharmod (char mod)
-  (t! charmodkeys $char $mod $lkeys $rkeys)
+  (t! charmodkeys $char $mod $lkeys)
 )
 
 (deftemplate rcharmod (char mod)
-  (t! charmodkeys $char $mod $rkeys $lkeys)
+  (t! charmodkeys $char $mod $rkeys)
 )
 
 (defchords mtl $chord-timeout
