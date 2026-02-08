@@ -18,14 +18,14 @@
   chord-timeout 50
   lkeys (
     q w e r t
-    a s d f g
-    z x c v b
+    a s   f g
+    z   c   b
   )
 
   rkeys (
     y u i o p
-    h j k l ;
-    n m , . /
+    h j   l ;
+    n   ,   /
   )
 )
 
