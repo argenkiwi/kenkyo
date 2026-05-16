@@ -1,106 +1,90 @@
+<p align="center">
+  <img src="images/kenkyo.png" width="200" alt="Kenkyo Logo">
+</p>
+
 # Kenkyo
 
-A layered keyboard layout designed to augment your keyboard's capabilities without altering or interfering with its default behaviour, so you can remain productive as you learn to use it.
+A layered keyboard layout designed to augment your productivity without altering your keyboard's default behavior. Master touch-typing and ergonomic key combinations while keeping your hands centered.
 
-> Kenkyo (謙虚) is the Japanese term for humility or modesty.
+> [!TIP]
+> **Kenkyo (謙虚)** is the Japanese term for humility or modesty, reflecting the layout's philosophy of staying out of your way until needed.
 
-## Benefits
+## Key Benefits
 
-- Available to any keyboard, by using software rather than firmware.
-- Intuitive and easy to learn.
-- Requires only 31 keys.
-- Your hands don't need to leave the center of the keyboard.
-- Allows you to touch-type 100% of the time.
-- Makes key combinations more comfortable and ergonomic.
-- Reduces hand movement and strain.
-- Helps transitioning to smaller keyboards.
+- **Hardware Agnostic:** Works on any keyboard via software (Kanata or Keyd).
+- **Minimalist:** Requires only 31 keys to access 100% of a standard keyboard's functionality.
+- **Ergonomic:** Reduces hand movement and strain by keeping everything under your home row.
+- **Seamless Learning:** Designed to be used gradually; your default layout remains fully functional.
 
-## Instructions
+## Getting Started
 
-Install the keyboard customisation software of your choice from the list below and place the corresponding configuration file, provided by this repository, in the recommended location.
+To use Kenkyo, install your preferred keyboard customization software and use the provided configuration files.
 
-- [Kanata](https://github.com/jtroo/kanata)
-- [Keyd](https://github.com/rvaiya/keyd) (Linux only)
+### 1. Choose your Software
 
-## Components
+| Software | Platform | Repository |
+| :--- | :--- | :--- |
+| **Kanata** | Windows, Linux, macOS | [jtroo/kanata](https://github.com/jtroo/kanata) |
+| **Keyd** | Linux | [rvaiya/keyd](https://github.com/rvaiya/keyd) |
 
-The componets described below assume a physical QWERTY keyboard, independently of the keyboard language and layout settings of your system. 
+### 2. Installation
 
-### Chords
+1. Clone this repository or download the configuration for your chosen software.
+2. Place the configuration files in the recommended directory for the software:
+   - **Kanata:** Typically `~/.config/kanata/` or specified via command line.
+   - **Keyd:** Copy `keyd/default.conf` to `/etc/keyd/default.conf`.
 
-This layout implements a few chords, also known as combos or key combinations, which are common to all layers with the exception of _Extend_:
+## Layout Overview
 
-- `W` + `E`: `Esc`
-- `I` + `O`: `BackSpace`
-- `X` + `C`: `Tab`
-- `,` + `.`: `Enter`
+Kenkyo uses a layered approach, where the "Main" layer handles standard typing, and additional layers are activated via modifiers or specific keys.
+
+### Core Chords
+
+Available on most layers for quick access to essential keys:
+
+- `W` + `E` → **Esc**
+- `I` + `O` → **BackSpace**
+- `X` + `C` → **Tab**
+- `,` + `.` → **Enter**
 
 ### Layers
 
-Blue keys represent changes to the default layer. Orange indicates which keys can activate the current layer while held.
+#### Main Layer
+The base layer featuring **Home Row Modifiers**. Hold keys on the home row to activate `Meta`, `Alt`, `Shift`, or `Ctrl`.
 
-> Bear in mind that layer and modifier keys will activate only if another key is tapped immediately after. Otherwise, the expected repeat or long-press action will be respected (although a slight delay may be perceived).
-
-#### [Main](https://www.keyboard-layout-editor.com/##@_name=Main;&@_w:1.5;&=Tab&=Q&=W&=E&=R&=T&=Y&=U&=I&=O&=P&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_w:1.75;&=Caps%20Lock&_c=#90D5FF;&=A%0A%0A%0A%0A%0A%0A%0A%0A%0AMeta&=S%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=D%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=F%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&_c=#cccccc;&=G&=H&_c=#90D5FF;&=J%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=K%0A%0A%0A%0A%0A%0A%0A%0A%0AShift&=L%0A%0A%0A%0A%0A%0A%0A%0A%0AAlt&=/:%0A/;%0A%0A%0A%0A%0A%0A%0A%0AMeta&_c=#cccccc;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#90D5FF;&=Z%0A%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=X%0A%0A%0A%0A%0A%0A%0A%0A%0AAltGr&_c=#cccccc;&=C&_c=#90D5FF;&=V%0A%0A%0A%0A%0A%0A%0A%0A%0AFmbl&_c=#cccccc;&=B&=N&_c=#90D5FF;&=M%0A%0A%0A%0A%0A%0A%0A%0A%0AFmbl&_c=#cccccc;&=%3C%0A,&_c=#90D5FF;&=%3E%0A.%0A%0A%0A%0A%0A%0A%0A%0AAltGr&=?%0A//%0A%0A%0A%0A%0A%0A%0A%0ACtrl&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#90D5FF&a:7&w:6.25;&=%3Ci%20class/='fa%20fa-thumbs-up'%3E%3C//i%3E&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
-  
 ![Main layer image](images/main.png)
 
-The default layer of this layout makes use of _Home Row Modifiers_ (see [patterns](#patterns)):
+- **Left Hand:** `A` (Meta), `S` (Alt), `D` (Shift), `F` (Ctrl)
+- **Right Hand:** `J` (Ctrl), `K` (Shift), `L` (Alt), `;` (Meta)
 
-- Hold `A`, `S`, `D` and `F` for `Meta`, `Alt`, `Shift` and `Control` respectively.
-- Hold `J`, `K`, `L` and `;` for `Control`, `Shift`, `Alt` and `Meta` respectively.
+#### Extend Layer
+Activated by holding **Space**. This layer puts navigation and editing tools directly under your right hand.
 
-> The `Meta` key is also known as `Win`, `Command`, `Super` or `Gui`. The `Alt` key is referred to as `Option` on MacOS. 
-
-The bottom row contains layer keys to quickly access funciton, number and symbol keys as well as the `Control` and `AltGr` modifiers to make some key combinations more convenient:
-
-- Hold `Z`, `C` and `V` for `Control`, `AltGr` and `Fumbol` respectively.
-- Hold `M`, `.` and `/` for `Fumbol`, `AltGr` and `Control` respectively.
-
-The spacebar is also a layer key and behaves as an entry point to the following layers, defaulting to the Extend layer described below.
-  
-#### [Extend](https://www.keyboard-layout-editor.com/##@_name=extend;&@_w:1.5;&=Tab&=Q&=W&_c=#90D5FF&a:5;&=%0A%3Ci%20class/='fa%20fa-exchange'%3E%3C//i%3E%0A%0A%0A%0A%0AShift&=%0A%3Ci%20class/='fa%20fa-exchange'%3E%3C//i%3E%0A%0A%0A%0A%0AFmbl&_c=#cccccc&a:4;&=T&_c=#90D5FF;&=Insert&=Home&=%E2%86%91&=End&=PgUp&_c=#cccccc;&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_w:1.75;&=Caps%20Lock&_c=#90D5FF;&=Meta&=Alt&=Shift&=Ctrl&=Menu&=Esc&=%E2%86%90&=%E2%86%93&=%E2%86%92&=PgDn&_c=#cccccc;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#90D5FF;&=%3Ci%20class/='kb%20kb-Multimedia-Play-Pause'%3E%3C//i%3E&=%3Ci%20class/='kb%20kb-Multimedia-Mute-2'%3E%3C//i%3E&=%3Ci%20class/='kb%20kb-Multimedia-Volume-Down-2'%3E%3C//i%3E&=%3Ci%20class/='kb%20kb-Multimedia-Volume-Up-2'%3E%3C//i%3E&_c=#cccccc;&=B&_c=#90D5FF;&=Tab&=Bspc&=Spc&=Del&=Enter&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
-  
 ![Extend layer image](images/extend.png)
 
-While holding the spacebar the navigation and editing keys will become accessible under the fingers of your right hand. With your left hand you will be able to access the modifier and media keys. The Shift and Fumbol keys can be used to switch to the corresponding layer, which will remain active until you release the spacebar.
+- **Navigation:** Arrow keys, Home/End, PgUp/PgDn.
+- **Editing:** Backspace, Delete, Enter, Tab.
+- **Media:** Volume controls and Play/Pause on the left hand.
 
-#### [Fumbol](https://www.keyboard-layout-editor.com/##@_name=Fumbol;&@_w:1.5;&=Tab&_c=#90D5FF;&=F1&=F2&=F3&=F4&=F5&=F6&=F7&=F8&=F9&=F10&_c=#cccccc;&=%7B%0A%5B&=%7D%0A%5D&_w:1.5;&=%7C%0A%5C;&@_w:1.75;&=Caps%20Lock&_c=#90D5FF;&=!%0A1%0A%0A%0A%0A%0A%0A%0A%0AMeta&=/@%0A2%0A%0A%0A%0A%0A%0A%0A%0AAlt&=#%0A3%0A%0A%0A%0A%0A%0A%0A%0AShift&=$%0A4%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=%25%0A5&=%5E%0A6&=/&%0A7%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=*%0A8%0A%0A%0A%0A%0A%0A%0A%0AShift&=(%0A9%0A%0A%0A%0A%0A%0A%0A%0AAlt&=)%0A0%0A%0A%0A%0A%0A%0A%0A%0AMeta&_c=#cccccc;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#90D5FF;&=%7C%0A%5C%0A%0A%0A%0A%0A%0A%0A%0ACtrl&=~%0A%60%0A%0A%0A%0A%0A%0A%0A%0AAltGr&=/_%0A-&_c=#FFA500;&=+%0A/=&_c=#90D5FF;&=F11&=F12&_c=#FFA500;&=%22%0A'&_c=#90D5FF;&=%7B%0A%5B&=%7D%0A%5D%0A%0A%0A%0A%0A%0A%0A%0AAltGr&=%7C%0A%5C%0A%0A%0A%0A%0A%0A%0A%0ACtrl&_c=#cccccc&w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Meta&_w:1.25;&=Alt&_c=#FFA500&a:7&w:6.25;&=&_c=#cccccc&a:4&w:1.25;&=Alt&_w:1.25;&=Meta&_w:1.25;&=Menu&_w:1.25;&=Ctrl)
-  
+#### Fumbol Layer
+Designed for numbers, function keys, and symbols. Access it by holding `V` or `M`, or via the Extend layer.
+
 ![Fumbol layer image](images/fumbol.png)
 
-As explained above, this layer can be accessed either by holding the layer keys from the main layer or by holding the spacebar and, once on the Extend layer, pressing the Fumbol layer switch key. 
+- **Numbers:** Distributed along the home row.
+- **Function Keys:** `F1`–`F10` on the top row, `F11`–`F12` on the bottom.
+- **Math Chords:** Quick access to `-`, `+`, `=`, `/`, `*` via home row combinations.
 
-On this layer the number keys have been distributed along the home (middle) row. The top row consists of function keys from 1 to 10. For completeness, `F11` and `F12` are located at the center of the bottom row. The bottom row contains symbols that would otherwise require you to move your hand away from the center of the keyboard to reach them. Finally, the home and bottom row modifiers are placed to match those of the main layer.
+## Philosophy
 
-> The first key to the left of the bottom row is bound to what is referred to as the ISO or 102nd key, which may emit different key codes depending on your keyboard language and layout settings.
+Kenkyo is built on four core principles:
 
-##### Chords
+1. **Seamlessness:** The layout is invisible until you choose to use its features.
+2. **Progressiveness:** Adopt patterns at your own pace without breaking your workflow.
+3. **Composability:** Uses standard patterns like [Home Row Modifiers](https://precondition.github.io/home-row-mods) and [SpaceFn](https://drop.com/talk/138510/what-is-space-fn-and-why-you-should-give-it-a-try).
+4. **Efficiency:** Strikes a balance between minimal hand motion and ease of learning.
 
-In order to quickly access symbols commonly available to numpads, the Fumbol layer offers the following additional chords:
+---
 
-- `S` + `D`: `-`
-- `D` + `F`: `+`
-- `S` + `F`: `=`
-- `J` + `K`: `/`
-- `K` + `L`: `*`
-- `J` + `L`: `.`
-
-## Goal
-
-To provide a starting point for the keyboard customisation journey of those who seek to increase their productivity, and/or improve the ergonomy of their workflows, without having to spend too much money on expensive hardware or too much time doing research.
-
-## Principles
-
-- Seamlessness: A user that is unaware of the presence of this layout should not be able to tell it is there. 
-- Progressiveness: A new user of the layout should be able to adopt the layout gradually and always have the option to fall back to pre-existing habits if necessary.
-- Composability: The layout should be built on well known patterns that can be applied together or individually.
-- Efficiency: The layout should endeavour to strike a balance between the effort required for its use (i.e. hand motion) and that required to learn it (i.e., complexity).
-  
-## Patterns
-
-- [Home row modifiers](https://precondition.github.io/home-row-mods)
-- [Impermanent (momentary) layers](https://jonny-wamsley.gitbook.io/the-ultimate-guide-to-keyboard-layers/ch-3-layer-activators/3.3-shift-layers)
-- [Layer anchoring](https://argenkiwi.medium.com/keyboard-layer-pinning-20aafede96e5)
-- [SpaceFn](https://drop.com/talk/138510/what-is-space-fn-and-why-you-should-give-it-a-try)
-- [Extend Layer](https://colemakmods.github.io/ergonomic-mods/extend.html)
+> [!NOTE]
+> This layout assumes a physical QWERTY keyboard but is independent of your system's language settings.
