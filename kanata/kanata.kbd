@@ -25,6 +25,7 @@
   tap-timeout 200     ;; Max time (ms) for a tap to be recognized
   hold-timeout 300    ;; Time (ms) to wait before a hold is recognized
   chord-timeout 50    ;; Window (ms) to press keys together for a chord
+  one-shot-timeout 450 ;; Timeout (ms) for one-shot modifiers/layers
 )
 
 ;; Templates to simplify complex key behaviors
@@ -70,16 +71,25 @@
   (i o) bspc
 )
 
-(defchords mbl $chord-timeout
-  (x  ) (t! charmod x ralt)
-  (  c) c
-  (x c) tab
+(defchords mhc $chord-timeout
+  (s          ) (t! charmod s lalt)
+  (  d        ) (t! charmod d lsft)
+  (    f      ) (t! charmod f lctl)
+  (      j    ) (t! charmod j rctl)
+  (        k  ) (t! charmod k rsft)
+  (          l) (t! charmod l lalt)
+  (  d     k  ) (one-shot $one-shot-timeout rsft)
+  (    f j    ) (one-shot $one-shot-timeout (layer-while-held fumbol))
+  (s         l) (one-shot $one-shot-timeout ralt)
 )
 
-(defchords mbr $chord-timeout
-  (,  ) ,
-  (  .) (t! charmod . ralt)
-  (, .) ret
+(defchords mbc $chord-timeout
+  (x      ) (t! charmod x ralt)
+  (  c    ) c
+  (    ,  ) ,
+  (      .) (t! charmod . ralt)
+  (x c    ) tab
+  (    , .) ret
 )
 
 (deflayermap (main)
@@ -91,22 +101,22 @@
 
   ;; Home row modifiers
   a (t! charmod a lmet)
-  s (t! charmod s lalt)
-  d (t! charmod d lsft)
-  f (t! charmod f lctl)
-  j (t! charmod j rctl)
-  k (t! charmod k rsft)
-  l (t! charmod l lalt)
+  s (chord mhc s)
+  d (chord mhc d)
+  f (chord mhc f)
+  j (chord mhc j)
+  k (chord mhc k)
+  l (chord mhc l)
   ; (t! charmod ; rmet)
 
   ;; Bottom row modifiers
   z (t! charmod z lctl) 
-  x (chord mbl x)
-  c (chord mbl c)
+  x (chord mbc x)
+  c (chord mbc c)
   v (t! charmod v (layer-while-held fumbol))
   m (t! charmod m (layer-while-held fumbol))
-  , (chord mbr ,)
-  . (chord mbr .)
+  , (chord mbc ,)
+  . (chord mbc .)
   / (t! charmod / rctl)
 
   ;; Space overloaded to 'extend' layer with state clearing logic
@@ -164,22 +174,20 @@
 )
 
 ;; Chords for numbers and math symbols on the home row
-(defchords fcl $chord-timeout
- (s    ) (t! charmod 2 lalt)
- (  d  ) (t! charmod 3 lsft) 
- (    f) (t! charmod 4 lctl)
- (s d  ) kp-
- (  d f) kp+
- (s   f) 🔢₌
-)
-
-(defchords fcr $chord-timeout
- (j    ) (t! charmod 7 rctl)
- (  k  ) (t! charmod 8 rsft)
- (    l) (t! charmod 9 lalt)
- (j k  ) kp/
- (  k l) kp*
- (j   l) .
+(defchords fhc $chord-timeout
+  (s          ) (t! charmod 2 lalt)
+  (  d        ) (t! charmod 3 lsft)
+  (    f      ) (t! charmod 4 lctl)
+  (      j    ) (t! charmod 7 rctl)
+  (        k  ) (t! charmod 8 rsft)
+  (          l) (t! charmod 9 lalt)
+  (s d        ) kp-
+  (  d f      ) kp+
+  (s   f      ) 🔢₌
+  (      j k  ) kp/
+  (        k l) kp*
+  (      j   l) .
+  (  d     k  ) (one-shot $one-shot-timeout rsft)
 )
 
 (defchords fbl $chord-timeout
@@ -209,14 +217,14 @@
 
   ;; Home row: Numbers with mods and symbols
   a (t! charmod 1 lmet)
-  s (chord fcl s)
-  d (chord fcl d)
-  f (chord fcl f)
+  s (chord fhc s)
+  d (chord fhc d)
+  f (chord fhc f)
   g 5
   h 6
-  j (chord fcr j)
-  k (chord fcr k)
-  l (chord fcr l)
+  j (chord fhc j)
+  k (chord fhc k)
+  l (chord fhc l)
   ; (t! charmod 0 rmet)
 
   ;; Bottom row: Symbols
