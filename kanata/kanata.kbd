@@ -71,37 +71,45 @@
   (i o) bspc
 )
 
-(defchords mhc $chord-timeout
-  (s          ) (t! charmod s lalt)
-  (  d        ) (t! charmod d lsft)
-  (    f      ) (t! charmod f lctl)
-  (      j    ) (t! charmod j rctl)
-  (        k  ) (t! charmod k rsft)
-  (          l) (t! charmod l lalt)
-  (s         l) (one-shot $one-shot-timeout ralt)
-  (  d     k  ) (one-shot $one-shot-timeout rsft)
-  (    f j    ) (one-shot $one-shot-timeout (layer-while-held fumbol))
-  (s d        ) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft))
-  (s d     k l) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft))
-  (        k l) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft))
-  (s d f      ) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  (s d f j k l) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  (      j k l) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  (s   f      ) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  (s   f j   l) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  (      j   l) (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  (  d f      ) (multi (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  (  d f j k  ) (multi (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  (      j k  ) (multi (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
-)
+(defchords mhbc $chord-timeout
+  ;; Individual keys
+  (s) (t! charmod s lalt)
+  (d) (t! charmod d lsft)
+  (f) (t! charmod f lctl)
+  (j) (t! charmod j rctl)
+  (k) (t! charmod k rsft)
+  (l) (t! charmod l lalt)
+  (x) (t! charmod x ralt)
+  (c) c
+  (v) (t! charmod v (layer-while-held fumbol))
+  (m) (t! charmod m (layer-while-held fumbol))
+  (,) ,
+  (.) (t! charmod . ralt)
 
-(defchords mbc $chord-timeout
-  (x      ) (t! charmod x ralt)
-  (  c    ) c
-  (    ,  ) ,
-  (      .) (t! charmod . ralt)
-  (x c    ) tab
-  (    , .) ret
+  ;; One-shot modifier chords
+  (x .) (one-shot $one-shot-timeout ralt)
+  (d k) (one-shot $one-shot-timeout rsft)
+  (v m) (one-shot $one-shot-timeout (layer-while-held fumbol))
+
+  ;; ralt + rsft
+  (x d)     (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft))
+  (k .)     (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft))
+
+  ;; ralt + rsft + fumbol
+  (x d v)       (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
+  (m k .)       (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
+
+  ;; ralt + fumbol
+  (x v)     (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout (layer-while-held fumbol)))
+  (m .)     (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout (layer-while-held fumbol)))
+
+  ;; rsft + fumbol
+  (d v)     (multi (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
+  (m k)     (multi (one-shot $one-shot-timeout rsft) (one-shot $one-shot-timeout (layer-while-held fumbol)))
+
+  ;; Other bottom row chords
+  (x c) tab
+  (, .) ret
 )
 
 (deflayermap (main)
@@ -113,22 +121,22 @@
 
   ;; Home row modifiers
   a (t! charmod a lmet)
-  s (chord mhc s)
-  d (chord mhc d)
-  f (chord mhc f)
-  j (chord mhc j)
-  k (chord mhc k)
-  l (chord mhc l)
+  s (chord mhbc s)
+  d (chord mhbc d)
+  f (chord mhbc f)
+  j (chord mhbc j)
+  k (chord mhbc k)
+  l (chord mhbc l)
   ; (t! charmod ; rmet)
 
   ;; Bottom row modifiers
   z (t! charmod z lctl) 
-  x (chord mbc x)
-  c (chord mbc c)
-  v (t! charmod v (layer-while-held fumbol))
-  m (t! charmod m (layer-while-held fumbol))
-  , (chord mbc ,)
-  . (chord mbc .)
+  x (chord mhbc x)
+  c (chord mhbc c)
+  v (chord mhbc v)
+  m (chord mhbc m)
+  , (chord mhbc ,)
+  . (chord mhbc .)
   / (t! charmod / rctl)
 
   ;; Space overloaded to 'extend' layer with state clearing logic
@@ -186,21 +194,22 @@
 )
 
 ;; Chords for numbers and math symbols on the home row
-(defchords fhc $chord-timeout
-  (s          ) (t! charmod 2 lalt)
-  (  d        ) (t! charmod 3 lsft)
-  (    f      ) (t! charmod 4 lctl)
-  (      j    ) (t! charmod 7 rctl)
-  (        k  ) (t! charmod 8 rsft)
-  (          l) (t! charmod 9 lalt)
-  (s d        ) kp-
-  (  d f      ) kp+
-  (s   f      ) 🔢₌
-  (      j k  ) kp/
-  (        k l) kp*
-  (      j   l) .
-  (  d     k  ) (one-shot $one-shot-timeout rsft)
-  (s         l) (one-shot $one-shot-timeout ralt)
+(defchords fhl $chord-timeout
+  (s    ) (t! charmod 2 lalt)
+  (  d  ) (t! charmod 3 lsft)
+  (    f) (t! charmod 4 lctl)
+  (s d  ) kp-
+  (  d f) kp+
+  (s   f) 🔢₌
+)
+
+(defchords fhr $chord-timeout
+  (j    ) (t! charmod 7 rctl)
+  (  k  ) (t! charmod 8 rsft)
+  (    l) (t! charmod 9 lalt)
+  (j k  ) kp/
+  (  k l) kp*
+  (j   l) .
 )
 
 (defchords fbl $chord-timeout
@@ -230,14 +239,14 @@
 
   ;; Home row: Numbers with mods and symbols
   a (t! charmod 1 lmet)
-  s (chord fhc s)
-  d (chord fhc d)
-  f (chord fhc f)
+  s (chord fhl s)
+  d (chord fhl d)
+  f (chord fhl f)
   g 5
   h 6
-  j (chord fhc j)
-  k (chord fhc k)
-  l (chord fhc l)
+  j (chord fhr j)
+  k (chord fhr k)
+  l (chord fhr l)
   ; (t! charmod 0 rmet)
 
   ;; Bottom row: Symbols
