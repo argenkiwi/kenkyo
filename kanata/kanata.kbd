@@ -188,6 +188,7 @@
   (        k l) kp*
   (      j   l) .
   (  d     k  ) (one-shot $one-shot-timeout rsft)
+  (s         l) (one-shot $one-shot-timeout ralt)
 )
 
 (defchords fbl $chord-timeout
