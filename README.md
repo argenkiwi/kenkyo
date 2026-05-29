@@ -47,6 +47,16 @@ Available on most layers for quick access to essential keys:
 - `X` + `C` → **Tab**
 - `,` + `.` → **Enter**
 
+### One-Shot Chords
+
+Activate modifiers or layers for the next keypress by tapping these combinations:
+
+- `X` + `.` → **One-shot AltGr (Right Alt)**
+- `D` + `K` → **One-shot Shift**
+- `V` + `M` → **One-shot Fumbol Layer**
+
+You can also combine these (e.g., `X` + `V` for AltGr + Fumbol) to stack modifiers for a single action.
+
 ### Layers
 
 #### Main Layer
