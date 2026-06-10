@@ -90,14 +90,14 @@
   o (chord mtr o)
 
   ;; Home row modifiers
-  a (t! charmod a lmet)
-  s (t! charmod s lalt)
+  a (t! charmod a lalt)
+  s (t! charmod s lmet)
   d (t! charmod d lsft)
   f (t! charmod f lctl)
   j (t! charmod j rctl)
   k (t! charmod k rsft)
-  l (t! charmod l lalt)
-  ; (t! charmod ; rmet)
+  l (t! charmod l lmet)
+  ; (t! charmod ; ralt)
 
   ;; Bottom row modifiers
   z (t! charmod z lctl) 
@@ -208,7 +208,7 @@
   p f10
 
   ;; Home row: Numbers with mods and symbols
-  a (t! charmod 1 lmet)
+  a (t! charmod 1 lalt)
   s (chord fcl s)
   d (chord fcl d)
   f (chord fcl f)
@@ -217,7 +217,7 @@
   j (chord fcr j)
   k (chord fcr k)
   l (chord fcr l)
-  ; (t! charmod 0 rmet)
+  ; (t! charmod 0 ralt)
 
   ;; Bottom row: Symbols
   z (t! charmod lsgt lctl)
