@@ -85,6 +85,13 @@
   ;; Space individual key
   (spc) (t! charmod spc (layer-while-held extend))
 
+  ;; Space-anchored one-shot modifier chords.
+  ;; Tapping a modifier key (d/k for Shift, v/m for Fumbol, x/. for AltGr) together with Space
+  ;; triggers a one-shot modifier. The typist can keep holding the Space key after releasing
+  ;; the other key to keep the modifier active. This replaces the old behavior where E and R
+  ;; on the extend layer performed a layer swap for shift/fumbol, and now additionally allows
+  ;; AltGr to be anchored to Space.
+
   ;; Single modifier one-shot chords (left)
   (d spc) (one-shot $one-shot-timeout lsft)
   (x spc) (one-shot $one-shot-timeout ralt)
