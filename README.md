@@ -47,26 +47,16 @@ Available on most layers for quick access to essential keys:
 - `X` + `C` → **Tab**
 - `,` + `.` → **Enter**
 
-### One-Shot Chords
-
-Activate modifiers or layers for the next keypress by tapping these combinations:
-
-- `X` + `.` → **One-shot AltGr (Right Alt)**
-- `D` + `K` → **One-shot Shift**
-- `V` + `M` → **One-shot Fumbol Layer**
-
-You can also combine these (e.g., `X` + `V` for AltGr + Fumbol) to stack modifiers for a single action.
-
 ### Space-Anchored Modifiers / Layers
 
-Tapping a modifier key together with Space triggers a space-anchored one-shot modifier. By keeping the Space key held down after releasing the other key in the chord, the modifier remains active:
+Tapping a modifier key together with `Space` triggers a space-anchored one-shot modifier or layer for the next keypress. By keeping the `Space` key held down after releasing the modifier key in the chord, the modifier remains active:
 
 - `D` + `Space` (or `K` + `Space`) → **Space-anchored Shift**
 - `V` + `Space` (or `M` + `Space`) → **Space-anchored Fumbol Layer**
 - `X` + `Space` (or `.` + `Space`) → **Space-anchored AltGr (Right Alt)**
 
 > [!NOTE]
-> This replaces the legacy behavior where the `E` and `R` keys on the Extend layer performed a layer swap to persist the Shift and Fumbol layers. The chord-based one-shot approach is more flexible, allows holding Space to keep the modifier active, and extends this capability to the `AltGr` modifier.
+> This replaces the legacy behavior where `X` + `.`, `D` + `K`, and `V` + `M` were used as non-anchored one-shot chords, as well as the `E`/`R` layer swap keys on the Extend layer. The space-anchored chord approach is more intuitive and allows holding `Space` to keep the modifier or layer active.
 
 ### Layers
 
