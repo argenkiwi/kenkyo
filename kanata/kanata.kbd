@@ -98,7 +98,7 @@
   (v spc) (one-shot $one-shot-timeout (layer-while-held fumbol))
 
   ;; Single modifier one-shot chords (right)
-  (k spc) (one-shot $one-shot-timeout lsft)
+  (k spc) (one-shot $one-shot-timeout rsft)
   (. spc) (one-shot $one-shot-timeout ralt)
   (m spc) (one-shot $one-shot-timeout (layer-while-held fumbol))
 
@@ -146,7 +146,7 @@
   . (chord mhbc .)
   / (t! charmod / rctl)
 
-  ;; Space overloaded to 'extend' layer with state clearing logic via chord engine
+  ;; Space overloaded to 'extend' layer via chord engine
   spc (chord mhbc spc)
 )
 
