@@ -88,10 +88,18 @@
   (,) ,
   (.) (t! charmod . ralt)
 
-  ;; Single modifier one-shot chords
-  (d k) (one-shot $one-shot-timeout lsft)
-  (x .) (one-shot $one-shot-timeout ralt)
-  (v m) (one-shot $one-shot-timeout (layer-while-held fumbol))
+  ;; Space individual key
+  (spc) (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
+
+  ;; Single modifier one-shot chords (left)
+  (d spc) (one-shot $one-shot-timeout lsft)
+  (x spc) (one-shot $one-shot-timeout ralt)
+  (v spc) (one-shot $one-shot-timeout (layer-while-held fumbol))
+
+  ;; Single modifier one-shot chords (right)
+  (k spc) (one-shot $one-shot-timeout lsft)
+  (. spc) (one-shot $one-shot-timeout ralt)
+  (m spc) (one-shot $one-shot-timeout (layer-while-held fumbol))
 
   ;; Left one-shot chords
   (x d)   (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft))
@@ -137,12 +145,8 @@
   . (chord mhbc .)
   / (t! charmod / rctl)
 
-  ;; Space overloaded to 'extend' layer with state clearing logic
-  spc (fork
-    (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
-    lsft
-    (lsft)
-  )
+  ;; Space overloaded to 'extend' layer with state clearing logic via chord engine
+  spc (chord mhbc spc)
 )
 
 (deflayermap (extend)
