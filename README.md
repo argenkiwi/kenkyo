@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/kenkyo.png" width="200" alt="Kenkyo Logo">
+  <img src="images/kenkyo.webp" width="200" alt="Kenkyo Logo">
 </p>
 
 # Kenkyo
@@ -73,7 +73,7 @@ Tapping a modifier key together with Space triggers a space-anchored one-shot mo
 #### Main Layer
 The base layer featuring **Home Row Modifiers**. Hold keys on the home row to activate `Meta`, `Alt`, `Shift`, or `Ctrl`.
 
-![Main layer image](images/main.png)
+![Main layer image](images/main.webp)
 
 - **Left Hand:** `A` (Meta), `S` (Alt), `D` (Shift), `F` (Ctrl)
 - **Right Hand:** `J` (Ctrl), `K` (Shift), `L` (Alt), `;` (Meta)
@@ -81,7 +81,7 @@ The base layer featuring **Home Row Modifiers**. Hold keys on the home row to ac
 #### Extend Layer
 Activated by holding **Space**. This layer puts navigation and editing tools directly under your right hand.
 
-![Extend layer image](images/extend.png)
+![Extend layer image](images/extend.webp)
 
 - **Navigation:** Arrow keys, Home/End, PgUp/PgDn.
 - **Editing:** Backspace, Delete, Enter, Tab.
@@ -90,7 +90,7 @@ Activated by holding **Space**. This layer puts navigation and editing tools dir
 #### Fumbol Layer
 Designed for numbers, function keys, and symbols. Access it by holding `V` or `M`, or via the Extend layer.
 
-![Fumbol layer image](images/fumbol.png)
+![Fumbol layer image](images/fumbol.webp)
 
 - **Numbers:** Distributed along the home row.
 - **Function Keys:** `F1`–`F10` on the top row, `F11`–`F12` on the bottom.
