@@ -56,7 +56,7 @@ Tapping a modifier key together with `Space` triggers a space-anchored one-shot 
 - `X` + `Space` (or `.` + `Space`) → **Space-anchored AltGr (Right Alt)**
 
 > [!NOTE]
-> This replaces the legacy behavior where `X` + `.`, `D` + `K`, and `V` + `M` were used as non-anchored one-shot chords, as well as the `E`/`R` layer swap keys on the Extend layer. The space-anchored chord approach is more intuitive and allows holding `Space` to keep the modifier or layer active.
+> This replaces the `E`/`R` layer swap keys on the Extend layer. The space-anchored chord approach is more intuitive and allows holding `Space` to keep the modifier or layer active.
 
 ### Layers
 
