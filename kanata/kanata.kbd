@@ -50,12 +50,6 @@
   )
 )
 
-(defvirtualkeys
-  ;; Virtual keys for managing state when switching layers
-  shift (multi (layer-switch main) lsft)
-  clear (multi (layer-switch main) (on-press release-virtualkey shift))
-)
-
 ;; Chord definitions for the 'main' layer
 ;; These allow multiple keys to trigger a single action (e.g., w+e = esc)
 
@@ -89,7 +83,7 @@
   (.) (t! charmod . ralt)
 
   ;; Space individual key
-  (spc) (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
+  (spc) (t! charmod spc (layer-while-held extend))
 
   ;; Single modifier one-shot chords (left)
   (d spc) (one-shot $one-shot-timeout lsft)
@@ -150,9 +144,7 @@
 )
 
 (deflayermap (extend)
-  ;; Navigation, media, and layer switching
-  e (on-press press-virtualkey shift)
-  r (layer-switch fumbol)
+  ;; Navigation, media
   y ins
   u home
   i up
@@ -266,5 +258,4 @@
   , (chord fbr ,)
   . (chord fbr .)
   / (t! charmod \ lctl)
-  spc (multi (layer-switch fumbol) (on-release tap-virtualkey clear))
 )
