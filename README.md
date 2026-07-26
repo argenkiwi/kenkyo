@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/kenkyo.png" width="200" alt="Kenkyo Logo">
+  <img src="images/kenkyo.webp" width="200" alt="Kenkyo Logo">
 </p>
 
 # Kenkyo
@@ -11,7 +11,7 @@ A layered keyboard layout designed to augment your productivity without altering
 
 ## Key Benefits
 
-- **Hardware Agnostic:** Works on any keyboard via software (Kanata or Keyd).
+- **Hardware Agnostic:** Works on any keyboard via software (Kanata or Keydo).
 - **Minimalist:** Requires only 31 keys to access 100% of a standard keyboard's functionality.
 - **Ergonomic:** Reduces hand movement and strain by keeping everything under your home row.
 - **Seamless Learning:** Designed to be used gradually; your default layout remains fully functional.
@@ -25,14 +25,14 @@ To use Kenkyo, install your preferred keyboard customization software and use th
 | Software | Platform | Repository |
 | :--- | :--- | :--- |
 | **Kanata** | Windows, Linux, macOS | [jtroo/kanata](https://github.com/jtroo/kanata) |
-| **Keyd** | Linux | [rvaiya/keyd](https://github.com/rvaiya/keyd) |
+| **Keydo** | Linux | [argenkiwi/keydo](https://github.com/argenkiwi/keydo) |
 
 ### 2. Installation
 
 1. Clone this repository or download the configuration for your chosen software.
 2. Place the configuration files in the recommended directory for the software:
    - **Kanata:** Typically `~/.config/kanata/` or specified via command line.
-   - **Keyd:** Copy `keyd/default.conf` to `/etc/keyd/default.conf`.
+   - **Keydo:** Copy `keyd/default.conf` to `/etc/keyd/default.conf`.
 
 ## Layout Overview
 
@@ -47,12 +47,23 @@ Available on most layers for quick access to essential keys:
 - `X` + `C` → **Tab**
 - `,` + `.` → **Enter**
 
+### Space-Anchored Modifiers / Layers
+
+Tapping a modifier key together with `Space` triggers a space-anchored one-shot modifier or layer for the next keypress. By keeping the `Space` key held down after releasing the modifier key in the chord, the modifier remains active:
+
+- `D` + `Space` (or `K` + `Space`) → **Space-anchored Shift**
+- `V` + `Space` (or `M` + `Space`) → **Space-anchored Fumbol Layer**
+- `X` + `Space` (or `.` + `Space`) → **Space-anchored AltGr (Right Alt)**
+
+> [!NOTE]
+> This replaces the legacy behavior where `X` + `.`, `D` + `K`, and `V` + `M` were used as non-anchored one-shot chords, as well as the `E`/`R` layer swap keys on the Extend layer. The space-anchored chord approach is more intuitive and allows holding `Space` to keep the modifier or layer active.
+
 ### Layers
 
 #### Main Layer
 The base layer featuring **Home Row Modifiers**. Hold keys on the home row to activate `Meta`, `Alt`, `Shift`, or `Ctrl`.
 
-![Main layer image](images/main.png)
+![Main layer image](images/main.webp)
 
 - **Left Hand:** `A` (Meta), `S` (Alt), `D` (Shift), `F` (Ctrl)
 - **Right Hand:** `J` (Ctrl), `K` (Shift), `L` (Alt), `;` (Meta)
@@ -60,7 +71,7 @@ The base layer featuring **Home Row Modifiers**. Hold keys on the home row to ac
 #### Extend Layer
 Activated by holding **Space**. This layer puts navigation and editing tools directly under your right hand.
 
-![Extend layer image](images/extend.png)
+![Extend layer image](images/extend.webp)
 
 - **Navigation:** Arrow keys, Home/End, PgUp/PgDn.
 - **Editing:** Backspace, Delete, Enter, Tab.
@@ -69,7 +80,7 @@ Activated by holding **Space**. This layer puts navigation and editing tools dir
 #### Fumbol Layer
 Designed for numbers, function keys, and symbols. Access it by holding `V` or `M`, or via the Extend layer.
 
-![Fumbol layer image](images/fumbol.png)
+![Fumbol layer image](images/fumbol.webp)
 
 - **Numbers:** Distributed along the home row.
 - **Function Keys:** `F1`–`F10` on the top row, `F11`–`F12` on the bottom.
