@@ -25,7 +25,8 @@ To use Kenkyo, install your preferred keyboard customization software and use th
 | Software | Platform | Repository |
 | :--- | :--- | :--- |
 | **Kanata** | Windows, Linux, macOS | [jtroo/kanata](https://github.com/jtroo/kanata) |
-| **Keydo** | Linux | [argenkiwi/keydo](https://github.com/argenkiwi/keydo) |
+| **Keydo** | Windows, Linux, macOS | [argenkiwi/keydo](https://github.com/argenkiwi/keydo) |
+| **Keyd** | Linux | [rvaiya/keyd](https://github.com/rvaiya/keyd) |
 
 ### 2. Installation
 
