@@ -20,20 +20,11 @@ A layered keyboard layout designed to augment your productivity without altering
 
 To use Kenkyo, install your preferred keyboard customization software and use the provided configuration files.
 
-### 1. Choose your Software
-
 | Software | Platform | Repository |
 | :--- | :--- | :--- |
 | **Kanata** | Windows, Linux, macOS | [jtroo/kanata](https://github.com/jtroo/kanata) |
 | **Keydo** | Windows, Linux, macOS | [argenkiwi/keydo](https://github.com/argenkiwi/keydo) |
 | **Keyd** | Linux | [rvaiya/keyd](https://github.com/rvaiya/keyd) |
-
-### 2. Installation
-
-1. Clone this repository or download the configuration for your chosen software.
-2. Place the configuration files in the recommended directory for the software:
-   - **Kanata:** Typically `~/.config/kanata/` or specified via command line.
-   - **Keydo:** Copy `keyd/default.conf` to `/etc/keyd/default.conf`.
 
 ## Layout Overview
 
