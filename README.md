@@ -123,6 +123,8 @@ Hold keys on the home row or bottom row to activate standard system modifiers:
   <img src="images/main.webp" alt="Main Layer Diagram" width="100%">
 </p>
 
+Home and bottom row modifiers are ideal for key combinations and shortcuts. However, while typing at speed they are skipped or bypassed to avoid misfires and latency. Here is where one-shot modifiers come handy.
+
 ### 3. One-Shot Single Modifiers
 
 Tap a modifier key together with `Space` to trigger a one-shot modifier for just the next keypress:
@@ -130,9 +132,11 @@ Tap a modifier key together with `Space` to trigger a one-shot modifier for just
 - `D` + `Space` (or `K` + `Space`) → **One-shot Shift**
 - `X` + `Space` (or `.` + `Space`) → **One-shot AltGr**
 
+One-shot modifiers are excellent for when we want to, for example, capitalise a letter or type a symbol. But sometimes we need to keep them around to modify more than one key consecutively (e.g., typing an acronym in all capitals). For that, we can use space-anchoring.
+
 ### 4. Space-Anchored Modifiers
 
-Extend one-shot behavior by anchoring with `Space`. Tap a modifier key together with `Space`, then **keep holding `Space`** after releasing the modifier key to keep that modifier active for multiple keypresses without needing to hold down the modifier key itself.
+Extend one-shot behavior by anchoring with `Space`: tap a modifier key together with `Space`, then **keep holding `Space`** after releasing the modifier key to keep that modifier active for multiple keypresses without needing to hold down the modifier key itself.
 
 ### 5. One-Shot Multi-Modifiers
 
