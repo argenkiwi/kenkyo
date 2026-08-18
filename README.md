@@ -72,7 +72,7 @@ Choose your preferred keyboard remapping engine below to install and load Kenkyo
 | :--- | :--- | :--- | :--- |
 | **Kanata** | Windows, macOS, Linux | [`kanata/kanata.kbd`](file:///Users/leandro/Code/kenkyo/kanata/kanata.kbd) | [jtroo/kanata](https://github.com/jtroo/kanata) |
 | **Keyd** | Linux | [`keyd/default.conf`](file:///Users/leandro/Code/kenkyo/keyd/default.conf) | [rvaiya/keyd](https://github.com/rvaiya/keyd) |
-| **Keydo** | Windows, macOS, Linux | Config compatible | [argenkiwi/keydo](https://github.com/argenkiwi/keydo) |
+| **Keydo** | Windows, macOS, Linux | [`keyd/default.conf`](file:///Users/leandro/Code/kenkyo/keyd/default.conf) | [argenkiwi/keydo](https://github.com/argenkiwi/keydo) |
 
 ### Kanata (Cross-platform)
 
