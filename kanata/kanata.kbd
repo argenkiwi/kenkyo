@@ -21,10 +21,10 @@
 (defvar
   ;; Timing variables for home row mods and chords
   streak-count 3       ;; Number of keys to consider a "typing streak"
-  streak-time 500      ;; Max time (ms) window to maintain a streak
+  streak-time 600      ;; Max time (ms) window to maintain a streak
   tap-timeout 200      ;; Max time (ms) for a tap to be recognized
   hold-timeout 300     ;; Time (ms) to wait before a hold is recognized
-  chord-timeout 50     ;; Window (ms) to press keys together for a chord
+  chord-timeout 35     ;; Window (ms) to press keys together for a chord
   one-shot-timeout 500 ;; Timeout (ms) for one-shot modifiers/layers
 )
 
