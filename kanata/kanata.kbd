@@ -95,12 +95,14 @@
   ;; Single modifier one-shot chords (left)
   (d spc) (one-shot $one-shot-timeout lsft)
   (x spc) (one-shot $one-shot-timeout ralt)
+  (c spc) (one-shot $one-shot-timeout (layer-while-held macros))
   (v spc) (one-shot $one-shot-timeout (layer-while-held fumbol))
 
   ;; Single modifier one-shot chords (right)
   (k spc) (one-shot $one-shot-timeout rsft)
-  (. spc) (one-shot $one-shot-timeout ralt)
   (m spc) (one-shot $one-shot-timeout (layer-while-held fumbol))
+  (, spc) (one-shot $one-shot-timeout (layer-while-held macros))
+  (. spc) (one-shot $one-shot-timeout ralt)
 
   ;; Left one-shot chords
   (x d)   (multi (one-shot $one-shot-timeout ralt) (one-shot $one-shot-timeout rsft))
@@ -266,3 +268,10 @@
   . (chord fbr .)
   / (t! charmod \ lctl)
 )
+
+(deflayermap (macros)
+  . (multi (macro . spc) (one-shot $one-shot-timeout lsft))
+  / (multi (macro S-/ spc) (one-shot $one-shot-timeout lsft))
+  a (multi (macro S-1 spc) (one-shot $one-shot-timeout lsft))
+)
+
