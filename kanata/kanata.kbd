@@ -117,6 +117,17 @@
   ;; Bottom row chords
   (x c)   tab
   (, .)   ret
+
+  ;; Space macros: emit space then a one-shot modifier.
+  ;; Avoids consecutive presses of the spacebar when a modified character follows.
+  ;; Left-hand: C is the anchor key (below D/Shift).
+  (c spc)     (multi spc (one-shot $one-shot-timeout lsft))
+  (x c spc)   (multi spc (one-shot $one-shot-timeout ralt))
+  (c v spc)   (multi spc (one-shot $one-shot-timeout (layer-while-held fumbol)))
+  ;; Right-hand: , is the anchor key (below K/Shift).
+  (, spc)     (multi spc (one-shot $one-shot-timeout rsft))
+  (m , spc)   (multi spc (one-shot $one-shot-timeout (layer-while-held fumbol)))
+  (. , spc)   (multi spc (one-shot $one-shot-timeout ralt))
 )
 
 (deflayermap (main)

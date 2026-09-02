@@ -34,6 +34,7 @@
   - [5. One-Shot Multi-Modifiers](#5-one-shot-multi-modifiers)
   - [6. Fumbol Layer](#6-fumbol-layer)
   - [7. SpaceFN and the Extend Layer](#7-spacefn-and-the-extend-layer)
+  - [8. Space Macros](#8-space-macros)
 - [Design Philosophy](#design-philosophy)
 - [Contributing](#contributing)
 - [License](#license)
@@ -170,6 +171,16 @@ Hold **Space** to enter the **Extend** layer, placing navigation and editing too
 - **Navigation:** Arrow keys, Home/End, Page Up/Page Down.
 - **Editing:** Backspace, Delete, Enter, Tab.
 - **Media:** Volume controls and Play/Pause on the left hand.
+
+### 8. Space Macros
+
+When typing, you often need a space followed by a capitalised letter or a symbol. Instead of pressing Space and then activating a modifier separately, space macros combine both into a single chord: they emit **Space immediately**, then leave a **one-shot modifier** active for the very next keypress.
+
+- `C` + `Space` (or `,` + `Space`) → **Space, then one-shot Shift**
+- `X` + `C` + `Space` (or `.` + `,` + `Space`) → **Space, then one-shot AltGr**
+- `C` + `V` + `Space` (or `M` + `,` + `Space`) → **Space, then one-shot Fumbol**
+
+The anchor keys mirror the one-shot modifier chords: `C` on the left (below `D`/Shift) and `,` on the right (below `K`/Shift).
 
 ---
 
