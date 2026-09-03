@@ -53,19 +53,15 @@
 ;; Chord definitions for the 'main' layer
 ;; These allow multiple keys to trigger a single action (e.g., w+e = esc)
 
-(defchords mtl $chord-timeout
+(defchords mhbc $chord-timeout
+  ;; Top row keys (merged from former mtl/mtr groups)
   (w  ) w
   (  e) e
   (w e) esc
-)
-
-(defchords mtr $chord-timeout
   (i  ) i
   (  o) o
   (i o) bspc
-)
 
-(defchords mhbc $chord-timeout
   ;; Left individual keys
   (s) (t! charmod s lalt)
   (d) (t! charmod d lsft)
@@ -120,22 +116,22 @@
 
   ;; Space macros: emit space then a one-shot modifier.
   ;; Avoids consecutive presses of the spacebar when a modified character follows.
-  ;; Left-hand: C is the anchor key (below D/Shift).
-  (c spc)     (multi spc (one-shot $one-shot-timeout lsft))
+  ;; Left-hand: E is the anchor key (above D/Shift).
+  (e spc)     (multi spc (one-shot $one-shot-timeout lsft))
   (x c spc)   (multi spc (one-shot $one-shot-timeout ralt))
   (c v spc)   (multi spc (one-shot $one-shot-timeout (layer-while-held fumbol)))
-  ;; Right-hand: , is the anchor key (below K/Shift).
-  (, spc)     (multi spc (one-shot $one-shot-timeout rsft))
+  ;; Right-hand: I is the anchor key (above K/Shift).
+  (i spc)     (multi spc (one-shot $one-shot-timeout rsft))
   (m , spc)   (multi spc (one-shot $one-shot-timeout (layer-while-held fumbol)))
   (. , spc)   (multi spc (one-shot $one-shot-timeout ralt))
 )
 
 (deflayermap (main)
   ;; Top row chords
-  w (chord mtl w)
-  e (chord mtl e)
-  i (chord mtr i)
-  o (chord mtr o)
+  w (chord mhbc w)
+  e (chord mhbc e)
+  i (chord mhbc i)
+  o (chord mhbc o)
 
   ;; Home row modifiers
   a (t! charmod a lmet)
