@@ -176,11 +176,11 @@ Hold **Space** to enter the **Extend** layer, placing navigation and editing too
 
 When typing, you often need a space followed by a capitalised letter or a symbol. Instead of pressing Space and then activating a modifier separately, space macros combine both into a single chord: they emit **Space immediately**, then leave a **one-shot modifier** active for the very next keypress.
 
-- `E` + `Space` (or `I` + `Space`) → **Space, then one-shot Shift**
-- `X` + `C` + `Space` (or `.` + `,` + `Space`) → **Space, then one-shot AltGr**
-- `C` + `V` + `Space` (or `M` + `,` + `Space`) → **Space, then one-shot Fumbol**
+- `D` + `K` (or `D` + `K` + `Space`) → **Space, then one-shot Shift**
+- `X` + `.` (or `X` + `.` + `Space`) → **Space, then one-shot AltGr**
+- `V` + `M` (or `V` + `M` + `Space`) → **Space, then one-shot Fumbol**
 
-The anchor keys mirror the one-shot modifier chords: `E` on the left (above `D`/Shift) and `I` on the right (above `K`/Shift).
+These chords use symmetric bilateral pairs of modifier keys on the left and right hands (`D`/`K` for Shift, `X`/`.` for AltGr, `V`/`M` for Fumbol), with or without pressing `Space`.
 
 ---
 
