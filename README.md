@@ -178,11 +178,14 @@ Combine multiple modifier keys in a single chord together with `Space` for one-s
 
 When typing, you often need a space followed by a capitalised letter or a symbol. Instead of pressing Space and then activating a modifier separately, space macros combine both into a single chord: they emit **Space immediately**, then leave a **one-shot modifier** active for the very next keypress.
 
-- `D` + `K` (or `D` + `K` + `Space`) → **Space, then one-shot Shift**
-- `X` + `.` (or `X` + `.` + `Space`) → **Space, then one-shot AltGr**
-- `V` + `M` (or `V` + `M` + `Space`) → **Space, then one-shot Fumbol**
+- **Left hand:** `S` + `D` + `Space` → **Space, then one-shot Shift**
+- **Left hand:** `C` + `V` + `Space` → **Space, then one-shot Fumbol**
+- **Left hand:** `X` + `C` + `Space` → **Space, then one-shot AltGr**
+- **Right hand:** `K` + `L` + `Space` → **Space, then one-shot Shift**
+- **Right hand:** `M` + `,` + `Space` → **Space, then one-shot Fumbol**
+- **Right hand:** `,` + `.` + `Space` → **Space, then one-shot AltGr**
 
-These chords use symmetric bilateral pairs of modifier keys on the left and right hands (`D`/`K` for Shift, `X`/`.` for AltGr, `V`/`M` for Fumbol), with or without pressing `Space`.
+These chords use adjacent same-hand modifier pairs anchored to `Space`, available symmetrically on both hands.
 
 ---
 
