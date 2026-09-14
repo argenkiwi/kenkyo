@@ -28,12 +28,14 @@
   - [Keydo (Cross-platform)](#keydo-cross-platform)
 - [Layout Overview & Learning Path](#layout-overview--learning-path)
   - [1. One-Key Chords](#1-one-key-chords)
-  - [2. Home and Bottom Row Modifiers](#2-home-and-bottom-row-modifiers)
-  - [3. One-Shot Single Modifiers](#3-one-shot-single-modifiers)
-  - [4. Space-Anchored Modifiers](#4-space-anchored-modifiers)
-  - [5. One-Shot Multi-Modifiers](#5-one-shot-multi-modifiers)
-  - [6. Fumbol Layer](#6-fumbol-layer)
-  - [7. SpaceFN and the Extend Layer](#7-spacefn-and-the-extend-layer)
+  - [2. SpaceFN and the Extend Layer](#2-spacefn-and-the-extend-layer)
+  - [3. Home and Bottom Row Modifiers](#3-home-and-bottom-row-modifiers)
+  - [4. Fumbol Layer](#4-fumbol-layer)
+  - [5. One-Shot Modifiers](#5-one-shot-modifiers)
+    - [Single-Key One-Shot Modifiers](#single-key-one-shot-modifiers)
+    - [Space-Anchored Modifiers](#space-anchored-modifiers)
+    - [One-Shot Multi-Modifiers](#one-shot-multi-modifiers)
+    - [Space Macros](#space-macros)
 - [Design Philosophy](#design-philosophy)
 - [Contributing](#contributing)
 - [License](#license)
@@ -110,7 +112,19 @@ Start with the essentials. These chords are available on most layers for quick a
 - `X` + `C` → **Tab**
 - `,` + `.` → **Enter**
 
-### 2. Home and Bottom Row Modifiers
+### 2. SpaceFN and the Extend Layer
+
+Hold **Space** to enter the **Extend** layer, placing navigation and editing tools directly under your fingers.
+
+<p align="center">
+  <img src="images/extend.webp" alt="Extend Layer Diagram" width="100%">
+</p>
+
+- **Navigation:** Arrow keys, Home/End, Page Up/Page Down.
+- **Editing:** Backspace, Delete, Enter, Tab.
+- **Media:** Volume controls and Play/Pause on the left hand.
+
+### 3. Home and Bottom Row Modifiers
 
 Hold keys on the home row or bottom row to activate standard system modifiers:
 
@@ -123,33 +137,11 @@ Hold keys on the home row or bottom row to activate standard system modifiers:
   <img src="images/main.webp" alt="Main Layer Diagram" width="100%">
 </p>
 
-Home and bottom row modifiers are ideal for key combinations and shortcuts. However, while typing at speed they are skipped or bypassed to avoid misfires and latency. Here is where one-shot modifiers come handy.
+### 4. Fumbol Layer
 
-### 3. One-Shot Single Modifiers
+Access numbers, function keys, and math symbols via the **Fumbol** layer:
 
-Tap a modifier key together with `Space` to trigger a one-shot modifier for just the next keypress:
-
-- `D` + `Space` (or `K` + `Space`) → **One-shot Shift**
-- `X` + `Space` (or `.` + `Space`) → **One-shot AltGr**
-
-One-shot modifiers are excellent for when we want to, for example, capitalise a letter or type a symbol. But sometimes we need to keep them around to modify more than one key consecutively (e.g., typing an acronym in all capitals). For that, we can use space-anchoring.
-
-### 4. Space-Anchored Modifiers
-
-Extend one-shot behavior by anchoring with `Space`: tap a modifier key together with `Space`, then **keep holding `Space`** after releasing the modifier key to keep that modifier active for multiple keypresses without needing to hold down the modifier key itself.
-
-### 5. One-Shot Multi-Modifiers
-
-Combine multiple modifier keys in a single chord together with `Space` for one-shot access to several modifiers at once:
-
-- **Left Hand:** `X` + `D` (AltGr + Shift), `X` + `V` (AltGr + Fumbol), `D` + `V` (Shift + Fumbol), `X` + `D` + `V` (all three)
-- **Right Hand:** `K` + `.` (AltGr + Shift), `M` + `.` (AltGr + Fumbol), `M` + `K` (Shift + Fumbol), `M` + `K` + `.` (all three)
-
-### 6. Fumbol Layer
-
-Access numbers, function keys, and math symbols via the **Fumbol** layer using hold, one-shot, or space-anchored triggers:
-
-- **Activation:** Hold `V` (left) or `M` (right), or tap `V` + `Space` / `M` + `Space` for one-shot / anchored access.
+- **Activation:** Hold `V` (left) or `M` (right).
 
 <p align="center">
   <img src="images/fumbol.webp" alt="Fumbol Layer Diagram" width="100%">
@@ -159,17 +151,41 @@ Access numbers, function keys, and math symbols via the **Fumbol** layer using h
 - **Function Keys:** `F1`–`F10` on the top row, `F11`–`F12` on the bottom row.
 - **Math Chords:** Quick access to `-`, `+`, `=`, `/`, `*` via home row combinations.
 
-### 7. SpaceFN and the Extend Layer
+### 5. One-Shot Modifiers
 
-Hold **Space** to enter the **Extend** layer, placing navigation and editing tools directly under your fingers.
+While hold-based modifiers and layers are great for navigation or standard shortcuts, typing at high speed benefits from momentary, low-latency modifier mechanics. Kenkyo provides a rich suite of one-shot modifier options:
 
-<p align="center">
-  <img src="images/extend.webp" alt="Extend Layer Diagram" width="100%">
-</p>
+#### Single-Key One-Shot Modifiers
 
-- **Navigation:** Arrow keys, Home/End, Page Up/Page Down.
-- **Editing:** Backspace, Delete, Enter, Tab.
-- **Media:** Volume controls and Play/Pause on the left hand.
+Tap a modifier key together with `Space` to trigger a one-shot modifier for just the next keypress:
+
+- `D` + `Space` (or `K` + `Space`) → **One-shot Shift**
+- `X` + `Space` (or `.` + `Space`) → **One-shot AltGr**
+- `V` + `Space` (or `M` + `Space`) → **One-shot Fumbol**
+
+#### Space-Anchored Modifiers
+
+Extend one-shot behavior by anchoring with `Space`: tap a modifier key together with `Space`, then **keep holding `Space`** after releasing the modifier key to keep that modifier active for multiple keypresses without needing to hold down the modifier key itself (e.g., typing an acronym in all capitals).
+
+#### One-Shot Multi-Modifiers
+
+Combine multiple modifier keys in a single chord together with `Space` for one-shot access to several modifiers at once:
+
+- **Left Hand:** `X` + `D` (AltGr + Shift), `X` + `V` (AltGr + Fumbol), `D` + `V` (Shift + Fumbol), `X` + `D` + `V` (all three)
+- **Right Hand:** `K` + `.` (AltGr + Shift), `M` + `.` (AltGr + Fumbol), `M` + `K` (Shift + Fumbol), `M` + `K` + `.` (all three)
+
+#### Space Macros
+
+When typing, you often need a space followed by a capitalised letter or a symbol. Instead of pressing Space and then activating a modifier separately, space macros combine both into a single chord: they emit **Space immediately**, then leave a **one-shot modifier** active for the very next keypress.
+
+- **Left hand:** `S` + `D` + `Space` → **Space, then one-shot Shift**
+- **Left hand:** `C` + `V` + `Space` → **Space, then one-shot Fumbol**
+- **Left hand:** `X` + `C` + `Space` → **Space, then one-shot AltGr**
+- **Right hand:** `K` + `L` + `Space` → **Space, then one-shot Shift**
+- **Right hand:** `M` + `,` + `Space` → **Space, then one-shot Fumbol**
+- **Right hand:** `,` + `.` + `Space` → **Space, then one-shot AltGr**
+
+These chords use adjacent same-hand modifier pairs anchored to `Space`, available symmetrically on both hands.
 
 ---
 
