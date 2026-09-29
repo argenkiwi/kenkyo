@@ -35,6 +35,7 @@
     - [Single-Key One-Shot Modifiers](#single-key-one-shot-modifiers)
     - [Space-Anchored Modifiers](#space-anchored-modifiers)
     - [One-Shot Multi-Modifiers](#one-shot-multi-modifiers)
+    - [Space Macros](#space-macros)
 - [Design Philosophy](#design-philosophy)
 - [Contributing](#contributing)
 - [License](#license)
@@ -172,6 +173,19 @@ Combine multiple modifier keys in a single chord together with `Space` for one-s
 
 - **Left Hand:** `X` + `D` (AltGr + Shift), `X` + `V` (AltGr + Fumbol), `D` + `V` (Shift + Fumbol), `X` + `D` + `V` (all three)
 - **Right Hand:** `K` + `.` (AltGr + Shift), `M` + `.` (AltGr + Fumbol), `M` + `K` (Shift + Fumbol), `M` + `K` + `.` (all three)
+
+#### Space Macros
+
+When typing, you often need a space followed by a capitalised letter or a symbol. Instead of pressing Space and then activating a modifier separately, space macros combine both into a single chord: they emit **Space immediately**, then leave a **one-shot modifier** active for the very next keypress.
+
+- **Left hand:** `S` + `D` + `Space` → **Space, then one-shot Shift**
+- **Left hand:** `C` + `V` + `Space` → **Space, then one-shot Fumbol**
+- **Left hand:** `X` + `C` + `Space` → **Space, then one-shot AltGr**
+- **Right hand:** `K` + `L` + `Space` → **Space, then one-shot Shift**
+- **Right hand:** `M` + `,` + `Space` → **Space, then one-shot Fumbol**
+- **Right hand:** `,` + `.` + `Space` → **Space, then one-shot AltGr**
+
+These chords use adjacent same-hand modifier pairs anchored to `Space`, available symmetrically on both hands.
 
 ---
 

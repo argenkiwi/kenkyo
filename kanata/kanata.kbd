@@ -53,19 +53,15 @@
 ;; Chord definitions for the 'main' layer
 ;; These allow multiple keys to trigger a single action (e.g., w+e = esc)
 
-(defchords mtl $chord-timeout
+(defchords mhbc $chord-timeout
+  ;; Top row keys (merged from former mtl/mtr groups)
   (w  ) w
   (  e) e
   (w e) esc
-)
-
-(defchords mtr $chord-timeout
   (i  ) i
   (  o) o
   (i o) bspc
-)
 
-(defchords mhbc $chord-timeout
   ;; Left individual keys
   (s) (t! charmod s lalt)
   (d) (t! charmod d lsft)
@@ -117,14 +113,24 @@
   ;; Bottom row chords
   (x c)   tab
   (, .)   ret
+
+  ;; Space macros: emit space then a one-shot modifier.
+  ;; Avoids consecutive presses of the spacebar when a modified character follows.
+  ;; Adjacent same-hand modifier pairs anchored to Space.
+  (s d spc)     (multi spc (one-shot $one-shot-timeout lsft))
+  (c v spc)     (multi spc (one-shot $one-shot-timeout (layer-while-held fumbol)))
+  (x c spc)     (multi spc (one-shot $one-shot-timeout ralt))
+  (k l spc)     (multi spc (one-shot $one-shot-timeout rsft))
+  (m , spc)     (multi spc (one-shot $one-shot-timeout (layer-while-held fumbol)))
+  (, . spc)     (multi spc (one-shot $one-shot-timeout ralt))
 )
 
 (deflayermap (main)
   ;; Top row chords
-  w (chord mtl w)
-  e (chord mtl e)
-  i (chord mtr i)
-  o (chord mtr o)
+  w (chord mhbc w)
+  e (chord mhbc e)
+  i (chord mhbc i)
+  o (chord mhbc o)
 
   ;; Home row modifiers
   a (t! charmod a lmet)
