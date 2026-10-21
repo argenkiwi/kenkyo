@@ -106,6 +106,10 @@ Kenkyo uses a layered approach where the **Main** layer handles standard typing,
 
 Start with the essentials. These chords are available on most layers for quick access to keys that are otherwise far from your home row:
 
+<p align="center">
+  <img src="images/chords.webp" alt="One-Key Chords Diagram" width="100%">
+</p>
+
 - `W` + `E` → **Esc**
 - `I` + `O` → **Backspace**
 - `X` + `C` → **Tab**
