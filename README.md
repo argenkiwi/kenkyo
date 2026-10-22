@@ -71,9 +71,9 @@ Choose your preferred keyboard remapping engine below to install and load Kenkyo
 
 | Engine | Platform Support | Config File | Project Repository |
 | :--- | :--- | :--- | :--- |
-| **Kanata** | Windows, macOS, Linux | [`kanata/kanata.kbd`](file:///Users/leandro/Code/kenkyo/kanata/kanata.kbd) | [jtroo/kanata](https://github.com/jtroo/kanata) |
-| **Keyd** | Linux | [`keyd/default.conf`](file:///Users/leandro/Code/kenkyo/keyd/default.conf) | [rvaiya/keyd](https://github.com/rvaiya/keyd) |
-| **Keydo** | Windows, macOS, Linux | [`keyd/default.conf`](file:///Users/leandro/Code/kenkyo/keyd/default.conf) | [argenkiwi/keydo](https://github.com/argenkiwi/keydo) |
+| **Kanata** | Windows, macOS, Linux | [`kanata/kanata.kbd`](kanata/kanata.kbd) | [jtroo/kanata](https://github.com/jtroo/kanata) |
+| **Keyd** | Linux | [`keyd/default.conf`](keyd/default.conf) | [rvaiya/keyd](https://github.com/rvaiya/keyd) |
+| **Keydo** | Windows, macOS, Linux | [`keyd/default.conf`](keyd/default.conf) | [argenkiwi/keydo](https://github.com/argenkiwi/keydo) |
 
 ### Kanata (Cross-platform)
 
@@ -197,5 +197,5 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## License
 
-Distributed under the MIT License. See [`LICENSE`](file:///Users/leandro/Code/kenkyo/LICENSE) for more details.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for more details.
 
