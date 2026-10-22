@@ -181,7 +181,7 @@ Kenkyo is built on four core principles:
 
 1. **Seamlessness:** The layout is invisible until you choose to use its features.
 2. **Progressiveness:** Adopt patterns at your own pace without breaking your existing workflow.
-3. **Composability:** Integrates standard ergonomic concepts such as [Home Row Modifiers](https://precondition.github.io/home-row-mods) and [SpaceFn](https://kbd.news/The-SpaceFN-concept-2315.html).
+3. **Composability:** Integrates standard ergonomic concepts such as [Home Row Modifiers](https://precondition.github.io/home-row-mods) and [SpaceFN](https://geekhack.org/index.php?topic=51069.0).
 4. **Efficiency:** Strikes a balance between minimal hand motion and ease of learning.
 
 > [!NOTE]
